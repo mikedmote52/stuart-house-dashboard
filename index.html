@@ -1,690 +1,897 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Stuart House — Rental Dashboard</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#09090b">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Stuart House">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Stuart House Command Center - Rental property management dashboard">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230a0a0a' width='180' height='180'/><circle cx='90' cy='90' r='60' fill='%2360a5fa'/><text x='90' y='110' font-size='80' fill='white' text-anchor='middle' font-weight='bold' font-family='system-ui'>S</text></svg>">
+  <title>Stuart House Command Center</title>
 
-:root {
-  --bg: #09090b;
-  --surface: #111113;
-  --surface2: #18181b;
-  --border: #27272a;
-  --border-hover: #3f3f46;
-  --text: #fafafa;
-  --text2: #a1a1aa;
-  --text3: #71717a;
-  --blue: #3b82f6;
-  --blue-dim: #1e3a5f;
-  --green: #22c55e;
-  --green-dim: #14532d;
-  --yellow: #eab308;
-  --yellow-dim: #422006;
-  --red: #ef4444;
-  --red-dim: #450a0a;
-  --orange: #f97316;
-  --orange-dim: #431407;
-  --purple: #a855f7;
-  --purple-dim: #3b0764;
-  --radius: 12px;
-  --radius-sm: 8px;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --safe-area-top: env(safe-area-inset-top, 0px);
+      --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+      --safe-area-left: env(safe-area-inset-left, 0px);
+      --safe-area-right: env(safe-area-inset-right, 0px);
 
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
-}
+      --bg-primary: #0a0a0a;
+      --bg-card: #141414;
+      --border-color: #222;
+      --text-primary: #ffffff;
+      --text-secondary: #a0a0a0;
+      --accent-blue: #60a5fa;
+      --accent-green: #4ade80;
+      --accent-yellow: #fbbf24;
+      --accent-purple: #c084fc;
 
-/* ===== NAV ===== */
-.nav {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(9,9,11,0.85);
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  padding: 12px 20px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.nav-left h1 { font-size: 16px; font-weight: 700; letter-spacing: -0.4px; }
-.nav-left .addr { font-size: 11px; color: var(--text3); margin-top: 1px; }
-.nav-right { display: flex; align-items: center; gap: 8px; }
-.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-.nav-time { font-size: 11px; color: var(--text3); }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+      --status-green: #4ade80;
+      --status-yellow: #fbbf24;
+      --status-red: #ef4444;
+      --status-orange: #f97316;
 
-/* ===== TABS ===== */
-.tabs {
-  display: flex; gap: 0; border-bottom: 1px solid var(--border);
-  padding: 0 20px; background: var(--surface);
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
-}
-.tab {
-  padding: 12px 16px; font-size: 13px; font-weight: 500; color: var(--text3);
-  border: none; background: none; cursor: pointer; white-space: nowrap;
-  border-bottom: 2px solid transparent; transition: all .2s;
-  position: relative;
-}
-.tab:hover { color: var(--text2); }
-.tab.active { color: var(--text); border-bottom-color: var(--blue); }
-.tab .count {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 18px; height: 18px; border-radius: 9px; font-size: 10px;
-  font-weight: 700; margin-left: 6px; padding: 0 5px;
-}
-.tab .count.red { background: var(--red-dim); color: var(--red); }
-.tab .count.orange { background: var(--orange-dim); color: var(--orange); }
-.tab .count.green { background: var(--green-dim); color: var(--green); }
-.tab .count.blue { background: var(--blue-dim); color: var(--blue); }
+      --platform-spareroom-bg: #1e3a5f;
+      --platform-spareroom-text: #60a5fa;
+      --platform-craigslist-bg: #3f2d5e;
+      --platform-craigslist-text: #c084fc;
+      --platform-fb-bg: #1e3a2f;
+      --platform-fb-text: #4ade80;
+      --platform-zillow-bg: #3f3520;
+      --platform-zillow-text: #fbbf24;
+    }
 
-/* ===== CONTENT ===== */
-.content { max-width: 640px; margin: 0 auto; padding: 16px; }
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', system-ui, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -webkit-touch-callout: none;
+    }
 
-/* ===== SUMMARY CARDS ===== */
-.summary {
-  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;
-}
-.sum-card {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 14px 16px;
-}
-.sum-card .val { font-size: 28px; font-weight: 700; letter-spacing: -1px; }
-.sum-card .lbl { font-size: 11px; color: var(--text3); margin-top: 2px; }
-.sum-card.red .val { color: var(--red); }
-.sum-card.green .val { color: var(--green); }
-.sum-card.blue .val { color: var(--blue); }
-.sum-card.yellow .val { color: var(--yellow); }
+    body {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-top: var(--safe-area-top);
+      padding-bottom: var(--safe-area-bottom);
+      padding-left: var(--safe-area-left);
+      padding-right: var(--safe-area-right);
+    }
 
-/* ===== ALERT BANNER ===== */
-.alert {
-  background: var(--red-dim); border: 1px solid #7f1d1d; border-radius: var(--radius);
-  padding: 12px 14px; margin-bottom: 16px; font-size: 13px; line-height: 1.5;
-  color: #fca5a5; display: flex; gap: 10px; align-items: flex-start;
-}
-.alert.warn { background: var(--yellow-dim); border-color: #713f12; color: #fde68a; }
-.alert.info { background: var(--blue-dim); border-color: #1e3a5f; color: #93c5fd; }
-.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .header {
+      padding: 20px 16px 16px;
+      border-bottom: 1px solid var(--border-color);
+      flex-shrink: 0;
+    }
 
-/* ===== PROSPECT CARDS ===== */
-.prospect {
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  margin-bottom: 12px; overflow: hidden; transition: border-color .2s;
-}
-.prospect:hover { border-color: var(--border-hover); }
+    .header-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+    }
 
-.prospect-header {
-  padding: 14px 16px 10px; display: flex; justify-content: space-between; align-items: flex-start;
-}
-.prospect-name { font-size: 15px; font-weight: 600; }
-.prospect-tag {
-  font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px;
-  text-transform: uppercase; letter-spacing: .3px;
-}
-.tag-excellent { background: var(--green-dim); color: var(--green); }
-.tag-strong { background: var(--blue-dim); color: var(--blue); }
+    .header-subtitle {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
 
-.prospect-platform {
-  padding: 0 16px; margin-bottom: 8px;
-  display: flex; align-items: center; gap: 8px;
-}
-.plat-badge {
-  font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 4px;
-  text-transform: uppercase; letter-spacing: .3px;
-}
-.plat-spareroom { background: var(--blue-dim); color: #60a5fa; }
-.plat-craigslist { background: var(--purple-dim); color: #c084fc; }
-.plat-fb { background: var(--green-dim); color: #4ade80; }
+    .header-timestamp {
+      font-size: 12px;
+      color: var(--status-green);
+      font-weight: 500;
+    }
 
-.prospect-status {
-  padding: 0 16px; margin-bottom: 10px;
-  display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600;
-}
-.sdot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.sdot.urgent { background: var(--red); animation: pulse 1.5s infinite; }
-.sdot.queued { background: var(--orange); animation: pulse 2s infinite; }
-.sdot.sent { background: var(--green); }
+    .content-area {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-/* Screening grid */
-.screening {
-  padding: 0 16px; margin-bottom: 10px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px;
-  font-size: 11px; color: var(--text3);
-}
-.screening b { color: var(--text2); font-weight: 500; }
+    .tabs-container {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--bg-primary);
+      flex-shrink: 0;
+      gap: 0;
+      padding: 0 12px;
+    }
 
-/* Collapsible message */
-.msg-toggle {
-  width: 100%; padding: 8px 16px; font-size: 12px; font-weight: 500;
-  color: var(--text3); background: var(--surface2); border: none;
-  border-top: 1px solid var(--border); cursor: pointer; text-align: left;
-  display: flex; justify-content: space-between; align-items: center;
-  transition: color .2s;
-}
-.msg-toggle:hover { color: var(--text2); }
-.msg-toggle .arrow { transition: transform .2s; }
-.msg-toggle.open .arrow { transform: rotate(180deg); }
+    .tab-button {
+      flex: 1;
+      padding: 12px 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
 
-.msg-content {
-  max-height: 0; overflow: hidden; transition: max-height .3s ease;
-  background: var(--bg);
-}
-.msg-content.open { max-height: 600px; }
-.msg-inner { padding: 12px 16px; font-size: 13px; line-height: 1.6; color: var(--text2); }
-.msg-inner .timestamp { font-size: 11px; color: var(--text3); margin-top: 6px; }
+    .tab-button:active {
+      background-color: rgba(96, 165, 250, 0.1);
+    }
 
-/* Draft */
-.draft-area {
-  background: #0c1220; border-top: 1px solid #1c2a3a;
-  padding: 12px 16px;
-}
-.draft-label {
-  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px;
-  color: var(--blue); margin-bottom: 6px;
-}
-.draft-text {
-  font-size: 13px; line-height: 1.6; color: #8baac8; white-space: pre-wrap;
-}
-.draft-note {
-  font-size: 11px; color: var(--orange); margin-top: 8px;
-}
+    .tab-button.active {
+      color: var(--text-primary);
+      border-bottom-color: var(--accent-blue);
+    }
 
-.draft-edit {
-  width: 100%; min-height: 100px; background: #0a1018; border: 1px solid var(--blue);
-  border-radius: var(--radius-sm); color: #8baac8; font-family: inherit;
-  font-size: 13px; line-height: 1.6; padding: 10px; resize: vertical; display: none;
-}
-.draft-edit:focus { outline: none; border-color: #60a5fa; }
+    .tab-icon {
+      font-size: 14px;
+      display: inline-block;
+    }
 
-/* Day picker */
-.day-picker {
-  display: flex; gap: 6px; padding: 10px 16px; flex-wrap: wrap;
-}
-.day-btn {
-  flex: 1; min-width: 70px; padding: 8px 4px; border-radius: var(--radius-sm);
-  font-size: 12px; font-weight: 600; border: 1px solid var(--border);
-  background: var(--surface2); color: var(--text2); cursor: pointer;
-  transition: all .15s; text-align: center;
-}
-.day-btn:hover { border-color: var(--blue); color: var(--text); }
-.day-btn.selected { background: var(--blue); color: #fff; border-color: var(--blue); }
-.day-btn.disabled { opacity: .3; cursor: not-allowed; pointer-events: none; }
+    .tab-content {
+      display: none;
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+    }
 
-/* Actions */
-.actions {
-  display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--border);
-}
-.btn {
-  flex: 1; padding: 10px; border: none; border-radius: var(--radius-sm);
-  font-size: 13px; font-weight: 600; cursor: pointer; text-align: center;
-  transition: all .15s; font-family: inherit;
-}
-.btn-send { background: var(--green); color: #000; }
-.btn-send:hover { background: #16a34a; }
-.btn-send:active { transform: scale(.97); }
-.btn-send:disabled { background: var(--green-dim); color: #4a7a4a; cursor: not-allowed; }
-.btn-edit-action { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
-.btn-edit-action:hover { border-color: var(--border-hover); color: var(--text); }
-.btn-done { background: var(--green-dim); color: var(--green); cursor: default; }
-.btn-queued { background: var(--orange-dim); color: var(--orange); cursor: default; }
+    .tab-content.active {
+      display: flex;
+      flex-direction: column;
+    }
 
-/* ===== PLATFORMS TAB ===== */
-.plat-card {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 16px; border-bottom: 1px solid var(--border);
-}
-.plat-card:last-child { border-bottom: none; }
-.plat-info { display: flex; flex-direction: column; gap: 2px; }
-.plat-name { font-size: 14px; font-weight: 500; }
-.plat-channel { font-size: 11px; color: var(--text3); }
-.plat-stat { font-size: 12px; font-weight: 600; text-align: right; }
-.plat-stat.live { color: var(--green); }
-.plat-stat.warn { color: var(--yellow); }
-.plat-stat.down { color: var(--red); }
+    .scroll-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 12px;
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+    }
 
-/* ===== TIMELINE TAB ===== */
-.timeline-item {
-  padding: 12px 16px; border-bottom: 1px solid var(--border);
-  display: flex; gap: 12px; align-items: flex-start;
-}
-.tl-dot {
-  width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0;
-}
-.tl-body { flex: 1; }
-.tl-time { font-size: 11px; color: var(--text3); margin-bottom: 2px; }
-.tl-text { font-size: 13px; line-height: 1.5; color: var(--text2); }
-.tl-text strong { color: var(--text); font-weight: 600; }
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-left: 4px solid transparent;
+      transition: all 0.2s ease;
+    }
 
-/* ===== SEND VIA ===== */
-.send-via {
-  font-size: 10px; color: var(--text3); padding: 0 16px 8px;
-}
-.send-via strong { color: var(--text2); }
+    .card.replied {
+      border-left-color: var(--status-green);
+    }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 400px) {
-  .summary { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .day-picker { gap: 4px; }
-  .day-btn { min-width: 60px; font-size: 11px; padding: 7px 2px; }
-}
-</style>
+    .card.new {
+      border-left-color: var(--status-yellow);
+      background-color: rgba(251, 191, 36, 0.05);
+    }
+
+    .card.urgent {
+      border-left-color: var(--status-red);
+      animation: pulse-urgent 2s infinite;
+    }
+
+    @keyframes pulse-urgent {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+      }
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .card-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .card-platform {
+      font-size: 11px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      background-color: rgba(160, 160, 160, 0.1);
+      color: var(--text-secondary);
+      flex-shrink: 0;
+    }
+
+    .card-platform.spareroom {
+      background-color: rgba(96, 165, 250, 0.15);
+      color: var(--platform-spareroom-text);
+    }
+
+    .card-platform.craigslist {
+      background-color: rgba(192, 132, 252, 0.15);
+      color: var(--platform-craigslist-text);
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .card-description {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: rgba(160, 160, 160, 0.1);
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status-dot.green {
+      background-color: var(--status-green);
+    }
+
+    .status-dot.yellow {
+      background-color: var(--status-yellow);
+    }
+
+    .status-dot.red {
+      background-color: var(--status-red);
+    }
+
+    .status-dot.orange {
+      background-color: var(--status-orange);
+    }
+
+    .assessment {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background-color: rgba(74, 222, 128, 0.1);
+      color: var(--status-green);
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .assessment.strong {
+      background-color: rgba(96, 165, 250, 0.1);
+      color: var(--accent-blue);
+    }
+
+    .platform-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .platform-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .platform-name {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .platform-status {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .platform-status.live {
+      color: var(--status-green);
+    }
+
+    .platform-status.warning {
+      color: var(--status-yellow);
+    }
+
+    .platform-status.error {
+      color: var(--status-red);
+    }
+
+    .platform-badge {
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-primary);
+      background-color: rgba(160, 160, 160, 0.1);
+      text-align: center;
+    }
+
+    .platform-badge.spareroom {
+      background-color: var(--platform-spareroom-bg);
+      color: var(--platform-spareroom-text);
+    }
+
+    .platform-badge.craigslist {
+      background-color: var(--platform-craigslist-bg);
+      color: var(--platform-craigslist-text);
+    }
+
+    .platform-badge.fb {
+      background-color: var(--platform-fb-bg);
+      color: var(--platform-fb-text);
+    }
+
+    .platform-badge.zillow {
+      background-color: var(--platform-zillow-bg);
+      color: var(--platform-zillow-text);
+    }
+
+    .platform-info {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .activity-item {
+      padding: 12px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .activity-time {
+      font-size: 12px;
+      color: var(--text-secondary);
+      font-weight: 500;
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .activity-description {
+      font-size: 13px;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .activity-meta {
+      font-size: 11px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      border-top: 1px solid var(--border-color);
+      background-color: var(--bg-primary);
+      gap: 0;
+      flex-shrink: 0;
+      padding: 0;
+      padding-bottom: var(--safe-area-bottom);
+    }
+
+    .nav-button {
+      flex: 1;
+      padding: 12px 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 600;
+      border-top: 2px solid transparent;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .nav-button:active {
+      background-color: rgba(96, 165, 250, 0.1);
+    }
+
+    .nav-button.active {
+      color: var(--accent-blue);
+      border-top-color: var(--accent-blue);
+    }
+
+    .nav-icon {
+      font-size: 20px;
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 40px 20px;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    .empty-state-icon {
+      font-size: 32px;
+      opacity: 0.5;
+    }
+
+    .empty-state-text {
+      font-size: 13px;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .small-badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background-color: rgba(160, 160, 160, 0.1);
+      color: var(--text-secondary);
+      display: inline-block;
+    }
+
+    @media (max-width: 320px) {
+      .header-title {
+        font-size: 24px;
+      }
+
+      .card-name {
+        font-size: 14px;
+      }
+
+      .tab-button {
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-left">
-    <h1>Stuart House</h1>
-    <div class="addr">2322 Stuart St, South Berkeley</div>
-  </div>
-  <div class="nav-right">
-    <div class="live-dot"></div>
-    <span class="nav-time" id="nav-time">Apr 6, 1:30 AM</span>
-  </div>
-</nav>
-
-<!-- TABS -->
-<div class="tabs" role="tablist">
-  <button class="tab active" data-tab="inbox" role="tab">
-    Inbox <span class="count red">2</span>
-  </button>
-  <button class="tab" data-tab="sent" role="tab">
-    Sent <span class="count green">1</span>
-  </button>
-  <button class="tab" data-tab="platforms" role="tab">
-    Platforms <span class="count blue">6</span>
-  </button>
-  <button class="tab" data-tab="timeline" role="tab">
-    Activity
-  </button>
-</div>
-
-<!-- ===== INBOX TAB ===== -->
-<div class="content">
-<div class="tab-content active" id="tab-inbox">
-
-  <div class="summary">
-    <div class="sum-card red"><div class="val">1</div><div class="lbl">Needs Your Reply</div></div>
-    <div class="sum-card yellow"><div class="val">1</div><div class="lbl">Ready to Send</div></div>
-    <div class="sum-card green"><div class="val">1</div><div class="lbl">Sent Today</div></div>
-    <div class="sum-card blue"><div class="val">3</div><div class="lbl">Active Prospects</div></div>
+  <div class="header">
+    <div class="header-title">Stuart House</div>
+    <div class="header-subtitle">Command Center</div>
+    <div class="header-timestamp">Last updated: Mon Apr 6, 2026 8:07 AM PT</div>
   </div>
 
-  <div class="alert">
-    <span class="alert-icon">!</span>
-    <div><strong>Julian has been waiting 38+ hours.</strong> Your calendar shows Mon–Wed evenings open. Pick a day below to send your reply on SpareRoom.</div>
+  <div class="content-area">
+    <div class="tabs-container">
+      <button class="tab-button active" data-tab="inbox">
+        <span class="tab-icon">📬</span>
+        <span>Inbox</span>
+      </button>
+      <button class="tab-button" data-tab="sent">
+        <span class="tab-icon">✉️</span>
+        <span>Sent</span>
+      </button>
+      <button class="tab-button" data-tab="platforms">
+        <span class="tab-icon">🌐</span>
+        <span>Platforms</span>
+      </button>
+      <button class="tab-button" data-tab="activity">
+        <span class="tab-icon">⏱️</span>
+        <span>Activity</span>
+      </button>
+    </div>
+
+    <!-- INBOX TAB -->
+    <div class="tab-content active" id="inbox">
+      <div class="scroll-container">
+        <!-- Julian Flanagan -->
+        <div class="card replied">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Julian Flanagan</div>
+              <div class="card-meta">SpareRoom · Tour Scheduling</div>
+              <div class="card-description">Berkeley Biophysics PhD student, age 21 · Move date: Aug 1, 2026</div>
+            </div>
+            <span class="card-platform spareroom">SpareRoom</span>
+          </div>
+          <div class="card-description">Mike proposed Sunday virtual tour at 3:47 AM EDT. Julian last active 3 hrs ago, hasn't read yet.</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="status-badge">
+              <span class="status-dot green"></span>
+              Replied
+            </span>
+            <span class="assessment">EXCELLENT — #1 Priority</span>
+          </div>
+        </div>
+
+        <!-- Thomas Thuillier -->
+        <div class="card replied">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Thomas Thuillier</div>
+              <div class="card-meta">Craigslist (Yahoo) · Responded</div>
+              <div class="card-description">Senior Scientist, Lawrence Berkeley Lab, French, age 55 · 1 year lease (wife joins Aug 2027)</div>
+            </div>
+            <span class="card-platform craigslist">Craigslist</span>
+          </div>
+          <div class="card-description">Phone: 510-365-5300 · Mike replied 04/06 12:36 AM. Awaiting Thomas's response.</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="status-badge">
+              <span class="status-dot green"></span>
+              Replied
+            </span>
+            <span class="assessment strong">EXCELLENT Fit</span>
+          </div>
+        </div>
+
+        <!-- Jan Schütte-Engel -->
+        <div class="card replied">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Jan Schütte-Engel</div>
+              <div class="card-meta">Craigslist (Yahoo) · Responded</div>
+              <div class="card-description">Postdoc at UC Berkeley · Wants hardwood floor room</div>
+            </div>
+            <span class="card-platform craigslist">Craigslist</span>
+          </div>
+          <div class="card-description">Phone: 217-904-8944 · Reply SENT 04/06 8:07 AM. Confirmed downstairs hardwood room, furnished, offered virtual tour.</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="status-badge">
+              <span class="status-dot green"></span>
+              Replied
+            </span>
+            <span class="assessment strong">STRONG Fit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SENT TAB -->
+    <div class="tab-content" id="sent">
+      <div class="scroll-container">
+        <!-- Jan Reply -->
+        <div class="card">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Jan Schütte-Engel</div>
+              <div class="card-meta">Craigslist (Yahoo Mail relay)</div>
+            </div>
+            <span class="small-badge">SENT</span>
+          </div>
+          <div class="card-description">Confirmed downstairs hardwood room, noted furnished, offered virtual tour.</div>
+          <div class="status-badge">
+            <span class="status-dot green"></span>
+            Sent 04/06 8:07 AM PT
+          </div>
+        </div>
+
+        <!-- Mike's SpareRoom Reply to Julian -->
+        <div class="card">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Julian Flanagan</div>
+              <div class="card-meta">SpareRoom</div>
+            </div>
+            <span class="small-badge">SENT</span>
+          </div>
+          <div class="card-description">Proposed Sunday virtual tour at 3:47 AM EDT.</div>
+          <div class="status-badge">
+            <span class="status-dot green"></span>
+            Sent 04/06 3:47 AM EDT (12:47 AM PT)
+          </div>
+        </div>
+
+        <!-- Mike's Yahoo Reply to Thomas -->
+        <div class="card">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Thomas Thuillier</div>
+              <div class="card-meta">Craigslist (Yahoo Mail)</div>
+            </div>
+            <span class="small-badge">SENT</span>
+          </div>
+          <div class="card-description">Response to Lawrence Berkeley Lab scientist inquiry.</div>
+          <div class="status-badge">
+            <span class="status-dot green"></span>
+            Sent 04/06 12:36 AM PT
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLATFORMS TAB -->
+    <div class="tab-content" id="platforms">
+      <div class="scroll-container">
+        <!-- SpareRoom -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">SpareRoom</span>
+            <span class="platform-status live">✓ LIVE</span>
+          </div>
+          <div class="platform-badge spareroom">UPGRADE EXPIRES 04/09 (3 days)</div>
+          <div class="platform-info">Julian Flanagan in pipeline · Active prospect</div>
+        </div>
+
+        <!-- Craigslist -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">Craigslist</span>
+            <span class="platform-status live">✓ LIVE</span>
+          </div>
+          <div class="platform-badge craigslist">23 DAYS OLD · RENEWAL ~MAY 1</div>
+          <div class="platform-info">Thomas Thuillier & Jan Schütte-Engel from this platform</div>
+        </div>
+
+        <!-- FB Marketplace -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">FB Marketplace</span>
+            <span class="platform-status warning">⚠ LIVE</span>
+          </div>
+          <div class="platform-badge fb">98 DAYS · 195 CLICKS · RENEWAL FAILED</div>
+          <div class="platform-info">Facebook bug preventing renewal · Manual intervention needed</div>
+        </div>
+
+        <!-- CalRentals -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">CalRentals</span>
+            <span class="platform-status live">✓ LIVE</span>
+          </div>
+          <div class="platform-badge" style="background-color: rgba(160, 160, 160, 0.1); color: var(--text-secondary);">7 DAYS · $30/MO PAID</div>
+          <div class="platform-info">No inquiries yet</div>
+        </div>
+
+        <!-- Zillow -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">Zillow</span>
+            <span class="platform-status warning">⚠ LIVE</span>
+          </div>
+          <div class="platform-badge zillow">BOT DETECTION ACTIVE</div>
+          <div class="platform-info">Automated checks blocked · Mike must check manually</div>
+        </div>
+
+        <!-- Apartments.com -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">Apartments.com</span>
+            <span class="platform-status error">❌ RETRY NEEDED</span>
+          </div>
+          <div class="platform-badge" style="background-color: rgba(239, 68, 68, 0.1); color: var(--status-red);">10 DAYS UNRESOLVED</div>
+          <div class="platform-info">Site error preventing posting · Requires manual troubleshooting</div>
+        </div>
+
+        <!-- FB Groups Berkeley -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">FB Groups Berkeley</span>
+            <span class="platform-status live">✓ LIVE</span>
+          </div>
+          <div class="platform-badge fb">4 GROUPS · 9 DAYS OLD</div>
+          <div class="platform-info">Posted 03/28 · Active in Berkeley housing communities</div>
+        </div>
+
+        <!-- FB Groups Bay Area -->
+        <div class="platform-card">
+          <div class="platform-header">
+            <span class="platform-name">FB Groups Bay Area</span>
+            <span class="platform-status warning">⚠ REPOST NEEDED</span>
+          </div>
+          <div class="platform-badge fb">3 GROUPS · REPOSTS PENDING</div>
+          <div class="platform-info">Bay Area Housing, SF Bay Area Housing, Oakland Housing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTIVITY TAB -->
+    <div class="tab-content" id="activity">
+      <div class="scroll-container">
+        <div class="activity-item">
+          <div class="activity-time">8:07 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Jan Schütte-Engel reply SENT via Yahoo Mail</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">8:00 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Morning sweep: all 4 inboxes checked, FB Marketplace renewal attempted (failed)</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">3:47 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Mike proposed Sunday tour to Julian via SpareRoom</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">12:36 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Mike replied to Thomas via Yahoo Mail</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">1:15 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Manual session: Thomas replied to, Jan draft completed, Julian iMessage sent</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">6:00 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Evening sweep completed</div>
+            <div class="activity-meta">04/05</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">10:47 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Julian replied with tour availability</div>
+            <div class="activity-meta">04/05</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">8:52 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Thomas Thuillier inquired via Craigslist</div>
+            <div class="activity-meta">04/05</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">8:23 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Jan Schütte-Engel inquired via Craigslist</div>
+            <div class="activity-meta">04/05</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- ===== JULIAN ===== -->
-  <div class="prospect" id="card-julian">
-    <div class="prospect-header">
-      <span class="prospect-name">Julian Flanagan</span>
-      <span class="prospect-tag tag-excellent">Excellent Fit</span>
-    </div>
-    <div class="prospect-platform">
-      <span class="plat-badge plat-spareroom">SpareRoom</span>
-      <span style="font-size:11px;color:var(--text3)">Biophysics PhD, Berkeley</span>
-    </div>
-    <div class="prospect-status" style="color:var(--red);">
-      <span class="sdot urgent"></span> WAITING — pick a virtual tour day
-    </div>
-    <div class="screening">
-      <div><b>Age:</b> 21</div>
-      <div><b>Move-in:</b> Aug 1, 2026</div>
-      <div><b>Lease:</b> 1 yr + renewal</div>
-      <div><b>Income:</b> PhD funding (5+ yr)</div>
-      <div><b>Vibe:</b> Quiet, tidy, friendly</div>
-      <div><b>Tour:</b> Virtual (FaceTime/Zoom)</div>
-    </div>
-
-    <button class="msg-toggle" onclick="toggleMsg(this)">
-      Their message <span class="arrow">▾</span>
+  <div class="nav-tabs">
+    <button class="nav-button active" data-nav="inbox">
+      <span class="nav-icon">📬</span>
+      <span>Inbox</span>
     </button>
-    <div class="msg-content">
-      <div class="msg-inner">
-        "Sounds great! Evenings also work for me - this week, I'm available any evening other than Thursday."
-        <div class="timestamp">Sat Apr 5, 10:47 AM EDT via SpareRoom</div>
-      </div>
-    </div>
-
-    <div class="day-picker" id="julian-days">
-      <button class="day-btn" onclick="pickDay(this,'Mon 7pm')">Mon<br><span style="font-size:10px;color:var(--text3)">7 PM</span></button>
-      <button class="day-btn" onclick="pickDay(this,'Tue 7pm')">Tue<br><span style="font-size:10px;color:var(--text3)">7 PM</span></button>
-      <button class="day-btn" onclick="pickDay(this,'Wed 7pm')">Wed<br><span style="font-size:10px;color:var(--text3)">7 PM</span></button>
-      <button class="day-btn disabled">Thu<br><span style="font-size:10px">Jayden</span></button>
-      <button class="day-btn disabled">Fri<br><span style="font-size:10px">Working</span></button>
-    </div>
-
-    <div class="send-via"><strong>Sends via:</strong> SpareRoom in-app messaging</div>
-
-    <div class="draft-area" id="julian-draft-area">
-      <div class="draft-label">Your Reply</div>
-      <div class="draft-text" id="julian-draft">Hey Julian, appreciate the flexibility! How about [DAY] evening around [TIME]? I'm currently down in SoCal so we'll do a virtual tour over FaceTime or Zoom — I'll send you the link beforehand. Looking forward to walking you through the place, I think it's going to check a lot of boxes for you.
-
-— Mike</div>
-      <textarea class="draft-edit" id="julian-edit"></textarea>
-      <div class="draft-note">Pick a day above to fill in the draft, then approve.</div>
-    </div>
-
-    <div class="actions">
-      <button class="btn btn-send" id="julian-send" disabled onclick="approveSend('julian')">Pick a Day First</button>
-      <button class="btn btn-edit-action" onclick="toggleEdit('julian')">Edit</button>
-    </div>
-  </div>
-
-  <!-- ===== JAN ===== -->
-  <div class="prospect" id="card-jan">
-    <div class="prospect-header">
-      <span class="prospect-name">Jan Schütte-Engel</span>
-      <span class="prospect-tag tag-strong">Strong Fit</span>
-    </div>
-    <div class="prospect-platform">
-      <span class="plat-badge plat-craigslist">Craigslist</span>
-      <span style="font-size:11px;color:var(--text3)">Postdoc, UC Berkeley</span>
-    </div>
-    <div class="prospect-status" style="color:var(--orange);">
-      <span class="sdot queued"></span> DRAFT READY — approve to send
-    </div>
-    <div class="screening">
-      <div><b>Income:</b> Postdoc funding (2-5 yr)</div>
-      <div><b>Interest:</b> Unfurnished, hardwood</div>
-      <div><b>Room:</b> Downstairs (hardwood)</div>
-      <div><b>Phone:</b> 217-904-8944</div>
-    </div>
-
-    <button class="msg-toggle" onclick="toggleMsg(this)">
-      Their message <span class="arrow">▾</span>
+    <button class="nav-button" data-nav="sent">
+      <span class="nav-icon">✉️</span>
+      <span>Sent</span>
     </button>
-    <div class="msg-content">
-      <div class="msg-inner">
-        "Hello! I'm a postdoc at UC Berkeley and am interested in the listed room. Is the unit still available? If so, would it be possible to schedule a tour? Quick question. I'm looking for an unfurnished room with hardwood floor. On the photos it looks like that one room has carpet and the other one hardwood floor. Is that correct?"
-        <div class="timestamp">Sun Apr 5, 8:23 PM via Craigslist relay → Yahoo</div>
-      </div>
-    </div>
-
-    <div class="send-via"><strong>Sends via:</strong> Yahoo Mail → Craigslist relay</div>
-
-    <div class="draft-area">
-      <div class="draft-label">Your Reply</div>
-      <div class="draft-text" id="jan-draft">Hi Jan, thanks for reaching out — yes, the room is still available! Good eye on the photos. The upstairs rooms have carpet and the downstairs room has hardwood floors. The rooms do come furnished, but I'd love to set up a tour so you can see the space and we can talk through what works. What days and times are best for you? We can do virtual or in-person, whichever is easier.
-
-Best,
-Mike
-(714) 612-0723</div>
-      <textarea class="draft-edit" id="jan-edit"></textarea>
-    </div>
-
-    <div class="actions">
-      <button class="btn btn-send" id="jan-send" onclick="approveSend('jan')">Approve &amp; Send via Yahoo</button>
-      <button class="btn btn-edit-action" onclick="toggleEdit('jan')">Edit</button>
-    </div>
-  </div>
-
-</div>
-
-<!-- ===== SENT TAB ===== -->
-<div class="tab-content" id="tab-sent">
-
-  <div class="prospect" id="card-thomas">
-    <div class="prospect-header">
-      <span class="prospect-name">Thomas Thuillier</span>
-      <span class="prospect-tag tag-excellent">Excellent Fit</span>
-    </div>
-    <div class="prospect-platform">
-      <span class="plat-badge plat-craigslist">Craigslist</span>
-      <span style="font-size:11px;color:var(--text3)">Staff Scientist, Lawrence Berkeley Lab</span>
-    </div>
-    <div class="prospect-status" style="color:var(--green);">
-      <span class="sdot sent"></span> SENT — Apr 6 at 12:36 AM via Yahoo
-    </div>
-    <div class="screening">
-      <div><b>Age:</b> 55</div>
-      <div><b>Move-in:</b> ~Aug 2026</div>
-      <div><b>Lease:</b> 1 yr (wife joins Aug 2027)</div>
-      <div><b>Income:</b> LBL staff (top-tier)</div>
-      <div><b>Phone:</b> 510-365-5300</div>
-      <div><b>Vibe:</b> Quiet, respectful</div>
-    </div>
-
-    <button class="msg-toggle" onclick="toggleMsg(this)">
-      Their message <span class="arrow">▾</span>
+    <button class="nav-button" data-nav="platforms">
+      <span class="nav-icon">🌐</span>
+      <span>Platforms</span>
     </button>
-    <div class="msg-content">
-      <div class="msg-inner">
-        "Hi, I'm interested by your posting. Is it possible to schedule a visit? about me: senior scientist hired at Lawrence berkeley lab (as staff scientist), French, 55. I'm seeking a shared house as I'm going to live alone for one year and I'm really not used to it (my wife will join me on August 2027). I'm a quiet and respectful being."
-        <div class="timestamp">Sun Apr 5, 8:52 PM via Craigslist relay → Yahoo</div>
-      </div>
-    </div>
-
-    <div class="draft-area" style="background:#0a1a0a; border-top-color:#1a3a1a;">
-      <div class="draft-label" style="color:var(--green);">Sent Response</div>
-      <div class="draft-text" style="color:#6b9a6b;">Confirmed room available, sent house details (400 sq ft, vaulted ceilings, furnished, walk to BART, $1,650 + utils), complimented his fit, offered virtual or in-person tour, provided phone number.</div>
-    </div>
-
-    <div class="actions">
-      <button class="btn btn-done">Sent ✓</button>
-    </div>
+    <button class="nav-button" data-nav="activity">
+      <span class="nav-icon">⏱️</span>
+      <span>Activity</span>
+    </button>
   </div>
 
-</div>
+  <script>
+    // Tab switching functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const navButtons = document.querySelectorAll('.nav-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-<!-- ===== PLATFORMS TAB ===== -->
-<div class="tab-content" id="tab-platforms">
+    function switchTab(tabName) {
+      // Hide all tabs
+      tabContents.forEach(tab => {
+        tab.classList.remove('active');
+      });
 
-  <div style="padding:4px 0 12px; font-size:12px; color:var(--text3);">
-    Active listings across 6 platforms with combined reach of 400K+
-  </div>
+      // Remove active state from all buttons
+      tabButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      navButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
 
-  <div class="prospect" style="padding:0;">
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">SpareRoom</div>
-        <div class="plat-channel">In-app messaging • Paid upgrade</div>
-      </div>
-      <div class="plat-stat live">LIVE<br><span style="font-size:10px;font-weight:400;">Expires Apr 9</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">Craigslist</div>
-        <div class="plat-channel">Email relay → Yahoo (mikedmote@yahoo.com)</div>
-      </div>
-      <div class="plat-stat live">LIVE<br><span style="font-size:10px;font-weight:400;">22 days • Renew ~May 1</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">Facebook Marketplace</div>
-        <div class="plat-channel">Messenger • 196 clicks</div>
-      </div>
-      <div class="plat-stat warn">RENEW<br><span style="font-size:10px;font-weight:400;">97 days old</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">CalRentals (Berkeley)</div>
-        <div class="plat-channel">Email • $30/mo paid listing</div>
-      </div>
-      <div class="plat-stat live">LIVE<br><span style="font-size:10px;font-weight:400;">6 days</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">Zillow</div>
-        <div class="plat-channel">Email • Bot detection active</div>
-      </div>
-      <div class="plat-stat warn">BLOCKED<br><span style="font-size:10px;font-weight:400;">Check manually</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">Apartments.com</div>
-        <div class="plat-channel">Email • Integration broken</div>
-      </div>
-      <div class="plat-stat down">DOWN<br><span style="font-size:10px;font-weight:400;">9 days</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">FB Groups (4 Berkeley)</div>
-        <div class="plat-channel">Direct posts • ~100K reach</div>
-      </div>
-      <div class="plat-stat live">LIVE<br><span style="font-size:10px;font-weight:400;">8 days old</span></div>
-    </div>
-    <div class="plat-card">
-      <div class="plat-info">
-        <div class="plat-name">FB Groups (3 Bay Area)</div>
-        <div class="plat-channel">Direct posts • ~334K reach</div>
-      </div>
-      <div class="plat-stat warn">REPOST<br><span style="font-size:10px;font-weight:400;">Needed</span></div>
-    </div>
-  </div>
+      // Show selected tab
+      const selectedTab = document.getElementById(tabName);
+      if (selectedTab) {
+        selectedTab.classList.add('active');
+      }
 
-</div>
+      // Add active state to corresponding buttons
+      const activeTabBtn = document.querySelector(`[data-tab="${tabName}"]`);
+      const activeNavBtn = document.querySelector(`[data-nav="${tabName}"]`);
+      if (activeTabBtn) activeTabBtn.classList.add('active');
+      if (activeNavBtn) activeNavBtn.classList.add('active');
 
-<!-- ===== TIMELINE TAB ===== -->
-<div class="tab-content" id="tab-timeline">
-
-  <div class="prospect" style="padding:0;">
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--blue);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 6, 1:15 AM</div>
-        <div class="tl-text">iMessage sent to <strong>Mike</strong> with Julian's tour options and calendar check (Mon–Wed open)</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--green);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 6, 12:36 AM</div>
-        <div class="tl-text">Reply sent to <strong>Thomas Thuillier</strong> via Yahoo → CL relay. Room confirmed, tour offered.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--orange);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 6, 12:30 AM</div>
-        <div class="tl-text">Root cause found: <strong>Craigslist emails go to Yahoo</strong>, not Gmail. Sweep config updated to check both.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--purple);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 5, 8:52 PM</div>
-        <div class="tl-text"><strong>Thomas Thuillier</strong> inquired via Craigslist. LBL staff scientist, 55, French. Excellent fit.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--purple);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 5, 8:23 PM</div>
-        <div class="tl-text"><strong>Jan Schütte-Engel</strong> inquired via Craigslist. Berkeley postdoc, wants unfurnished hardwood room.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--yellow);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 5, 10:47 AM</div>
-        <div class="tl-text"><strong>Julian Flanagan</strong> replied on SpareRoom — available any evening except Thursday for virtual tour.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--green);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 5, 8:00 AM</div>
-        <div class="tl-text">Morning sweep completed. All inboxes checked. Julian's reply detected and flagged.</div>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <span class="tl-dot" style="background:var(--green);"></span>
-      <div class="tl-body">
-        <div class="tl-time">Apr 4, 9:08 PM</div>
-        <div class="tl-text">Tour scheduling reply sent to <strong>Julian</strong> on SpareRoom. Offered flexible evenings/weekends.</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-</div>
-
-<script>
-// Tabs
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
-  });
-});
-
-// Collapsible messages
-function toggleMsg(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
-}
-
-// Day picker
-function pickDay(btn, day) {
-  document.querySelectorAll('#julian-days .day-btn').forEach(b => b.classList.remove('selected'));
-  btn.classList.add('selected');
-
-  const dayName = day.split(' ')[0];
-  const time = day.split(' ')[1];
-  const draft = document.getElementById('julian-draft');
-  draft.textContent = `Hey Julian, appreciate the flexibility! How about ${dayName} evening around ${time}? I'm currently down in SoCal so we'll do a virtual tour over FaceTime or Zoom — I'll send you the link beforehand. Looking forward to walking you through the place, I think it's going to check a lot of boxes for you.\n\n— Mike`;
-
-  const sendBtn = document.getElementById('julian-send');
-  sendBtn.disabled = false;
-  sendBtn.textContent = 'Approve & Send on SpareRoom';
-}
-
-// Edit toggle
-function toggleEdit(prospect) {
-  const draft = document.getElementById(prospect + '-draft');
-  const edit = document.getElementById(prospect + '-edit');
-  if (edit.style.display === 'none' || !edit.style.display) {
-    edit.value = draft.textContent;
-    edit.style.display = 'block';
-    draft.style.display = 'none';
-    edit.focus();
-    if (prospect === 'julian') {
-      document.getElementById('julian-send').disabled = false;
-      document.getElementById('julian-send').textContent = 'Approve & Send on SpareRoom';
+      // Save to localStorage
+      localStorage.setItem('activeTab', tabName);
     }
-  } else {
-    draft.textContent = edit.value;
-    edit.style.display = 'none';
-    draft.style.display = 'block';
-  }
-}
 
-// Approve
-function approveSend(prospect) {
-  const btn = document.getElementById(prospect + '-send');
-  const platform = prospect === 'julian' ? 'SpareRoom' : 'Yahoo';
-  btn.textContent = 'Queuing...';
-  btn.disabled = true;
+    // Add event listeners to tab buttons
+    tabButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        switchTab(button.dataset.tab);
+      });
+    });
 
-  setTimeout(() => {
-    btn.textContent = 'Queued for next sweep ✓';
-    btn.className = 'btn btn-queued';
+    // Add event listeners to nav buttons
+    navButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        switchTab(button.dataset.nav);
+      });
+    });
 
-    const card = document.getElementById('card-' + prospect);
-    const statusEl = card.querySelector('.prospect-status');
-    statusEl.style.color = 'var(--orange)';
-    statusEl.innerHTML = '<span class="sdot queued"></span> QUEUED — sends via ' + platform + ' on next sweep';
-  }, 800);
-}
+    // Restore saved tab on page load
+    window.addEventListener('load', () => {
+      const savedTab = localStorage.getItem('activeTab') || 'inbox';
+      switchTab(savedTab);
+    });
 
-// Update time
-const now = new Date();
-document.getElementById('nav-time').textContent = now.toLocaleDateString('en-US', {month:'short', day:'numeric'}) + ', ' + now.toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'});
-</script>
+    // Prevent double-tap zoom on buttons
+    document.addEventListener('touchstart', function(e) {
+      if (e.target.closest('.tab-button') || e.target.closest('.nav-button')) {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
+    // Log for debugging
+    console.log('Stuart House Command Center loaded');
+  </script>
 </body>
 </html>
