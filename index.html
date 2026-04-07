@@ -504,7 +504,7 @@
   <div class="header">
     <div class="header-title">Stuart House</div>
     <div class="header-subtitle">Command Center</div>
-    <div class="header-timestamp">Last updated: Mon Apr 6, 2026 8:07 AM PT</div>
+    <div class="header-timestamp">Last updated: Mon Apr 6, 2026 6:00 PM PT — Evening Sweep</div>
   </div>
 
   <div class="content-area">
@@ -530,23 +530,63 @@
     <!-- INBOX TAB -->
     <div class="tab-content active" id="inbox">
       <div class="scroll-container">
-        <!-- Julian Flanagan -->
+
+        <!-- Summary Stats -->
+        <div class="card" style="background: rgba(74,222,128,0.05); border-left-color: var(--status-green);">
+          <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <div style="text-align: center; flex: 1;">
+              <div style="font-size: 22px; font-weight: 700; color: var(--accent-green);">2</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Tours Confirmed</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="font-size: 22px; font-weight: 700; color: var(--accent-yellow);">2</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Awaiting Reply</div>
+            </div>
+            <div style="text-align: center; flex: 1;">
+              <div style="font-size: 22px; font-weight: 700; color: var(--accent-blue);">5</div>
+              <div style="font-size: 11px; color: var(--text-secondary);">Total Active</div>
+            </div>
+          </div>
+          <div style="font-size: 11px; color: var(--accent-green); text-align: center; margin-top: 4px;">🗓 Julius Fri 04/10 11am · Julian Sun 04/12 11am PST</div>
+        </div>
+
+        <!-- Julian Flanagan — TOUR CONFIRMED -->
         <div class="card replied">
           <div class="card-header">
             <div style="flex: 1;">
               <div class="card-name">Julian Flanagan</div>
-              <div class="card-meta">SpareRoom · Tour Scheduling</div>
+              <div class="card-meta">SpareRoom · 🗓 VIRTUAL TOUR CONFIRMED</div>
               <div class="card-description">Berkeley Biophysics PhD student, age 21 · Move date: Aug 1, 2026</div>
             </div>
             <span class="card-platform spareroom">SpareRoom</span>
           </div>
-          <div class="card-description">Mike proposed Sunday virtual tour at 3:47 AM EDT. Julian last active 3 hrs ago, hasn't read yet.</div>
+          <div class="card-description">Sunday 04/12 at 11am PST (FaceTime/Zoom). Julian replied 6:19 PM EDT: "Sunday works for me. I'm busy 4-5pm PST but otherwise free." Sweep confirmed 11am.</div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <span class="status-badge">
+            <span class="status-badge" style="background: rgba(74,222,128,0.15); color: var(--status-green);">
               <span class="status-dot green"></span>
-              Replied
+              Tour Confirmed — Sun 04/12 11am PST
             </span>
             <span class="assessment">EXCELLENT — #1 Priority</span>
+          </div>
+        </div>
+
+        <!-- Julius — TOUR CONFIRMED IN-PERSON -->
+        <div class="card replied">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Julius</div>
+              <div class="card-meta">Facebook Groups · 🗓 IN-PERSON TOUR CONFIRMED</div>
+              <div class="card-description">PhD student at UC Berkeley · Move date: Aug 1, 2026</div>
+            </div>
+            <span class="card-platform" style="background: rgba(74,222,128,0.15); color: var(--platform-fb-text);">FB Groups</span>
+          </div>
+          <div class="card-description">In-person tour confirmed Friday 04/10 ~11 AM at Stuart House. Mike works that afternoon — showing Julius around before work. iMessage: 510-859-5718.</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="status-badge" style="background: rgba(74,222,128,0.15); color: var(--status-green);">
+              <span class="status-dot green"></span>
+              Tour Confirmed — Fri 04/10 11am
+            </span>
+            <span class="assessment strong">STRONG Fit</span>
           </div>
         </div>
 
@@ -555,16 +595,16 @@
           <div class="card-header">
             <div style="flex: 1;">
               <div class="card-name">Thomas Thuillier</div>
-              <div class="card-meta">Craigslist (Yahoo) · Responded</div>
-              <div class="card-description">Senior Scientist, Lawrence Berkeley Lab, French, age 55 · 1 year lease (wife joins Aug 2027)</div>
+              <div class="card-meta">Craigslist (Yahoo) · Awaiting Reply</div>
+              <div class="card-description">Senior Scientist, Lawrence Berkeley Lab · French, age 55 · 1 year lease</div>
             </div>
             <span class="card-platform craigslist">Craigslist</span>
           </div>
-          <div class="card-description">Phone: 510-365-5300 · Mike replied 04/06 12:36 AM. Awaiting Thomas's response.</div>
+          <div class="card-description">Phone: 510-365-5300 · Mike replied 04/06 12:36 AM. No response yet — normal cadence.</div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             <span class="status-badge">
-              <span class="status-dot green"></span>
-              Replied
+              <span class="status-dot yellow"></span>
+              Awaiting Thomas's reply
             </span>
             <span class="assessment strong">EXCELLENT Fit</span>
           </div>
@@ -575,27 +615,65 @@
           <div class="card-header">
             <div style="flex: 1;">
               <div class="card-name">Jan Schütte-Engel</div>
-              <div class="card-meta">Craigslist (Yahoo) · Responded</div>
+              <div class="card-meta">Craigslist (Yahoo) · Awaiting Reply</div>
               <div class="card-description">Postdoc at UC Berkeley · Wants hardwood floor room</div>
             </div>
             <span class="card-platform craigslist">Craigslist</span>
           </div>
-          <div class="card-description">Phone: 217-904-8944 · Reply SENT 04/06 8:07 AM. Confirmed downstairs hardwood room, furnished, offered virtual tour.</div>
+          <div class="card-description">Phone: 217-904-8944 · Reply SENT 04/06 8:07 AM. Confirmed downstairs hardwood, furnished, virtual tour offered. No response yet — normal cadence.</div>
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             <span class="status-badge">
-              <span class="status-dot green"></span>
-              Replied
+              <span class="status-dot yellow"></span>
+              Awaiting Jan's reply
             </span>
             <span class="assessment strong">STRONG Fit</span>
           </div>
         </div>
+
+        <!-- Jack Boyd -->
+        <div class="card replied">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Jack Boyd</div>
+              <div class="card-meta">Facebook/Craigslist · Tour Scheduling</div>
+              <div class="card-description">Incoming grad student at UC Berkeley · Currently back east</div>
+            </div>
+            <span class="card-platform" style="background: rgba(74,222,128,0.15); color: var(--platform-fb-text);">iMessage</span>
+          </div>
+          <div class="card-description">iMessage: 805-453-2989 · Mike proposed Sunday virtual tour via iMessage. Awaiting Jack's reply. FaceTime/Zoom appropriate (currently out of state).</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <span class="status-badge">
+              <span class="status-dot yellow"></span>
+              Awaiting Jack's reply
+            </span>
+            <span class="assessment strong">STRONG Fit</span>
+          </div>
+        </div>
+
       </div>
     </div>
 
     <!-- SENT TAB -->
     <div class="tab-content" id="sent">
       <div class="scroll-container">
-        <!-- Jan Reply -->
+
+        <!-- Evening: Julian Tour Confirmation -->
+        <div class="card replied">
+          <div class="card-header">
+            <div style="flex: 1;">
+              <div class="card-name">Julian Flanagan — Tour Confirmed ✅</div>
+              <div class="card-meta">SpareRoom · Evening Sweep</div>
+            </div>
+            <span class="small-badge">SENT</span>
+          </div>
+          <div class="card-description">"Perfect! Let's do Sunday at 11am PST — I'll send you a FaceTime or Zoom link that morning. Really looking forward to showing you the place!"</div>
+          <div class="status-badge" style="background: rgba(74,222,128,0.1); color: var(--status-green);">
+            <span class="status-dot green"></span>
+            Sent 04/06 ~6 PM PT · Virtual tour Sun 04/12 11am PST locked
+          </div>
+        </div>
+
+        <!-- Morning: Jan Reply -->
         <div class="card">
           <div class="card-header">
             <div style="flex: 1;">
@@ -611,7 +689,7 @@
           </div>
         </div>
 
-        <!-- Mike's SpareRoom Reply to Julian -->
+        <!-- Mike's SpareRoom Reply to Julian (Sunday proposal) -->
         <div class="card">
           <div class="card-header">
             <div style="flex: 1;">
@@ -620,7 +698,7 @@
             </div>
             <span class="small-badge">SENT</span>
           </div>
-          <div class="card-description">Proposed Sunday virtual tour at 3:47 AM EDT.</div>
+          <div class="card-description">Mike proposed Sunday virtual tour: "Is sunday possible? Im off all day. let me know what times work."</div>
           <div class="status-badge">
             <span class="status-dot green"></span>
             Sent 04/06 3:47 AM EDT (12:47 AM PT)
@@ -636,7 +714,7 @@
             </div>
             <span class="small-badge">SENT</span>
           </div>
-          <div class="card-description">Response to Lawrence Berkeley Lab scientist inquiry.</div>
+          <div class="card-description">Response to Lawrence Berkeley Lab senior scientist inquiry — confirmed room, offered tour.</div>
           <div class="status-badge">
             <span class="status-dot green"></span>
             Sent 04/06 12:36 AM PT
@@ -652,10 +730,10 @@
         <div class="platform-card">
           <div class="platform-header">
             <span class="platform-name">SpareRoom</span>
-            <span class="platform-status live">✓ LIVE</span>
+            <span class="platform-status warning">⚠ LIVE</span>
           </div>
-          <div class="platform-badge spareroom">UPGRADE EXPIRES 04/09 (3 days)</div>
-          <div class="platform-info">Julian Flanagan in pipeline · Active prospect</div>
+          <div class="platform-badge spareroom">UPGRADE EXPIRES 04/09 — 3 DAYS · DECISION NEEDED</div>
+          <div class="platform-info">Julian tour confirmed Sun 04/12 · If Julian converts, no renewal needed · If not, renew ($) — best platform for lead quality</div>
         </div>
 
         <!-- Craigslist -->
@@ -733,10 +811,51 @@
     <!-- ACTIVITY TAB -->
     <div class="tab-content" id="activity">
       <div class="scroll-container">
+
+        <div class="activity-item" style="border-left: 3px solid var(--status-green);">
+          <div class="activity-time">~6:00 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">🗓 Julian Flanagan virtual tour CONFIRMED — Sunday 04/12 11am PST · Sweep replied on SpareRoom</div>
+            <div class="activity-meta">04/06 · Evening Sweep</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">~6 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Evening sweep: all 4 inboxes checked · No new FB Marketplace messages · Thomas & Jan no reply yet (normal)</div>
+            <div class="activity-meta">04/06 · Evening Sweep</div>
+          </div>
+        </div>
+
+        <div class="activity-item" style="border-left: 3px solid var(--status-green);">
+          <div class="activity-time">~12:45 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">🗓 Julius in-person tour CONFIRMED — Friday 04/10 ~11am at Stuart House</div>
+            <div class="activity-meta">04/06 · iMessage</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">11:20 AM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Jack Boyd inquired via iMessage (805-453-2989) · Mike proposed Sunday virtual tour</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
+        <div class="activity-item">
+          <div class="activity-time">12:03 PM</div>
+          <div style="flex: 1;">
+            <div class="activity-description">Julius inquired via iMessage (510-859-5718) · Tour scheduling began</div>
+            <div class="activity-meta">04/06</div>
+          </div>
+        </div>
+
         <div class="activity-item">
           <div class="activity-time">8:07 AM</div>
           <div style="flex: 1;">
-            <div class="activity-description">Jan Schütte-Engel reply SENT via Yahoo Mail</div>
+            <div class="activity-description">Jan Schütte-Engel reply SENT via Yahoo Mail — confirmed hardwood, furnished, virtual tour offered</div>
             <div class="activity-meta">04/06</div>
           </div>
         </div>
@@ -744,7 +863,7 @@
         <div class="activity-item">
           <div class="activity-time">8:00 AM</div>
           <div style="flex: 1;">
-            <div class="activity-description">Morning sweep: all 4 inboxes checked, FB Marketplace renewal attempted (failed)</div>
+            <div class="activity-description">Morning sweep: all 4 inboxes checked · FB Marketplace renewal attempted (failed)</div>
             <div class="activity-meta">04/06</div>
           </div>
         </div>
@@ -760,31 +879,15 @@
         <div class="activity-item">
           <div class="activity-time">12:36 AM</div>
           <div style="flex: 1;">
-            <div class="activity-description">Mike replied to Thomas via Yahoo Mail</div>
+            <div class="activity-description">Mike replied to Thomas Thuillier via Yahoo Mail</div>
             <div class="activity-meta">04/06</div>
-          </div>
-        </div>
-
-        <div class="activity-item">
-          <div class="activity-time">1:15 AM</div>
-          <div style="flex: 1;">
-            <div class="activity-description">Manual session: Thomas replied to, Jan draft completed, Julian iMessage sent</div>
-            <div class="activity-meta">04/06</div>
-          </div>
-        </div>
-
-        <div class="activity-item">
-          <div class="activity-time">6:00 PM</div>
-          <div style="flex: 1;">
-            <div class="activity-description">Evening sweep completed</div>
-            <div class="activity-meta">04/05</div>
           </div>
         </div>
 
         <div class="activity-item">
           <div class="activity-time">10:47 AM</div>
           <div style="flex: 1;">
-            <div class="activity-description">Julian replied with tour availability</div>
+            <div class="activity-description">Julian replied with tour availability — any evening except Thursday</div>
             <div class="activity-meta">04/05</div>
           </div>
         </div>
@@ -792,7 +895,7 @@
         <div class="activity-item">
           <div class="activity-time">8:52 PM</div>
           <div style="flex: 1;">
-            <div class="activity-description">Thomas Thuillier inquired via Craigslist</div>
+            <div class="activity-description">Thomas Thuillier (LBL Senior Scientist) inquired via Craigslist</div>
             <div class="activity-meta">04/05</div>
           </div>
         </div>
@@ -800,7 +903,7 @@
         <div class="activity-item">
           <div class="activity-time">8:23 PM</div>
           <div style="flex: 1;">
-            <div class="activity-description">Jan Schütte-Engel inquired via Craigslist</div>
+            <div class="activity-description">Jan Schütte-Engel (UC Berkeley Postdoc) inquired via Craigslist</div>
             <div class="activity-meta">04/05</div>
           </div>
         </div>
