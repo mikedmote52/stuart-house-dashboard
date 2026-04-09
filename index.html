@@ -1,1124 +1,1097 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stuart House - Rental Management Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-primary: #0f1419;
-            --bg-secondary: #1a1f26;
-            --bg-tertiary: #242a33;
-            --text-primary: #e4e6eb;
-            --text-secondary: #8a8d93;
-            --text-muted: #5f6368;
-            --border-color: #3a3f47;
-            --accent-blue: #3b82f6;
-            --accent-purple: #a855f7;
-            --accent-green: #10b981;
-            --accent-yellow: #f59e0b;
-            --accent-red: #ef4444;
-            --success: #10b981;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --platform-spareroom: #3b82f6;
-            --platform-craigslist: #a855f7;
-            --platform-facebook: #10b981;
-            --platform-imessage: #10b981;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* HEADER */
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: var(--bg-primary);
-            border-bottom: 1px solid var(--border-color);
-            padding: 16px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .header-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .header-address {
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 2px;
-        }
-
-        .header-timestamp {
-            font-size: 12px;
-            color: var(--text-muted);
-            white-space: nowrap;
-        }
-
-        /* TABS */
-        .tabs {
-            display: flex;
-            gap: 8px;
-            padding: 12px 20px;
-            border-bottom: 1px solid var(--border-color);
-            background: var(--bg-primary);
-            overflow-x: auto;
-        }
-
-        .tab {
-            padding: 8px 16px;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
-            white-space: nowrap;
-        }
-
-        .tab:hover {
-            color: var(--text-primary);
-        }
-
-        .tab.active {
-            color: var(--accent-blue);
-            border-bottom-color: var(--accent-blue);
-        }
-
-        /* CONTAINER */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* STATS */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 16px;
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-top: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* PROSPECT CARD */
-        .prospect-card {
-            background: var(--bg-secondary);
-            border: 2px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 16px;
-            transition: all 0.2s;
-        }
-
-        .prospect-card:hover {
-            border-color: var(--accent-blue);
-            background: var(--bg-tertiary);
-        }
-
-        .prospect-card.urgent {
-            border-color: var(--danger);
-            background: rgba(239, 68, 68, 0.05);
-        }
-
-        .prospect-card.warning {
-            border-color: var(--warning);
-            background: rgba(245, 158, 11, 0.05);
-        }
-
-        .prospect-card.success {
-            border-color: var(--success);
-            background: rgba(16, 185, 129, 0.05);
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .card-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .prospect-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .prospect-role {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        .card-badges {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .badge-status {
-            background: rgba(239, 68, 68, 0.15);
-            color: #fca5a5;
-        }
-
-        .badge-status.warning {
-            background: rgba(245, 158, 11, 0.15);
-            color: #fcd34d;
-        }
-
-        .badge-status.success {
-            background: rgba(16, 185, 129, 0.15);
-            color: #6ee7b7;
-        }
-
-        .badge-fit {
-            background: var(--bg-tertiary);
-            color: var(--text-secondary);
-        }
-
-        .card-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 16px;
-            margin-bottom: 16px;
-            font-size: 13px;
-        }
-
-        .detail-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .detail-label {
-            color: var(--text-muted);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-
-        .detail-value {
-            color: var(--text-primary);
-            font-weight: 500;
-        }
-
-        .detail-value.phone {
-            font-family: 'Courier New', monospace;
-        }
-
-        /* MESSAGE / NOTES SECTION */
-        .card-message {
-            background: var(--bg-primary);
-            border-left: 3px solid var(--accent-blue);
-            padding: 12px;
-            border-radius: 4px;
-            margin-bottom: 16px;
-            font-size: 13px;
-            line-height: 1.5;
-        }
-
-        .message-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .message-label {
-            font-weight: 600;
-            color: var(--text-secondary);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .message-toggle {
-            color: var(--text-muted);
-            font-size: 14px;
-            transition: transform 0.2s;
-        }
-
-        .message-toggle.collapsed {
-            transform: rotate(-90deg);
-        }
-
-        .message-content {
-            color: var(--text-primary);
-        }
-
-        .message-content.hidden {
-            display: none;
-        }
-
-        .message-timestamp {
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 8px;
-        }
-
-        .card-notes {
-            background: var(--bg-primary);
-            border-left: 3px solid var(--accent-yellow);
-            padding: 12px;
-            border-radius: 4px;
-            font-size: 13px;
-            margin-bottom: 16px;
-        }
-
-        /* ACTION BUTTONS */
-        .card-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 10px 16px;
-            border: none;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .btn-primary {
-            background: var(--accent-blue);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #2563eb;
-        }
-
-        .btn-secondary {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background: var(--border-color);
-        }
-
-        /* OPEN CONVERSATION BUTTON - PROMINENT */
-        .btn-conversation {
-            background: linear-gradient(135deg, var(--accent-blue) 0%, #2563eb 100%);
-            color: white;
-            padding: 11px 18px;
-            font-weight: 700;
-            font-size: 13px;
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-conversation:hover {
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
-            transform: translateY(-1px);
-        }
-
-        .btn-conversation.purple {
-            background: linear-gradient(135deg, var(--accent-purple) 0%, #9333ea 100%);
-            box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
-        }
-
-        .btn-conversation.purple:hover {
-            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.4);
-        }
-
-        .btn-conversation.green {
-            background: linear-gradient(135deg, var(--accent-green) 0%, #059669 100%);
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-        }
-
-        .btn-conversation.green:hover {
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
-        }
-
-        .btn-conversation.imessage {
-            background: linear-gradient(135deg, #34c759 0%, #30b0c0 100%);
-            box-shadow: 0 2px 8px rgba(52, 199, 89, 0.3);
-        }
-
-        .btn-conversation.imessage:hover {
-            box-shadow: 0 4px 12px rgba(52, 199, 89, 0.4);
-        }
-
-        /* PLATFORMS GRID */
-        .platforms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
-        }
-
-        .platform-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.2s;
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
-        }
-
-        .platform-card:hover {
-            border-color: var(--accent-blue);
-            background: var(--bg-tertiary);
-            transform: translateY(-2px);
-        }
-
-        .platform-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .platform-status {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            margin-bottom: 12px;
-        }
-
-        .status-indicator {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .status-indicator.live {
-            background: var(--success);
-        }
-
-        .status-indicator.warning {
-            background: var(--warning);
-        }
-
-        .status-indicator.error {
-            background: var(--danger);
-        }
-
-        .platform-details {
-            font-size: 12px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* ACTIVITY TIMELINE */
-        .activity-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .activity-item {
-            display: flex;
-            gap: 16px;
-            padding: 16px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-        }
-
-        .activity-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--accent-blue);
-            margin-top: 4px;
-            flex-shrink: 0;
-        }
-
-        .activity-content {
-            flex: 1;
-        }
-
-        .activity-time {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .activity-description {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin-top: 4px;
-        }
-
-        /* TAB CONTENT */
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-            .container {
-                padding: 16px;
-            }
-
-            .header {
-                padding: 12px 16px;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .header-left {
-                width: 100%;
-            }
-
-            .header-timestamp {
-                width: 100%;
-            }
-
-            .card-details {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .platforms-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .card-actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .btn-conversation {
-                width: 100%;
-            }
-
-            .tabs {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-        }
-
-        /* UTILITIES */
-        .text-muted {
-            color: var(--text-muted);
-        }
-
-        .external-link::after {
-            content: ' ↗';
-        }
-
-        h2 {
-            margin-bottom: 24px;
-            font-size: 18px;
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Stuart Dash" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Stuart Dash - Rental Manager</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      padding-top: env(safe-area-inset-top);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    main {
+      flex: 1;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      padding: 16px;
+      padding-bottom: 80px;
+      width: 100%;
+    }
+
+    /* Header & Update Status */
+    .header {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .header-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .header-subtitle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+
+    .header-updated {
+      font-size: 11px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .header-updated.stale {
+      color: #f97316;
+    }
+
+    .header-updated.very-stale {
+      color: #ef4444;
+    }
+
+    .refresh-indicator {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #22c55e;
+      animation: pulse 2s infinite;
+    }
+
+    .refresh-indicator.refreshing {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Room Pills */
+    .rooms {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .room-pill {
+      flex: 1;
+      min-width: 140px;
+      padding: 12px;
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .room-pill:active {
+      transform: scale(0.98);
+    }
+
+    .room-pill-name {
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .room-pill-meta {
+      font-size: 11px;
+      color: #888;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      padding: 16px;
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-card.live .stat-number {
+      color: #22c55e;
+    }
+
+    .stat-card.pending .stat-number {
+      color: #eab308;
+    }
+
+    .stat-card.prospects .stat-number {
+      color: #3b82f6;
+    }
+
+    .stat-card.actions .stat-number {
+      color: #f97316;
+    }
+
+    /* Prospect Spotlight */
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #888;
+      margin: 24px 0 12px 0;
+      padding-top: 12px;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .prospects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .prospect-card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .prospect-card:active {
+      transform: scale(0.98);
+    }
+
+    .prospect-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .prospect-name {
+      font-size: 16px;
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .prospect-status-badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .prospect-status-badge.screening {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    .prospect-status-badge.responded {
+      background: #eab308;
+      color: #000;
+    }
+
+    .prospect-status-badge.qualified {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .prospect-profile {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .prospect-match {
+      margin-bottom: 12px;
+    }
+
+    .prospect-match-label {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .match-bar {
+      width: 100%;
+      height: 6px;
+      background: #1a1a1a;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .match-bar-fill {
+      height: 100%;
+      background: #22c55e;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    .match-bar-fill.ok {
+      background: #eab308;
+    }
+
+    .match-bar-fill.poor {
+      background: #ef4444;
+    }
+
+    .prospect-message {
+      background: #0a0a0a;
+      border-left: 3px solid #3b82f6;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-style: italic;
+      color: #bbb;
+      line-height: 1.4;
+    }
+
+    .prospect-conversation {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 12px;
+      padding: 8px;
+      background: #0a0a0a;
+      border-radius: 4px;
+    }
+
+    .prospect-action {
+      font-size: 12px;
+      color: #f97316;
+      font-weight: 500;
+      padding: 8px;
+      background: rgba(249, 115, 22, 0.1);
+      border-radius: 4px;
+      border-left: 2px solid #f97316;
+    }
+
+    /* What's New Section */
+    .whats-new {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .whats-new-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #22c55e;
+    }
+
+    .whats-new-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .whats-new-item {
+      font-size: 12px;
+      display: flex;
+      gap: 8px;
+      padding: 8px 0;
+      line-height: 1.4;
+    }
+
+    .whats-new-item-icon {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .whats-new-item.success .whats-new-item-icon {
+      color: #22c55e;
+    }
+
+    .whats-new-item.failure .whats-new-item-icon {
+      color: #ef4444;
+    }
+
+    .whats-new-item-text {
+      flex: 1;
+      color: #aaa;
+    }
+
+    /* Actions Section */
+    .actions-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .action-item {
+      background: #141414;
+      border-left: 3px solid #f97316;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .action-item:active {
+      transform: translateX(2px);
+    }
+
+    .action-priority {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #f97316;
+    }
+
+    .action-text {
+      color: #aaa;
+      line-height: 1.4;
+    }
+
+    /* Listings Accordion */
+    .listings-section {
+      margin-bottom: 24px;
+    }
+
+    .accordion-group {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .accordion-header {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      background: #141414;
+      border: none;
+      width: 100%;
+      font-size: 13px;
+      font-weight: 500;
+      color: #e5e5e5;
+      transition: all 0.2s ease;
+    }
+
+    .accordion-header:active {
+      background: #1a1a1a;
+    }
+
+    .accordion-header .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .accordion-header .status-dot.live {
+      background: #22c55e;
+    }
+
+    .accordion-header .status-dot.pending {
+      background: #eab308;
+    }
+
+    .accordion-header .status-dot.warn {
+      background: #f97316;
+    }
+
+    .accordion-header .status-dot.error {
+      background: #ef4444;
+    }
+
+    .accordion-header .status-dot.inactive {
+      background: #666;
+    }
+
+    .accordion-toggle {
+      font-size: 10px;
+      color: #666;
+      transition: transform 0.2s ease;
+    }
+
+    .accordion-toggle.open {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: #0a0a0a;
+    }
+
+    .accordion-content.open {
+      max-height: 500px;
+    }
+
+    .accordion-detail {
+      padding: 12px;
+      font-size: 11px;
+      color: #888;
+      line-height: 1.5;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .facebook-groups-summary {
+      font-size: 12px;
+      color: #aaa;
+      padding: 8px 0;
+    }
+
+    /* System Status */
+    .system-status {
+      margin-bottom: 24px;
+    }
+
+    .system-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 4px;
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+
+    .system-item-name {
+      font-weight: 500;
+    }
+
+    .system-item-status {
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .system-item-status.live {
+      background: rgba(34, 197, 94, 0.2);
+      color: #22c55e;
+    }
+
+    .system-item-status.error {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+    }
+
+    .system-item-status.pending {
+      background: rgba(235, 179, 8, 0.2);
+      color: #eab308;
+    }
+
+    /* Bottom Navigation */
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      padding-bottom: env(safe-area-inset-bottom);
+      background: #0a0a0a;
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    nav a {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #666;
+      font-size: 11px;
+      text-align: center;
+      transition: color 0.2s ease;
+    }
+
+    nav a:active {
+      color: #22c55e;
+    }
+
+    /* Pull to Refresh */
+    .pull-to-refresh {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 20px 16px;
+      color: #666;
+      font-size: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .pull-to-refresh.pulling {
+      color: #22c55e;
+    }
+
+    /* Empty State */
+    .empty-state {
+      padding: 24px 16px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+    }
+
+    /* Loading/Error States */
+    .error-message {
+      padding: 12px;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid #ef4444;
+      border-radius: 4px;
+      color: #ef4444;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- HEADER -->
-    <div class="header">
-        <div class="header-left">
-            <div>
-                <div class="header-title">Stuart House</div>
-                <div class="header-address">2322 Stuart St, South Berkeley</div>
-            </div>
-        </div>
-        <div class="header-timestamp">Updated Apr 7, 2026 • 12:30 PM PT</div>
-    </div>
-
-    <!-- TABS -->
-    <div class="tabs">
-        <button class="tab active" data-tab="inbox">Inbox</button>
-        <button class="tab" data-tab="tours">Tours</button>
-        <button class="tab" data-tab="sent">Sent</button>
-        <button class="tab" data-tab="platforms">Platforms</button>
-        <button class="tab" data-tab="activity">Activity</button>
-    </div>
-
+  <main>
     <div class="container">
-        <!-- INBOX TAB -->
-        <div id="inbox" class="tab-content active">
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-value">1</div>
-                    <div class="stat-label">Needs Reply</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">2</div>
-                    <div class="stat-label">Tours This Week</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">1</div>
-                    <div class="stat-label">Awaiting Confirmation</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">5</div>
-                    <div class="stat-label">Total Active</div>
-                </div>
-            </div>
-
-            <!-- Jan Schütte-Engel -->
-            <div class="prospect-card urgent">
-                <div class="card-header">
-                    <div class="card-title">
-                        <div>
-                            <div class="prospect-name">Jan Schütte-Engel</div>
-                            <div class="prospect-role">Postdoc, UC Berkeley</div>
-                        </div>
-                    </div>
-                    <div class="card-badges">
-                        <span class="badge badge-status">NEEDS REPLY</span>
-                        <span class="badge badge-fit">Strong Fit</span>
-                    </div>
-                </div>
-
-                <div class="card-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Platform</div>
-                        <div class="detail-value">Craigslist (via Yahoo)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Income</div>
-                        <div class="detail-value">Postdoc funding (2-5 yr)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Interest</div>
-                        <div class="detail-value">Unfurnished, hardwood</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Phone</div>
-                        <div class="detail-value phone">217-904-8944</div>
-                    </div>
-                </div>
-
-                <div class="card-message">
-                    <div class="message-header" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.message-toggle').classList.toggle('collapsed')">
-                        <span class="message-label">Latest Message</span>
-                        <span class="message-toggle">▼</span>
-                    </div>
-                    <div class="message-content">
-                        "Who lives in the apartment? The ad says two upstairs rooms are free — does that mean the downstairs hardwood room is NOT available?"
-                        <div class="message-timestamp">Apr 6, 10:14 PM via Craigslist relay → Yahoo</div>
-                    </div>
-                </div>
-
-                <div class="card-notes">
-                    <strong>📝 Draft Note:</strong> Needs Mike's input on room availability and housemate details before replying
-                </div>
-
-                <div class="card-actions">
-                    <a href="https://mail.yahoo.com/d/search/keyword=reply.craigslist.org" target="_blank" class="btn btn-conversation purple external-link">
-                        Open Conversation
-                    </a>
-                    <a href="tel:217-904-8944" class="btn btn-secondary">Call (217) 904-8944</a>
-                </div>
-            </div>
-
-            <!-- Jack Boyd -->
-            <div class="prospect-card warning">
-                <div class="card-header">
-                    <div class="card-title">
-                        <div>
-                            <div class="prospect-name">Jack Boyd</div>
-                            <div class="prospect-role">Incoming Berkeley grad student (back east)</div>
-                        </div>
-                    </div>
-                    <div class="card-badges">
-                        <span class="badge badge-status warning">AWAITING CONFIRMATION</span>
-                        <span class="badge badge-fit">Strong Fit</span>
-                    </div>
-                </div>
-
-                <div class="card-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Platform</div>
-                        <div class="detail-value">iMessage / Facebook</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Interest</div>
-                        <div class="detail-value">400 sqft room, virtual tour</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Tour</div>
-                        <div class="detail-value">Sun 04/12 (pending)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Phone</div>
-                        <div class="detail-value phone">805-453-2989</div>
-                    </div>
-                </div>
-
-                <div class="card-message">
-                    <div class="message-header" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.message-toggle').classList.toggle('collapsed')">
-                        <span class="message-label">Latest Status</span>
-                        <span class="message-toggle">▼</span>
-                    </div>
-                    <div class="message-content">
-                        Interested in virtual tour. Mike proposed Sunday 04/12 — awaiting Jack's confirmation.
-                        <div class="message-timestamp">Apr 6</div>
-                    </div>
-                </div>
-
-                <div class="card-actions">
-                    <a href="sms://805-453-2989" class="btn btn-conversation imessage external-link">
-                        Open Conversation
-                    </a>
-                    <a href="tel:805-453-2989" class="btn btn-secondary">Call (805) 453-2989</a>
-                </div>
-            </div>
+      <!-- Header with Update Status -->
+      <div class="header">
+        <div>
+          <h1 class="header-title">Stuart Dash</h1>
+          <p class="header-subtitle" id="property-subtitle">Loading...</p>
+          <div class="header-updated">
+            <span class="refresh-indicator" id="refresh-dot"></span>
+            <span id="updated-text">Loading...</span>
+          </div>
         </div>
+      </div>
 
-        <!-- TOURS TAB -->
-        <div id="tours" class="tab-content">
-            <!-- Julius -->
-            <div class="prospect-card success">
-                <div class="card-header">
-                    <div class="card-title">
-                        <div>
-                            <div class="prospect-name">Julius</div>
-                            <div class="prospect-role">Berkeley PhD student</div>
-                        </div>
-                    </div>
-                    <div class="card-badges">
-                        <span class="badge badge-status success">TOUR CONFIRMED</span>
-                        <span class="badge badge-fit">Strong Fit</span>
-                    </div>
-                </div>
+      <!-- Room Pills -->
+      <div class="rooms" id="rooms-container"></div>
 
-                <div class="card-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Platform</div>
-                        <div class="detail-value">Facebook Groups / iMessage</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Move-In</div>
-                        <div class="detail-value">Aug 1, 2026</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Tour</div>
-                        <div class="detail-value">Fri 04/10 ~11 AM</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Phone</div>
-                        <div class="detail-value phone">510-859-5718</div>
-                    </div>
-                </div>
-
-                <div class="card-message">
-                    <div class="message-header" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.message-toggle').classList.toggle('collapsed')">
-                        <span class="message-label">Tour Details</span>
-                        <span class="message-toggle">▼</span>
-                    </div>
-                    <div class="message-content">
-                        In-person tour confirmed for Friday 04/10 at approximately 11 AM at Stuart House. Mike will be showing Julius before he heads to work.
-                    </div>
-                </div>
-
-                <div class="card-actions">
-                    <a href="sms://510-859-5718" class="btn btn-conversation green external-link">
-                        Open Conversation
-                    </a>
-                    <a href="tel:510-859-5718" class="btn btn-secondary">Call (510) 859-5718</a>
-                </div>
-            </div>
-
-            <!-- Julian Flanagan -->
-            <div class="prospect-card success">
-                <div class="card-header">
-                    <div class="card-title">
-                        <div>
-                            <div class="prospect-name">Julian Flanagan</div>
-                            <div class="prospect-role">Biophysics PhD, Berkeley, age 21</div>
-                        </div>
-                    </div>
-                    <div class="card-badges">
-                        <span class="badge badge-status success">TOUR CONFIRMED</span>
-                        <span class="badge badge-fit">Excellent Fit</span>
-                    </div>
-                </div>
-
-                <div class="card-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Platform</div>
-                        <div class="detail-value">SpareRoom</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Move-In</div>
-                        <div class="detail-value">Aug 1, 2026</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Lease</div>
-                        <div class="detail-value">1 yr + renewal</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Income</div>
-                        <div class="detail-value">PhD funding (5+ yr)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Vibe</div>
-                        <div class="detail-value">Quiet, tidy, friendly</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Tour</div>
-                        <div class="detail-value">Sun 04/12, 11 AM PST</div>
-                    </div>
-                </div>
-
-                <div class="card-message">
-                    <div class="message-header" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.message-toggle').classList.toggle('collapsed')">
-                        <span class="message-label">Tour Details</span>
-                        <span class="message-toggle">▼</span>
-                    </div>
-                    <div class="message-content">
-                        Virtual tour confirmed for Sunday 04/12 at 11 AM PST via FaceTime/Zoom. Julian is busy 4-5 PM PST. Send FaceTime/Zoom link Sunday morning.
-                    </div>
-                </div>
-
-                <div class="card-actions">
-                    <a href="https://www.spareroom.com/roommate/mythreads_beta.pl?thread_id=106600258_103057608" target="_blank" class="btn btn-conversation external-link">
-                        Open Conversation
-                    </a>
-                </div>
-            </div>
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card live">
+          <div class="stat-number" id="stat-live">0</div>
+          <div class="stat-label">Live</div>
         </div>
-
-        <!-- SENT TAB -->
-        <div id="sent" class="tab-content">
-            <!-- Thomas Thuillier -->
-            <div class="prospect-card success">
-                <div class="card-header">
-                    <div class="card-title">
-                        <div>
-                            <div class="prospect-name">Thomas Thuillier</div>
-                            <div class="prospect-role">Staff Scientist, Lawrence Berkeley Lab, French, age 55</div>
-                        </div>
-                    </div>
-                    <div class="card-badges">
-                        <span class="badge badge-status success">RESPONDED</span>
-                        <span class="badge badge-fit">Excellent Fit</span>
-                    </div>
-                </div>
-
-                <div class="card-details">
-                    <div class="detail-item">
-                        <div class="detail-label">Platform</div>
-                        <div class="detail-value">Craigslist (via Yahoo)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Move-In</div>
-                        <div class="detail-value">~Aug 2026</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Lease</div>
-                        <div class="detail-value">1 yr (wife joins Aug 2027)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Income</div>
-                        <div class="detail-value">LBL staff (top-tier)</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Phone</div>
-                        <div class="detail-value phone">510-365-5300</div>
-                    </div>
-                    <div class="detail-item">
-                        <div class="detail-label">Status</div>
-                        <div class="detail-value">Awaiting his reply</div>
-                    </div>
-                </div>
-
-                <div class="card-message">
-                    <div class="message-header" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.message-toggle').classList.toggle('collapsed')">
-                        <span class="message-label">Our Message</span>
-                        <span class="message-toggle">▼</span>
-                    </div>
-                    <div class="message-content">
-                        Initial inquiry sent. Thomas replied on Apr 6, 12:36 AM. Awaiting his response to our follow-up.
-                        <div class="message-timestamp">Sent Apr 6, 12:36 AM</div>
-                    </div>
-                </div>
-
-                <div class="card-actions">
-                    <a href="https://mail.yahoo.com/d/search/keyword=reply.craigslist.org" target="_blank" class="btn btn-conversation purple external-link">
-                        Open Conversation
-                    </a>
-                    <a href="tel:510-365-5300" class="btn btn-secondary">Call (510) 365-5300</a>
-                </div>
-            </div>
+        <div class="stat-card pending">
+          <div class="stat-number" id="stat-pending">0</div>
+          <div class="stat-label">Pending</div>
         </div>
-
-        <!-- PLATFORMS TAB -->
-        <div id="platforms" class="tab-content">
-            <h2>Listing Platforms & Management</h2>
-            <div class="platforms-grid">
-                <!-- SpareRoom -->
-                <a href="https://www.spareroom.com/roommate/mylistings.pl" target="_blank" class="platform-card">
-                    <div class="platform-name">SpareRoom</div>
-                    <div class="platform-status">
-                        <div class="status-indicator live"></div>
-                        <span>LIVE</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Upgrade expires:</strong> Apr 9 (2 days)<br>
-                        <strong>Active prospects:</strong> Julian
-                    </div>
-                </a>
-
-                <!-- Craigslist -->
-                <a href="https://post.craigslist.org/manage" target="_blank" class="platform-card">
-                    <div class="platform-name">Craigslist</div>
-                    <div class="platform-status">
-                        <div class="status-indicator live"></div>
-                        <span>LIVE</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Renewed:</strong> Apr 7<br>
-                        <strong>Next renewal:</strong> ~May 1<br>
-                        <strong>Active prospects:</strong> Jan, Thomas
-                    </div>
-                </a>
-
-                <!-- Facebook Marketplace -->
-                <a href="https://www.facebook.com/marketplace/selling/" target="_blank" class="platform-card">
-                    <div class="platform-name">Facebook Marketplace</div>
-                    <div class="platform-status">
-                        <div class="status-indicator warning"></div>
-                        <span>RENEW BROKEN</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Age:</strong> 98 days<br>
-                        <strong>Clicks:</strong> 333 (225/wk)<br>
-                        <strong>Status:</strong> Renew button grayed out
-                    </div>
-                </a>
-
-                <!-- CalRentals -->
-                <a href="https://housing.berkeley.edu/calrentals" target="_blank" class="platform-card">
-                    <div class="platform-name">CalRentals</div>
-                    <div class="platform-status">
-                        <div class="status-indicator live"></div>
-                        <span>LIVE</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Age:</strong> 6 days<br>
-                        <strong>Cost:</strong> $30/mo
-                    </div>
-                </a>
-
-                <!-- Zillow -->
-                <a href="https://www.zillow.com/rental-manager/" target="_blank" class="platform-card">
-                    <div class="platform-name">Zillow</div>
-                    <div class="platform-status">
-                        <div class="status-indicator error"></div>
-                        <span>BLOCKED</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Issue:</strong> Bot detection<br>
-                        <strong>Action:</strong> Investigate access
-                    </div>
-                </a>
-
-                <!-- Apartments.com -->
-                <a href="https://www.apartments.com/manage/" target="_blank" class="platform-card">
-                    <div class="platform-name">Apartments.com</div>
-                    <div class="platform-status">
-                        <div class="status-indicator error"></div>
-                        <span>DOWN</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Age:</strong> 10 days<br>
-                        <strong>Action:</strong> Investigate status
-                    </div>
-                </a>
-
-                <!-- Facebook Groups (Berkeley) -->
-                <a href="https://www.facebook.com/groups/" target="_blank" class="platform-card">
-                    <div class="platform-name">FB Groups (4 Berkeley)</div>
-                    <div class="platform-status">
-                        <div class="status-indicator live"></div>
-                        <span>LIVE</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Age:</strong> 8 days old<br>
-                        <strong>Active prospects:</strong> Julius
-                    </div>
-                </a>
-
-                <!-- Facebook Groups (Bay Area) -->
-                <a href="https://www.facebook.com/groups/" target="_blank" class="platform-card">
-                    <div class="platform-name">FB Groups (3 Bay Area)</div>
-                    <div class="platform-status">
-                        <div class="status-indicator warning"></div>
-                        <span>REPOST NEEDED</span>
-                    </div>
-                    <div class="platform-details">
-                        <strong>Reach:</strong> 334K<br>
-                        <strong>Action:</strong> Repost content
-                    </div>
-                </a>
-            </div>
+        <div class="stat-card prospects">
+          <div class="stat-number" id="stat-prospects">0</div>
+          <div class="stat-label">Prospects</div>
         </div>
-
-        <!-- ACTIVITY TAB -->
-        <div id="activity" class="tab-content">
-            <div class="activity-timeline">
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <div class="activity-content">
-                        <div class="activity-time">Apr 7, 8:00 AM</div>
-                        <div class="activity-description">Morning sweep. Jan's reply found. Craigslist renewed. All inboxes checked.</div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <div class="activity-content">
-                        <div class="activity-time">Apr 6, 10:14 PM</div>
-                        <div class="activity-description">Jan Schütte-Engel replied via Craigslist relay with questions about room availability.</div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <div class="activity-content">
-                        <div class="activity-time">Apr 6, 6:19 PM</div>
-                        <div class="activity-description">Julian confirmed Sunday 04/12 at 11 AM PST for virtual tour.</div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <div class="activity-content">
-                        <div class="activity-time">Apr 6, 6:00 PM</div>
-                        <div class="activity-description">Evening sweep. Julian tour confirmed. All inboxes checked.</div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <div class="activity-content">
-                        <div class="activity-time">Apr 6, 12:36 AM</div>
-                        <div class="activity-description">Reply sent to Thomas Thuillier via Yahoo email.</div>
-                    </div>
-                </div>
-
-                <div class="activity-item">
-                    <div class="activity-dot"></div>
-                    <div class="activity-content">
-                        <div class="activity-time">Apr 6, 12:30 AM</div>
-                        <div class="activity-description">Root cause found — Craigslist relay emails going to Yahoo Mail, not Gmail.</div>
-                    </div>
-                </div>
-            </div>
+        <div class="stat-card actions">
+          <div class="stat-number" id="stat-actions">0</div>
+          <div class="stat-label">Actions</div>
         </div>
+      </div>
+
+      <!-- Prospect Spotlight -->
+      <div id="prospect-section"></div>
+
+      <!-- What's New -->
+      <div id="whats-new-section"></div>
+
+      <!-- Actions -->
+      <div id="actions-section"></div>
+
+      <!-- Listings -->
+      <div id="listings-section"></div>
+
+      <!-- Facebook Groups Summary -->
+      <div id="facebook-groups-section"></div>
+
+      <!-- System Status -->
+      <div id="system-section"></div>
     </div>
+  </main>
 
-    <script>
-        // TAB SWITCHING
-        const tabs = document.querySelectorAll('.tab');
-        const contents = document.querySelectorAll('.tab-content');
+  <nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="https://docs.google.com/document/d/1pPjH2pPQw3hT8F4fYz0eN9m6K7x4lL3v0aB3cD5eF6g/edit" target="_blank">Call Line</a>
+    <a href="https://docs.google.com/document/d/1qQ0iI5sT9u7vW2xY3zZ4aA5bB6cC7dD8eE9fF0gG1h/edit" target="_blank">CL Listing</a>
+    <a href="https://mail.google.com/mail/u/0/" target="_blank">Email</a>
+    <a href="https://www.spareroom.com.au/" target="_blank">SpareRoom</a>
+  </nav>
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs and contents
-                tabs.forEach(t => t.classList.remove('active'));
-                contents.forEach(c => c.classList.remove('active'));
+  <script>
+    // State management
+    let appState = {
+      data: null,
+      lastFetchTime: null,
+      lastLogDate: null,
+      expandedSections: {}
+    };
 
-                // Add active class to clicked tab and corresponding content
-                tab.classList.add('active');
-                const tabName = tab.getAttribute('data-tab');
-                document.getElementById(tabName).classList.add('active');
-            });
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      init();
+      setInterval(() => refreshData(), 2 * 60 * 1000); // Auto-refresh every 2 minutes
+    });
+
+    async function init() {
+      await fetchData();
+      render();
+    }
+
+    async function fetchData() {
+      try {
+        const dot = document.getElementById('refresh-dot');
+        dot.classList.add('refreshing');
+
+        const response = await fetch('data.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        appState.data = await response.json();
+        appState.lastFetchTime = new Date();
+
+        dot.classList.remove('refreshing');
+        updateLastUpdatedTime();
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        document.querySelector('.error-message')?.remove();
+        const errorEl = document.createElement('div');
+        errorEl.className = 'error-message';
+        errorEl.textContent = 'Failed to load data. Check your connection.';
+        document.querySelector('.container').prepend(errorEl);
+      }
+    }
+
+    function refreshData() {
+      fetchData();
+      render();
+    }
+
+    function updateLastUpdatedTime() {
+      if (!appState.lastFetchTime) return;
+
+      const now = new Date();
+      const diff = Math.floor((now - appState.lastFetchTime) / 1000 / 60); // minutes
+      const text = document.getElementById('updated-text');
+      const dot = document.getElementById('refresh-dot');
+
+      if (diff === 0) {
+        text.textContent = 'Updated just now';
+      } else if (diff === 1) {
+        text.textContent = 'Updated 1 min ago';
+      } else if (diff < 60) {
+        text.textContent = `Updated ${diff} min ago`;
+      } else if (diff < 120) {
+        text.textContent = 'Updated 1h ago';
+      } else {
+        text.textContent = `Updated ${Math.floor(diff / 60)}h ago`;
+      }
+
+      // Staleness warning
+      if (diff > 120) {
+        text.classList.add('very-stale');
+      } else if (diff > 90) {
+        text.classList.add('stale');
+      } else {
+        text.classList.remove('stale', 'very-stale');
+      }
+    }
+
+    function render() {
+      if (!appState.data) return;
+
+      renderHeader();
+      renderRooms();
+      renderStats();
+      renderProspectSpotlight();
+      renderWhatsNew();
+      renderActions();
+      renderListings();
+      renderFacebookGroups();
+      renderSystemStatus();
+
+      // Update timestamp periodically
+      setInterval(updateLastUpdatedTime, 30000);
+    }
+
+    function renderHeader() {
+      const data = appState.data;
+      document.getElementById('property-subtitle').textContent =
+        data.property.subtitle + ' · ' + data.property.address;
+    }
+
+    function renderRooms() {
+      const container = document.getElementById('rooms-container');
+      container.innerHTML = '';
+
+      appState.data.property.rooms.forEach(room => {
+        const pill = document.createElement('div');
+        pill.className = 'room-pill';
+        pill.innerHTML = `
+          <div class="room-pill-name">${room.name}</div>
+          <div class="room-pill-meta">$${room.price}/mo · ${room.availableDate}</div>
+        `;
+        container.appendChild(pill);
+      });
+    }
+
+    function renderStats() {
+      const stats = appState.data.stats;
+      document.getElementById('stat-live').textContent = stats.live;
+      document.getElementById('stat-pending').textContent = stats.pending;
+      document.getElementById('stat-prospects').textContent = stats.prospects;
+      document.getElementById('stat-actions').textContent = stats.actions;
+    }
+
+    function renderProspectSpotlight() {
+      const container = document.getElementById('prospect-section');
+      const activeProspects = appState.data.prospects.filter(p => p.active);
+
+      if (activeProspects.length === 0) {
+        container.innerHTML = '<div class="empty-state">No active prospects</div>';
+        return;
+      }
+
+      container.innerHTML = `<h2 class="section-title">Active Prospects</h2>`;
+
+      const prospectsHtml = document.createElement('div');
+      prospectsHtml.className = 'prospects-container';
+
+      activeProspects.forEach(prospect => {
+        const statusClass = prospect.status === 'SCREENING' ? 'screening' :
+                          prospect.status === 'RESPONDED' ? 'responded' : 'qualified';
+
+        // Build profile summary
+        const profile = prospect.profile || 'Profile pending';
+        const matchAssessment = prospect.matchAssessment || 'Not yet assessed';
+        const lastMessage = prospect.lastMessage || 'No messages yet';
+        const conversationStage = prospect.conversationStage || 'Initial contact';
+
+        // Determine match bar fill level
+        let matchLevel = 0.7; // default
+        let matchClass = '';
+        if (matchAssessment.includes('excellent') || matchAssessment.includes('excellent')) {
+          matchLevel = 0.9;
+          matchClass = '';
+        } else if (matchAssessment.includes('good')) {
+          matchLevel = 0.75;
+          matchClass = '';
+        } else if (matchAssessment.includes('ok') || matchAssessment.includes('moderate')) {
+          matchLevel = 0.5;
+          matchClass = 'ok';
+        } else if (matchAssessment.includes('poor') || matchAssessment.includes('weak')) {
+          matchLevel = 0.3;
+          matchClass = 'poor';
+        }
+
+        const card = document.createElement('div');
+        card.className = 'prospect-card';
+        card.innerHTML = `
+          <div class="prospect-header">
+            <div class="prospect-name">${prospect.name}</div>
+            <span class="prospect-status-badge ${statusClass}">${prospect.status}</span>
+          </div>
+
+          <div class="prospect-profile">
+            ${profile}
+          </div>
+
+          <div class="prospect-match">
+            <div class="prospect-match-label">
+              <span>Match Quality</span>
+              <span>${matchAssessment}</span>
+            </div>
+            <div class="match-bar">
+              <div class="match-bar-fill ${matchClass}" style="width: ${matchLevel * 100}%"></div>
+            </div>
+          </div>
+
+          <div class="prospect-message">
+            "${lastMessage}"
+          </div>
+
+          <div class="prospect-conversation">
+            ${conversationStage}
+          </div>
+
+          <div class="prospect-action">
+            🔔 ${prospect.actionNeeded}
+          </div>
+        `;
+
+        prospectsHtml.appendChild(card);
+      });
+
+      container.appendChild(prospectsHtml);
+    }
+
+    function renderWhatsNew() {
+      const container = document.getElementById('whats-new-section');
+      const log = appState.data.log;
+
+      if (!log || (!log.worked || log.worked.length === 0) && (!log.failed || log.failed.length === 0)) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = `
+        <h2 class="section-title">What's New</h2>
+        <div class="whats-new">
+          <div class="whats-new-title">Latest Updates from ${log.date}</div>
+          <div class="whats-new-list">
+      `;
+
+      if (log.worked && log.worked.length > 0) {
+        log.worked.slice(0, 3).forEach(item => {
+          html += `
+            <div class="whats-new-item success">
+              <div class="whats-new-item-icon">✓</div>
+              <div class="whats-new-item-text">${item}</div>
+            </div>
+          `;
         });
+      }
 
-        // COLLAPSIBLE MESSAGES (handlers are inline in HTML via onclick)
-        // This is just a note that message expansion is handled by inline onclick handlers
-    </script>
+      if (log.failed && log.failed.length > 0) {
+        log.failed.slice(0, 2).forEach(item => {
+          html += `
+            <div class="whats-new-item failure">
+              <div class="whats-new-item-icon">✕</div>
+              <div class="whats-new-item-text">${item}</div>
+            </div>
+          `;
+        });
+      }
+
+      html += `
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    function renderActions() {
+      const container = document.getElementById('actions-section');
+      const actions = appState.data.actions || [];
+
+      if (actions.length === 0) {
+        container.innerHTML = '';
+        return;
+      }
+
+      let html = '<h2 class="section-title">Action Items</h2><div class="actions-container">';
+
+      actions.forEach(action => {
+        html += `
+          <div class="action-item">
+            <div class="action-priority">${action.icon} ${action.priority}</div>
+            <div class="action-text">${action.text}</div>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function renderListings() {
+      const container = document.getElementById('listings-section');
+      const listings = appState.data.listings || [];
+      const platforms = listings.filter(l => l.category === 'platform');
+
+      if (platforms.length === 0) return;
+
+      let html = '<h2 class="section-title">Platforms</h2>';
+
+      platforms.forEach((listing, idx) => {
+        const isOpen = appState.expandedSections[listing.id] || false;
+        const statusDot = `<span class="status-dot ${listing.status}"></span>`;
+
+        html += `
+          <div class="accordion-group">
+            <button class="accordion-header" onclick="toggleAccordion('${listing.id}')">
+              <span>${statusDot}${listing.name}</span>
+              <span class="accordion-toggle ${isOpen ? 'open' : ''}">›</span>
+            </button>
+            <div class="accordion-content ${isOpen ? 'open' : ''}" id="content-${listing.id}">
+              <div class="accordion-detail">${listing.detail}</div>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function renderFacebookGroups() {
+      const container = document.getElementById('facebook-groups-section');
+      const listings = appState.data.listings || [];
+      const fbGroups = listings.filter(l => l.category === 'facebook_group');
+
+      if (fbGroups.length === 0) return;
+
+      const live = fbGroups.filter(l => l.status === 'live').length;
+      const pending = fbGroups.filter(l => l.status === 'pending').length;
+      const warn = fbGroups.filter(l => l.status === 'warn').length;
+
+      let html = `
+        <h2 class="section-title">Facebook Groups</h2>
+        <div class="accordion-group">
+          <button class="accordion-header" onclick="toggleAccordion('fb-groups')">
+            <span><span class="status-dot live"></span>Facebook Groups</span>
+            <span class="accordion-toggle ${appState.expandedSections['fb-groups'] ? 'open' : ''}">›</span>
+          </button>
+          <div class="accordion-content ${appState.expandedSections['fb-groups'] ? 'open' : ''}" id="content-fb-groups">
+            <div class="accordion-detail">
+              <div class="facebook-groups-summary">
+                <strong>${live}</strong> live · <strong>${pending}</strong> pending · <strong>${warn}</strong> needs action
+              </div>
+      `;
+
+      fbGroups.forEach(group => {
+        const statusDot = `<span class="status-dot ${group.status}"></span>`;
+        html += `
+          <div style="padding: 10px 0; border-top: 1px solid #1a1a1a; font-size: 11px;">
+            ${statusDot}<strong>${group.name}</strong><br/>
+            <span style="color: #666;">${group.detail}</span>
+          </div>
+        `;
+      });
+
+      html += `
+            </div>
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    function renderSystemStatus() {
+      const container = document.getElementById('system-section');
+      const systems = appState.data.system || [];
+
+      if (systems.length === 0) return;
+
+      let html = '<h2 class="section-title">System Status</h2><div class="system-status">';
+
+      systems.forEach(sys => {
+        html += `
+          <div class="system-item">
+            <div>
+              <div class="system-item-name">${sys.name}</div>
+              <div style="color: #666; font-size: 10px; margin-top: 2px;">${sys.detail}</div>
+            </div>
+            <span class="system-item-status ${sys.status}">${sys.status.toUpperCase()}</span>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function toggleAccordion(id) {
+      appState.expandedSections[id] = !appState.expandedSections[id];
+      const content = document.getElementById(`content-${id}`);
+      const toggle = content?.parentElement?.querySelector('.accordion-toggle');
+
+      if (content) {
+        content.classList.toggle('open');
+      }
+      if (toggle) {
+        toggle.classList.toggle('open');
+      }
+    }
+
+    // Pull-to-refresh gesture
+    let touchStartY = 0;
+    document.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      if (document.querySelector('main').scrollTop === 0) {
+        const touchCurrentY = e.touches[0].clientY;
+        const diff = touchCurrentY - touchStartY;
+
+        if (diff > 60) {
+          refreshData();
+          touchStartY = touchCurrentY; // Reset to prevent multiple triggers
+        }
+      }
+    });
+  </script>
 </body>
 </html>

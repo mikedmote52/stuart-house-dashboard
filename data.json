@@ -1,0 +1,341 @@
+{
+  "lastUpdated": "2026-04-09T18:47:36.990022+00:00",
+  "property": {
+    "address": "2322 Stuart St",
+    "subtitle": "Berkeley Rental Manager",
+    "rooms": [
+      {
+        "name": "Room A (King)",
+        "price": 1650,
+        "status": "available",
+        "availableDate": "2026-08-01"
+      },
+      {
+        "name": "Room B (Queen)",
+        "price": 1650,
+        "status": "available",
+        "availableDate": "2026-08-01"
+      }
+    ]
+  },
+  "stats": {
+    "live": 8,
+    "pending": 1,
+    "prospects": 5,
+    "actions": 6
+  },
+  "actions": [
+    {
+      "id": "act-1",
+      "icon": "\ud83d\udcac",
+      "priority": "Thomas Thuillier",
+      "text": "Reply with screening confirmation and tour scheduling. Thomas is an excellent prospect \u2014 LBL staff scientist = very stable income, quiet/respectful, seeking 1-year lease. Suggest Friday evening tour if Mike is back in Berkeley.",
+      "source": "prospects"
+    },
+    {
+      "id": "act-2",
+      "icon": "\ud83d\udcac",
+      "priority": "Jan Sch\u00fctte-Engel",
+      "text": "NEEDS REPLY \u2014 FLAGGED FOR MIKE.** Jan is asking two questions that require Mike's direct input: (1) Who currently lives in the house? What are the other housemates like? (2) Room availability confusion \u2014 ad says two upstairs rooms, so is the downstairs hardwood room available or not? Mike needs to clarify before we reply.",
+      "source": "prospects"
+    },
+    {
+      "id": "act-3",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Zillow",
+      "text": "Bot detection was RESOLVED 04/06, confirmed 0 leads on 04/07. Chrome session LOGGED OUT as of 04/09 AM sweep \u2014 rental-manager redirects to identity.zillow.com/login. Listing presumed still live. **Mike: re-auth Zillow in Chrome.**",
+      "source": "listings"
+    },
+    {
+      "id": "act-4",
+      "icon": "\u26a0\ufe0f",
+      "priority": "SpareRoom",
+      "text": "Ref #103057608. Last confirmed live 04/07. Free 7-day upgrade was scheduled to expire 04/09 ~3:11 PM EDT. Chrome session LOGGED OUT as of 04/09 AM sweep \u2014 cannot verify listing status or renew upgrade. Julian virtual tour CONFIRMED Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome and renew upgrade (pre-approved).**",
+      "source": "listings"
+    },
+    {
+      "id": "act-5",
+      "icon": "\ud83d\udd34",
+      "priority": "Apartments.com",
+      "text": "Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads.",
+      "source": "listings"
+    },
+    {
+      "id": "act-6",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Facebook Marketplace",
+      "text": "Listed 12/31/2025, ~100 days old, 333 clicks (225/week as of 04/07). Renewal button still grayed out. Chrome session LOGGED OUT as of 04/09 AM \u2014 cannot execute pre-approved delete+relist. Mike: re-auth Facebook in Chrome, then sweep can run the relist on the next pass.",
+      "source": "listings"
+    }
+  ],
+  "listings": [
+    {
+      "id": "lst-1",
+      "name": "Craigslist",
+      "detail": "Pre-existing \u00b7 Posted 03/14, RENEWED 04/07 morning sweep. 24 days old. Generated 2 strong prospects (Thomas, Jan). Next renewal ~May 1.",
+      "status": "live",
+      "category": "platform",
+      "notes": "Posted 03/14, RENEWED 04/07 morning sweep. 24 days old. Generated 2 strong prospects (Thomas, Jan). Next renewal ~May 1."
+    },
+    {
+      "id": "lst-2",
+      "name": "Zillow",
+      "detail": "03/28/2026 \u00b7 Bot detection was RESOLVED 04/06, confirmed 0 leads on 04/07. Chrome session LOGGED OUT as of 04/09 AM sweep \u2014 rental-manager redirects to identity.zillow.com/login. Listing presumed still live. **Mike: re-auth Zillow in Chrome.**",
+      "status": "warn",
+      "category": "platform",
+      "notes": "Bot detection was RESOLVED 04/06, confirmed 0 leads on 04/07. Chrome session LOGGED OUT as of 04/09 AM sweep \u2014 rental-manager redirects to identity.zillow.com/login. Listing presumed still live. **Mike: re-auth Zillow in Chrome.**"
+    },
+    {
+      "id": "lst-3",
+      "name": "SpareRoom",
+      "detail": "04/01/2026 \u00b7 Ref #103057608. Last confirmed live 04/07. Free 7-day upgrade was scheduled to expire 04/09 ~3:11 PM EDT. Chrome session LOGGED OUT as of 04/09 AM sweep \u2014 cannot verify listing status or renew upgrade. Julian virtual tour CONFIRMED Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome and renew upgrade (pre-approved).**",
+      "status": "warn",
+      "category": "platform",
+      "notes": "Ref #103057608. Last confirmed live 04/07. Free 7-day upgrade was scheduled to expire 04/09 ~3:11 PM EDT. Chrome session LOGGED OUT as of 04/09 AM sweep \u2014 cannot verify listing status or renew upgrade. Julian virtual tour CONFIRMED Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome and renew upgrade (pre-approved).**"
+    },
+    {
+      "id": "lst-4",
+      "name": "CalRentals (och.berkeley.edu)",
+      "detail": "03/30/2026 \u00b7 $30/mo paid. APPROVED 03/30. 7 days live. No inquiries visible.",
+      "status": "live",
+      "category": "platform",
+      "notes": "$30/mo paid. APPROVED 03/30. 7 days live. No inquiries visible."
+    },
+    {
+      "id": "lst-5",
+      "name": "Apartments.com",
+      "detail": "03/28/2026 \u00b7 Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads.",
+      "status": "error",
+      "category": "platform",
+      "notes": "Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads."
+    },
+    {
+      "id": "lst-6",
+      "name": "Facebook Marketplace",
+      "detail": "Pre-existing \u00b7 Listed 12/31/2025, ~100 days old, 333 clicks (225/week as of 04/07). Renewal button still grayed out. Chrome session LOGGED OUT as of 04/09 AM \u2014 cannot execute pre-approved delete+relist. Mike: re-auth Facebook in Chrome, then sweep can run the relist on the next pass.",
+      "status": "warn",
+      "category": "platform",
+      "notes": "Listed 12/31/2025, ~100 days old, 333 clicks (225/week as of 04/07). Renewal button still grayed out. Chrome session LOGGED OUT as of 04/09 AM \u2014 cannot execute pre-approved delete+relist. Mike: re-auth Facebook in Chrome, then sweep can run the relist on the next pass."
+    },
+    {
+      "id": "lst-16",
+      "name": "Furnished Finder",
+      "detail": "$200 cost, decide later. Luisa Prieto from FF sent follow-up email 04/04 (sales outreach).",
+      "status": "inactive",
+      "category": "platform",
+      "notes": "$200 cost, decide later. Luisa Prieto from FF sent follow-up email 04/04 (sales outreach)."
+    },
+    {
+      "id": "fbg-7",
+      "name": "UC Berkeley Housing, Rooms, Apts (47.7K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. Admin approved immediately. No CL link (group bans external links).",
+      "status": "live",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit. Admin approved immediately. No CL link (group bans external links)."
+    },
+    {
+      "id": "fbg-8",
+      "name": "UC Berkeley Off-Campus (90.0K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. Live immediately.",
+      "status": "live",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit. Live immediately."
+    },
+    {
+      "id": "fbg-9",
+      "name": "Berkeley CA Rentals (6.6K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit with CL link.",
+      "status": "live",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit with CL link."
+    },
+    {
+      "id": "fbg-10",
+      "name": "Berkeley & Bay Area (16.4K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit with CL link.",
+      "status": "live",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit with CL link."
+    },
+    {
+      "id": "fbg-11",
+      "name": "Bay Area/SF Housing (81.4K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. No CL link (to avoid rejection).",
+      "status": "live",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit. No CL link (to avoid rejection)."
+    },
+    {
+      "id": "fbg-12",
+      "name": "Bay Area Rooms & Apts",
+      "detail": "03/28/2026 \u00b7 Group deleted or restricted. Removed from rotation.",
+      "status": "inactive",
+      "category": "facebook_group",
+      "notes": "Group deleted or restricted. Removed from rotation."
+    },
+    {
+      "id": "fbg-13",
+      "name": "Affordable Housing Bay Area (35.2K)",
+      "detail": "03/28/2026 \u00b7 Private group, need to join and request.",
+      "status": "inactive",
+      "category": "facebook_group",
+      "notes": "Private group, need to join and request."
+    },
+    {
+      "id": "fbg-14",
+      "name": "SF Bay Area Housing (220.0K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. No CL link. Previously pending/rejected since 03/28.",
+      "status": "live",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit. No CL link. Previously pending/rejected since 03/28."
+    },
+    {
+      "id": "fbg-15",
+      "name": "Oakland Housing (35.5K)",
+      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. No CL link. Post pending admin approval.",
+      "status": "pending",
+      "category": "facebook_group",
+      "notes": "Fresh post 04/06 weekly audit. No CL link. Post pending admin approval."
+    }
+  ],
+  "prospects": [
+    {
+      "id": "prsp-1",
+      "name": "Julian Flanagan",
+      "source": "SpareRoom",
+      "status": "TOUR CONFIRMED \u2705",
+      "date": "04/02/2026",
+      "notes": "Berkeley Biophysics PhD student, age 21. VIRTUAL TOUR CONFIRMED: Sunday 04/12 at 11am PST (FaceTime/Zoom). Julian replied 04/06 6:19 PM EDT: \"Sunday works for me. I'm busy 4-5pm PST but otherwise free.\" We replied 04/06 evening confirming 11am PST. 8 messages in thread. Best prospect to date.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-2",
+      "name": "Thomas Thuillier",
+      "source": "Craigslist",
+      "status": "RESPONDED \u2705",
+      "date": "04/05/2026",
+      "notes": "Senior scientist at Lawrence Berkeley Lab (staff scientist). French, age 55. Seeking shared house for 1 year (wife joins Aug 2027). REPLIED 04/06 12:36 AM via Yahoo Mail to CL relay. Awaiting his response to schedule tour. Phone: 510-365-5300. EXCELLENT fit.",
+      "actionNeeded": "Reply with screening confirmation and tour scheduling. Thomas is an excellent prospect \u2014 LBL staff scientist = very stable income, quiet/respectful, seeking 1-year lease. Suggest Friday evening tour if Mike is back in Berkeley.",
+      "active": true
+    },
+    {
+      "id": "prsp-3",
+      "name": "Jan Sch\u00fctte-Engel",
+      "source": "Craigslist",
+      "status": "NEEDS REPLY \u26a0\ufe0f",
+      "date": "04/05/2026",
+      "notes": "Postdoc at UC Berkeley. Wants unfurnished room with hardwood floor. Downstairs room has hardwood \u2014 works for Jan. REPLIED 04/06 8:07 AM via Yahoo Mail to CL relay. JAN REPLIED 04/06 10:14 PM asking: (1) Who lives in the apartment? (2) Are the two upstairs rooms available, meaning downstairs hardwood is NOT available? FLAGGED FOR MIKE \u2014 needs clarity on room availability and housemate details. Phone: 217-904-8944. Strong fit \u2014 Berkeley postdoc, stable funding.",
+      "actionNeeded": "NEEDS REPLY \u2014 FLAGGED FOR MIKE.** Jan is asking two questions that require Mike's direct input: (1) Who currently lives in the house? What are the other housemates like? (2) Room availability confusion \u2014 ad says two upstairs rooms, so is the downstairs hardwood room available or not? Mike needs to clarify before we reply.",
+      "active": true
+    },
+    {
+      "id": "prsp-4",
+      "name": "Julius",
+      "source": "Facebook Groups",
+      "status": "TOUR TOMORROW \u2705",
+      "date": "04/06/2026",
+      "notes": "Berkeley PhD student. IN-PERSON TOUR: **Friday 04/10 ~11 AM \u2014 TOMORROW.** Mike works that afternoon, showing Julius around before work. Sweep could NOT verify iMessage thread today (Full Disk Access denied) \u2014 Mike please confirm no last-minute reschedule from Julius. STRONG fit \u2014 Berkeley PhD, Aug 1 move-in aligns.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-5",
+      "name": "Jack Boyd",
+      "source": "Facebook/Craigslist post",
+      "status": "TOUR SCHEDULING \u2705",
+      "date": "04/06/2026",
+      "notes": "Incoming Berkeley grad student. Currently back east. Interested in 400sqft room in S Berkeley. Wants virtual tour/FaceTime. Mike proposed Sunday 04/12. Awaiting confirmation. STRONG fit \u2014 Berkeley grad student, flexible on virtual.",
+      "actionNeeded": null,
+      "active": true
+    }
+  ],
+  "tours": {
+    "scheduled": [
+      {
+        "date": "04/10/2026",
+        "time": "11:00 AM",
+        "prospect": "Julius",
+        "type": "In-person",
+        "confirmed": "Yes",
+        "notes": "Berkeley PhD student. Mike showing him around before work that afternoon. Collect: program name, lease duration, living priorities."
+      },
+      {
+        "date": "04/12/2026",
+        "time": "11:00 AM PST",
+        "prospect": "Julian Flanagan",
+        "type": "Virtual (FaceTime/Zoom)",
+        "confirmed": "Yes",
+        "notes": "Berkeley Biophysics PhD. Mike to send FaceTime/Zoom link Sunday morning. Priority #1 prospect."
+      },
+      {
+        "date": "04/12/2026",
+        "time": "TBD",
+        "prospect": "Jack Boyd",
+        "type": "Virtual (FaceTime)",
+        "confirmed": "Pending",
+        "notes": "Incoming Berkeley grad student, back east. Mike proposed Sunday \u2014 awaiting Jack's confirmation."
+      }
+    ],
+    "completed": []
+  },
+  "system": [
+    {
+      "name": "Morning Sweep",
+      "detail": "Runs 8 AM daily",
+      "status": "live"
+    },
+    {
+      "name": "Midday Check",
+      "detail": "Runs 12 PM daily",
+      "status": "live"
+    },
+    {
+      "name": "Evening Sweep",
+      "detail": "Runs 6 PM daily",
+      "status": "live"
+    },
+    {
+      "name": "Weekly Audit",
+      "detail": "Mondays 10 AM",
+      "status": "live"
+    },
+    {
+      "name": "Daily Group Update",
+      "detail": "iMessage to Mike + mom 7:15 AM",
+      "status": "live"
+    },
+    {
+      "name": "Email Monitoring",
+      "detail": "Yahoo (CL relay) + berkeleystuarthouse@gmail.com",
+      "status": "live"
+    },
+    {
+      "name": "iMessage Monitoring",
+      "detail": "(714) 612-0723",
+      "status": "live"
+    },
+    {
+      "name": "Facebook Messenger",
+      "detail": "Manual check via Chrome",
+      "status": "pending"
+    },
+    {
+      "name": "Dashboard Sync",
+      "detail": "Auto-deploy to GitHub Pages",
+      "status": "pending"
+    }
+  ],
+  "log": {
+    "date": "04/09/2026",
+    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "worked": [],
+    "failed": [
+      "Platform-wide auth degradation is the top issue \u2014 see above. This is the first sweep since setup where Chrome had no usable sessions for SR/FB/Zillow simultaneously.",
+      "iMessage is the highest-value platform for this week (Julius + Jack Boyd + Mike's instructions) and it's opaque to the sweep. Need a durable fix: Full Disk Access, an iMessage cloud bridge, or routing prospect texts through Mike's Google Voice which a sweep can read.",
+      "FB Marketplace renewal bug still unresolved after 98+ days. Can't delete+relist today because of the auth blocker."
+    ],
+    "improvement": "",
+    "metrics": {}
+  }
+}
