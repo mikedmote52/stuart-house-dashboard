@@ -625,6 +625,141 @@
 </head>
 
 <body>
+<!--
+  STUART HOUSE STALENESS BANNER
+  Inject this block immediately after <body> in index.html.
+
+  It fetches data.json on its own schedule (every 60s), reads lastUpdated,
+  and shows a loud banner if the data is older than STALE_MINUTES.
+
+  The existing dashboard keeps rendering as before. This is a parallel
+  truth-channel that does not trust the dashboard's own rendering path.
+
+  THRESHOLDS (tune here, not inline):
+    WARN_MINUTES  = 90   yellow banner: worth noticing
+    STALE_MINUTES = 180  red banner: something is wrong
+    DEAD_MINUTES  = 360  flashing red: publisher is broken
+
+  Tie these to the morning-sweep cadence. The sweep runs 8am PT, so any
+  gap beyond 3 hours in the middle of the business day is abnormal.
+-->
+<style>
+  #sh-staleness-banner {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 99999;
+    padding: 12px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    transition: background-color 0.3s;
+    display: none;
+  }
+  #sh-staleness-banner.visible { display: block; }
+  #sh-staleness-banner.warn   { background: #b58900; }
+  #sh-staleness-banner.stale  { background: #c0392b; }
+  #sh-staleness-banner.dead   { background: #8b0000; animation: sh-pulse 1.2s infinite; }
+  #sh-staleness-banner.fetch-fail { background: #4a0e4e; }
+  #sh-staleness-banner a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 12px;
+  }
+  @keyframes sh-pulse {
+    0%, 100% { background: #8b0000; }
+    50%      { background: #ff1a1a; }
+  }
+  /* push page content down when banner is visible */
+  body.sh-banner-visible { padding-top: 56px; }
+</style>
+
+<div id="sh-staleness-banner" role="alert" aria-live="assertive">
+  <span id="sh-staleness-message">Checking data freshness…</span>
+  <a href="#" id="sh-staleness-refresh" onclick="window.shStalenessCheck(); return false;">recheck</a>
+</div>
+
+<script>
+(function () {
+  var WARN_MINUTES  = 90;
+  var STALE_MINUTES = 180;
+  var DEAD_MINUTES  = 360;
+  var POLL_INTERVAL_MS = 60 * 1000;
+  var DATA_URL = 'data.json?ts=' + Date.now();
+
+  var banner  = document.getElementById('sh-staleness-banner');
+  var message = document.getElementById('sh-staleness-message');
+
+  function setState(cls, text) {
+    banner.className = '';
+    banner.classList.add('visible', cls);
+    document.body.classList.add('sh-banner-visible');
+    message.textContent = text;
+  }
+  function hide() {
+    banner.className = '';
+    document.body.classList.remove('sh-banner-visible');
+  }
+
+  function fmtAge(min) {
+    if (min < 60) return min + ' min';
+    var h = Math.floor(min / 60);
+    var m = min % 60;
+    return h + 'h ' + m + 'm';
+  }
+
+  window.shStalenessCheck = function () {
+    fetch('data.json?ts=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        var raw = data.lastUpdated || data.generated_at || data.timestamp;
+        if (!raw) {
+          setState('fetch-fail', 'data.json has no timestamp field. Publisher is broken.');
+          return;
+        }
+        var ts  = new Date(raw).getTime();
+        var now = Date.now();
+        var ageMin = Math.round((now - ts) / 60000);
+
+        if (ageMin < 0) {
+          // clock skew, treat as fresh
+          hide();
+          return;
+        }
+        if (ageMin >= DEAD_MINUTES) {
+          setState('dead',
+            'DATA ' + fmtAge(ageMin) + ' STALE. Morning sweep has not run. ' +
+            'Chrome sessions likely logged out. Check auth-monitor.');
+        } else if (ageMin >= STALE_MINUTES) {
+          setState('stale',
+            'Data is ' + fmtAge(ageMin) + ' stale. Expected < 3h during the day. ' +
+            'Likely scraper/auth failure.');
+        } else if (ageMin >= WARN_MINUTES) {
+          setState('warn',
+            'Data is ' + fmtAge(ageMin) + ' old. Refresh expected soon.');
+        } else {
+          hide();
+        }
+      })
+      .catch(function (err) {
+        setState('fetch-fail',
+          'Cannot fetch data.json (' + err.message + '). ' +
+          'Dashboard cannot verify freshness.');
+      });
+  };
+
+  // first check immediately, then poll
+  window.shStalenessCheck();
+  setInterval(window.shStalenessCheck, POLL_INTERVAL_MS);
+})();
+</script>
+<!-- END STUART HOUSE STALENESS BANNER -->
+
   <main>
     <div class="container">
       <!-- Header with Update Status -->
