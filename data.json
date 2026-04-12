@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T15:31:25.489784+00:00",
+  "lastUpdated": "2026-04-12T19:31:00.157485+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 8,
     "pending": 1,
-    "prospects": 5,
+    "prospects": 8,
     "actions": 5
   },
   "actions": [
@@ -196,14 +196,44 @@
       "id": "prsp-1",
       "name": "Julian Flanagan",
       "source": "SpareRoom",
-      "status": "TOURED (UNVERIFIED) \ud83d\udd0d",
+      "status": "TOUR RESCHEDULING \ud83d\udd04",
       "date": "04/02/2026",
-      "notes": "Berkeley Biophysics PhD student, age 21. VIRTUAL TOUR WAS TODAY Sunday 04/12 at 11am PST. SpareRoom still logged out \u2014 cannot verify if tour happened or check for follow-up messages. Mike: please confirm tour outcome. 8 messages in SpareRoom thread. Best prospect to date. PRIORITY #1.",
+      "notes": "Berkeley Biophysics PhD student, age 21. Tour did NOT happen at scheduled 11am PST 04/12. Julian messaged at 10:16 AM PT ready for tour; Mike replied at 11:27 AM PT apologizing for getting off work late, asked Julian to text him at 714-612-0723 to set up FaceTime/Zoom later today. Julian saw message, last active \"just now.\" 11 messages in SpareRoom thread. Mike gave Julian his phone number \u2014 tour expected later today. PRIORITY #1.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-2",
+      "name": "J T",
+      "source": "SpareRoom",
+      "status": "NEW \u2014 UNREPLIED \u26a0\ufe0f",
+      "date": "04/09/2026",
+      "notes": "UC Berkeley graduate student. Messaged 04/09: \"Hi Michael! I'm a graduate student at UC Berkeley. I saw your posting and...\" 3 days unreplied (missed during SpareRoom lockout). STRONG fit \u2014 Berkeley grad student. NEEDS IMMEDIATE RESPONSE.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-3",
+      "name": "Diego Aranda",
+      "source": "SpareRoom",
+      "status": "NEW \u2014 UNREPLIED \u26a0\ufe0f",
+      "date": "04/08/2026",
+      "notes": "Messaged 04/08: \"Hi Michael, I am Diego. Hope you are doing well! I was wondering if it could...\" 4 days unreplied (missed during SpareRoom lockout). NEEDS RESPONSE.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-4",
+      "name": "Kris",
+      "source": "SpareRoom",
+      "status": "NEW \u2014 UNREPLIED \u26a0\ufe0f",
+      "date": "04/11/2026",
+      "notes": "Messaged yesterday: \"Hi! My boyfriend and I are looking for a place! I am 20 and he is 18. We are...\" Couple (ages 20, 18). Need more info \u2014 may not fit single-room rental. NEEDS RESPONSE.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-5",
       "name": "Thomas Thuillier",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/12 \u274c",
@@ -213,7 +243,7 @@
       "active": true
     },
     {
-      "id": "prsp-3",
+      "id": "prsp-6",
       "name": "Jan Sch\u00fctte-Engel",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/13 \u274c",
@@ -223,7 +253,7 @@
       "active": true
     },
     {
-      "id": "prsp-4",
+      "id": "prsp-7",
       "name": "Julius",
       "source": "Facebook Groups",
       "status": "TOURED (UNVERIFIED) \ud83d\udd0d",
@@ -233,7 +263,7 @@
       "active": true
     },
     {
-      "id": "prsp-5",
+      "id": "prsp-8",
       "name": "Jack Boyd",
       "source": "Facebook/Craigslist post",
       "status": "TOUR SCHEDULING \u26a0\ufe0f",
@@ -260,7 +290,7 @@
         "time": "11:00 AM PST",
         "prospect": "Julian Flanagan",
         "type": "Virtual (FaceTime/Zoom)",
-        "outcome": "UNVERIFIED \u2014 SpareRoom logged out, cannot confirm. Tour was scheduled for today. Mike: please confirm outcome. Priority #1."
+        "outcome": "RESCHEDULING \u2014 Tour did NOT happen at 11am. Julian messaged ready at 10:16 AM PT; Mike replied 11:27 AM PT asking Julian to text 714-612-0723 to do FaceTime/Zoom later today. Julian saw message. Pending reschedule for later today 04/12."
       },
       {
         "date": "04/10/2026",
@@ -319,15 +349,10 @@
     }
   ],
   "log": {
-    "date": "04/13/2026",
-    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "date": "04/12/2026",
+    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
     "worked": [],
-    "failed": [
-      "iMessage MCP: authorization denied (5+ days, needs Full Disk Access)",
-      "SpareRoom: logged out (5 days, needs re-auth)",
-      "Zillow: logged out (4 days, needs re-auth)",
-      "Craigslist listing: expiring soon, needs renewal"
-    ],
+    "failed": [],
     "improvement": "",
     "metrics": {}
   }
