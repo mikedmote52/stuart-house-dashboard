@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T10:28:24.545745+00:00",
+  "lastUpdated": "2026-04-12T15:31:25.489784+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -19,10 +19,10 @@
     ]
   },
   "stats": {
-    "live": 9,
+    "live": 8,
     "pending": 1,
     "prospects": 5,
-    "actions": 4
+    "actions": 5
   },
   "actions": [
     {
@@ -35,19 +35,26 @@
     {
       "id": "act-2",
       "icon": "\u26a0\ufe0f",
+      "priority": "Craigslist",
+      "text": "Posted 03/14, RENEWED 04/07. **Expiration notice received 04/13 6:18 AM.** Mike: log into CL and repost/renew ASAP. Generated 2 prospects (Thomas, Jan \u2014 both now stale/archived).",
+      "source": "listings"
+    },
+    {
+      "id": "act-3",
+      "icon": "\u26a0\ufe0f",
       "priority": "Zillow",
       "text": "Still logged out as of 04/12 sweep. Redirects to identity.zillow.com/login. Auth blocked since 04/09. **Mike: re-auth Zillow in Chrome.**",
       "source": "listings"
     },
     {
-      "id": "act-3",
+      "id": "act-4",
       "icon": "\u26a0\ufe0f",
       "priority": "SpareRoom",
       "text": "Ref #103057608. Still logged out as of 04/12. Upgrade likely expired 04/09. Julian virtual tour TODAY Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome.**",
       "source": "listings"
     },
     {
-      "id": "act-4",
+      "id": "act-5",
       "icon": "\ud83d\udd34",
       "priority": "Apartments.com",
       "text": "Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads.",
@@ -58,10 +65,10 @@
     {
       "id": "lst-1",
       "name": "Craigslist",
-      "detail": "Pre-existing \u00b7 Posted 03/14, RENEWED 04/07 morning sweep. 24 days old. Generated 2 strong prospects (Thomas, Jan). Next renewal ~May 1.",
-      "status": "live",
+      "detail": "Pre-existing \u00b7 Posted 03/14, RENEWED 04/07. **Expiration notice received 04/13 6:18 AM.** Mike: log into CL and repost/renew ASAP. Generated 2 prospects (Thomas, Jan \u2014 both now stale/archived).",
+      "status": "warn",
       "category": "platform",
-      "notes": "Posted 03/14, RENEWED 04/07 morning sweep. 24 days old. Generated 2 strong prospects (Thomas, Jan). Next renewal ~May 1."
+      "notes": "Posted 03/14, RENEWED 04/07. **Expiration notice received 04/13 6:18 AM.** Mike: log into CL and repost/renew ASAP. Generated 2 prospects (Thomas, Jan \u2014 both now stale/archived)."
     },
     {
       "id": "lst-2",
@@ -209,9 +216,9 @@
       "id": "prsp-3",
       "name": "Jan Sch\u00fctte-Engel",
       "source": "Craigslist",
-      "status": "COOLING \u26a0\ufe0f",
+      "status": "STALE \u2014 ARCHIVED 04/13 \u274c",
       "date": "04/05/2026",
-      "notes": "Postdoc at UC Berkeley. REPLIED 04/08 11:16 PM via Yahoo Mail: clarified both upstairs rooms are the available ones (carpeted, vaulted, 400sqft each); downstairs hardwood is NOT available (Mike's personal space); two current tenants leaving in July, house freshly available Aug 1 with one other new tenant starting together; offered virtual tour. 4 days no reply \u2014 flagged COOLING 04/12 evening sweep. Possible lost interest (wanted unfurnished hardwood). Phone: 217-904-8944. Strong fit if re-engages.",
+      "notes": "Postdoc at UC Berkeley. REPLIED 04/08 11:16 PM via Yahoo Mail: clarified both upstairs rooms are the available ones (carpeted, vaulted, 400sqft each); downstairs hardwood is NOT available (Mike's personal space); two current tenants leaving in July, house freshly available Aug 1 with one other new tenant starting together; offered virtual tour. 5+ days no reply \u2014 archived 04/13 morning sweep per >5-day stale rule. Possible lost interest (wanted unfurnished hardwood). Phone: 217-904-8944. Strong fit if re-engages \u2014 Mike can nudge via direct text.",
       "actionNeeded": null,
       "active": true
     },
@@ -243,8 +250,8 @@
         "time": "TBD",
         "prospect": "Jack Boyd",
         "type": "Virtual (FaceTime)",
-        "confirmed": "Pending (6 days)",
-        "notes": "Incoming Berkeley grad student, back east. Mike proposed Sunday 04/12 on 04/06 \u2014 no confirmed reply visible (iMessage blocked). Needs nudge."
+        "confirmed": "Pending (7 days)",
+        "notes": "Incoming Berkeley grad student, back east. Mike proposed Sunday 04/12 on 04/06 \u2014 7 days no confirmed reply visible (iMessage blocked). Likely stale \u2014 needs nudge or archive soon."
       }
     ],
     "completed": [
@@ -312,10 +319,15 @@
     }
   ],
   "log": {
-    "date": "04/12/2026",
-    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
+    "date": "04/13/2026",
+    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
     "worked": [],
-    "failed": [],
+    "failed": [
+      "iMessage MCP: authorization denied (5+ days, needs Full Disk Access)",
+      "SpareRoom: logged out (5 days, needs re-auth)",
+      "Zillow: logged out (4 days, needs re-auth)",
+      "Craigslist listing: expiring soon, needs renewal"
+    ],
     "improvement": "",
     "metrics": {}
   }
