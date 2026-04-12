@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T21:03:47.621588+00:00",
+  "lastUpdated": "2026-04-12T21:10:18.463543+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -19,10 +19,10 @@
     ]
   },
   "stats": {
-    "live": 8,
+    "live": 10,
     "pending": 1,
     "prospects": 8,
-    "actions": 5
+    "actions": 3
   },
   "actions": [
     {
@@ -41,20 +41,6 @@
     },
     {
       "id": "act-3",
-      "icon": "\u26a0\ufe0f",
-      "priority": "Zillow",
-      "text": "Still logged out as of 04/12 sweep. Redirects to identity.zillow.com/login. Auth blocked since 04/09. **Mike: re-auth Zillow in Chrome.**",
-      "source": "listings"
-    },
-    {
-      "id": "act-4",
-      "icon": "\u26a0\ufe0f",
-      "priority": "SpareRoom",
-      "text": "Ref #103057608. Still logged out as of 04/12. Upgrade likely expired 04/09. Julian virtual tour TODAY Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome.**",
-      "source": "listings"
-    },
-    {
-      "id": "act-5",
       "icon": "\ud83d\udd34",
       "priority": "Apartments.com",
       "text": "Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads.",
@@ -73,18 +59,18 @@
     {
       "id": "lst-2",
       "name": "Zillow",
-      "detail": "03/28/2026 \u00b7 Still logged out as of 04/12 sweep. Redirects to identity.zillow.com/login. Auth blocked since 04/09. **Mike: re-auth Zillow in Chrome.**",
-      "status": "warn",
+      "detail": "03/28/2026 \u00b7 Logged in and active as of 04/12. Listing live 15 days. Application invite sent to Julian Flanagan 04/12.",
+      "status": "live",
       "category": "platform",
-      "notes": "Still logged out as of 04/12 sweep. Redirects to identity.zillow.com/login. Auth blocked since 04/09. **Mike: re-auth Zillow in Chrome.**"
+      "notes": "Logged in and active as of 04/12. Listing live 15 days. Application invite sent to Julian Flanagan 04/12."
     },
     {
       "id": "lst-3",
       "name": "SpareRoom",
-      "detail": "04/01/2026 \u00b7 Ref #103057608. Still logged out as of 04/12. Upgrade likely expired 04/09. Julian virtual tour TODAY Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome.**",
-      "status": "warn",
+      "detail": "04/01/2026 \u00b7 Ref #103057608. Logged in and active as of 04/12. Upgrade confirmed active until 05/07/2026. All 4 inbox threads replied 04/12.",
+      "status": "live",
       "category": "platform",
-      "notes": "Ref #103057608. Still logged out as of 04/12. Upgrade likely expired 04/09. Julian virtual tour TODAY Sun 04/12 11am PST. **Mike: re-auth SpareRoom in Chrome.**"
+      "notes": "Ref #103057608. Logged in and active as of 04/12. Upgrade confirmed active until 05/07/2026. All 4 inbox threads replied 04/12."
     },
     {
       "id": "lst-4",
