@@ -828,66 +828,48 @@
       prospectsHtml.className = 'prospects-container';
 
       activeProspects.forEach(prospect => {
-        const statusClass = prospect.status === 'SCREENING' ? 'screening' :
-                          prospect.status === 'RESPONDED' ? 'responded' : 'qualified';
+        const statusClass = prospect.status.includes('APPLICATION') ? 'screening' :
+                          prospect.status.includes('RESPONDED') || prospect.status.includes('TOUR') ? 'responded' :
+                          prospect.status.includes('STALE') || prospect.status.includes('ARCHIVED') ? 'stale' : 'qualified';
 
-        // Build profile summary
-        const profile = prospect.profile || 'Profile pending';
-        const matchAssessment = prospect.matchAssessment || 'Not yet assessed';
-        const lastMessage = prospect.lastMessage || 'No messages yet';
-        const conversationStage = prospect.conversationStage || 'Initial contact';
+        // Extract useful info from notes
+        const notes = prospect.notes || '';
+        const source = prospect.source || '';
+        const date = prospect.date || '';
 
-        // Determine match bar fill level
-        let matchLevel = 0.7; // default
-        let matchClass = '';
-        if (matchAssessment.includes('excellent') || matchAssessment.includes('excellent')) {
-          matchLevel = 0.9;
-          matchClass = '';
-        } else if (matchAssessment.includes('good')) {
-          matchLevel = 0.75;
-          matchClass = '';
-        } else if (matchAssessment.includes('ok') || matchAssessment.includes('moderate')) {
-          matchLevel = 0.5;
-          matchClass = 'ok';
-        } else if (matchAssessment.includes('poor') || matchAssessment.includes('weak')) {
-          matchLevel = 0.3;
-          matchClass = 'poor';
+        // Build a clean summary from notes (first sentence or first 120 chars)
+        let summary = '';
+        if (notes) {
+          const firstSentence = notes.split(/\.\s/)[0];
+          summary = firstSentence.length > 140 ? firstSentence.substring(0, 137) + '...' : firstSentence + '.';
         }
 
         const card = document.createElement('div');
         card.className = 'prospect-card';
-        card.innerHTML = `
+
+        let cardHtml = `
           <div class="prospect-header">
             <div class="prospect-name">${prospect.name}</div>
             <span class="prospect-status-badge ${statusClass}">${prospect.status}</span>
           </div>
-
-          <div class="prospect-profile">
-            ${profile}
-          </div>
-
-          <div class="prospect-match">
-            <div class="prospect-match-label">
-              <span>Match Quality</span>
-              <span>${matchAssessment}</span>
-            </div>
-            <div class="match-bar">
-              <div class="match-bar-fill ${matchClass}" style="width: ${matchLevel * 100}%"></div>
-            </div>
-          </div>
-
-          <div class="prospect-message">
-            "${lastMessage}"
-          </div>
-
-          <div class="prospect-conversation">
-            ${conversationStage}
-          </div>
-
-          <div class="prospect-action">
-            🔔 ${prospect.actionNeeded}
-          </div>
         `;
+
+        // Source and date line
+        if (source || date) {
+          cardHtml += `<div class="prospect-profile" style="color:#888;font-size:12px;">${source}${date ? ' · ' + date : ''}</div>`;
+        }
+
+        // Notes summary (the real content)
+        if (summary) {
+          cardHtml += `<div class="prospect-message" style="font-style:normal;color:#ccc;">${summary}</div>`;
+        }
+
+        // Action needed - only show if it actually exists
+        if (prospect.actionNeeded) {
+          cardHtml += `<div class="prospect-action">🔔 ${prospect.actionNeeded}</div>`;
+        }
+
+        card.innerHTML = cardHtml;
 
         prospectsHtml.appendChild(card);
       });
