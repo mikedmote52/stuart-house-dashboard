@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T21:10:18.463543+00:00",
+  "lastUpdated": "2026-04-13T01:26:13.781450+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -182,9 +182,9 @@
       "id": "prsp-1",
       "name": "Julian Flanagan",
       "source": "SpareRoom",
-      "status": "APPLICATION SENT \ud83d\udccb",
+      "status": "APPLICATION RECEIVED \u2705",
       "date": "04/02/2026",
-      "notes": "Berkeley Biophysics PhD student, age 21. Spoke with Mike on phone 04/12 \u2014 interested, wants to apply. Zillow application invite sent 04/12 to julian.flanagan133@gmail.com. AWAITING APPLICATION COMPLETION. PRIORITY #1.",
+      "notes": "Berkeley Biophysics PhD student, age 21. Spoke with Mike on phone 04/12. Zillow application invite sent 04/12, APPLICATION COMPLETED SAME DAY including credit and background check. Mike: REVIEW APPLICATION on Zillow Rental Manager. PRIORITY #1.",
       "actionNeeded": null,
       "active": true
     },
