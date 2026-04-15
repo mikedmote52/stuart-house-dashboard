@@ -343,19 +343,9 @@ function renderOverview(d) {
   const actions = d.actions || [];
   const prospects = d.prospects || [];
 
-  // Determine hero: Julian's lease email is priority #1 if still pending
-  const julian = prospects.find(p => p.name === 'Julian Flanagan' && p.status && p.status.includes('LEASE PENDING'));
   const heroEl = document.getElementById('overview-hero');
 
-  if (julian) {
-    heroEl.innerHTML = `
-      <div class="hero-action">
-        <div class="hero-label">Priority #1</div>
-        <div class="hero-title">Send Julian Flanagan's lease email</div>
-        <div class="hero-body">Draft is in Gmail — $1,650/mo, Aug 1 2026–Jul 31 2027. $3,300 due at signing. This is your best prospect: Berkeley Biophysics PhD, approved.</div>
-        <a class="hero-link" href="https://mail.google.com/mail/u/0/#drafts" target="_blank">→ Open Gmail Drafts</a>
-      </div>`;
-  } else if (actions.length) {
+  if (actions.length) {
     const a = actions[0];
     const url = linkFor(a.source, a.priority);
     heroEl.innerHTML = `

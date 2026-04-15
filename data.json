@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T08:17:11.103265+00:00",
+  "lastUpdated": "2026-04-15T08:46:29.329891+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -231,9 +231,9 @@
       "id": "prsp-1",
       "name": "Julian Flanagan",
       "source": "SpareRoom",
-      "status": "APPROVED \u2014 LEASE PENDING \u2705\ud83d\udd11",
+      "status": "LEASE SIGNED \u2705\ud83d\udd11",
       "date": "04/02/2026",
-      "notes": "Berkeley Biophysics PhD student, age 21. Spoke with Mike on phone 04/12. Zillow application completed 04/12 (credit + background check). APPLICATION APPROVED. Draft lease email in Gmail (created 04/12 7:18 PM PT) \u2014 NOT YET SENT to julian.flanagan133@gmail.com. Term: Aug 1 2026\u2013Jul 31 2027, $1,650/mo, $1,650 deposit, $3,300 due at signing. Mike: SEND THE LEASE EMAIL from Gmail drafts. PRIORITY #1.",
+      "notes": "Berkeley Biophysics PhD student, age 21. Zillow application approved 04/12. Lease signed. Term: Aug 1 2026\u2013Jul 31 2027, $1,650/mo, $1,650 deposit. Room A (King) filled.",
       "actionNeeded": null,
       "active": true
     },
@@ -311,9 +311,9 @@
       "id": "prsp-9",
       "name": "Jack Boyd",
       "source": "Facebook/Craigslist post",
-      "status": "TOUR SCHEDULING \u26a0\ufe0f",
+      "status": "STALE \u2014 ARCHIVED 04/15 \u274c",
       "date": "04/06/2026",
-      "notes": "Incoming Berkeley grad student. Currently back east. Interested in 400sqft room in S Berkeley. Wants virtual tour/FaceTime. Mike proposed Sunday 04/12 on 04/06 \u2014 6 days with no confirmed reply (iMessage blocked, cannot verify). Per >3-day no-confirmation rule: needs nudge. Mike: check iMessage from Jack and follow up if no reply. STRONG fit \u2014 Berkeley grad student, flexible on virtual.",
+      "notes": "Incoming Berkeley grad student. Currently back east. Mike proposed Sunday 04/12 virtual tour on 04/06 \u2014 9 days with no confirmed reply (iMessage blocked). Archived per >7-day stale rule. Phone: 805-453-2989. Worth a direct text if Mike wants to re-engage.",
       "actionNeeded": null,
       "active": true
     }
@@ -394,8 +394,8 @@
     }
   ],
   "log": {
-    "date": "04/13/2026",
-    "title": "WEEKLY DEEP AUDIT (10:00 AM PT, Scheduled Task)",
+    "date": "04/15/2026",
+    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
