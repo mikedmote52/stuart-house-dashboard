@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-13T01:30:58.292632+00:00",
+  "lastUpdated": "2026-04-15T08:17:11.103265+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -19,10 +19,10 @@
     ]
   },
   "stats": {
-    "live": 10,
-    "pending": 1,
-    "prospects": 8,
-    "actions": 3
+    "live": 4,
+    "pending": 0,
+    "prospects": 9,
+    "actions": 10
   },
   "actions": [
     {
@@ -36,7 +36,7 @@
       "id": "act-2",
       "icon": "\u26a0\ufe0f",
       "priority": "Craigslist",
-      "text": "Posted 03/14, RENEWED 04/07. **Expiration notice received 04/13 6:18 AM.** Mike: log into CL and repost/renew ASAP. Generated 2 prospects (Thomas, Jan \u2014 both now stale/archived).",
+      "text": "Posted 03/14, RENEWED 04/07. Expiration notice 04/13. WEEKLY AUDIT 04/13: listing still visible (\"posted about a month ago\") but needs immediate repost. Mike: log into CL and repost ASAP. Generated 2 prospects (Thomas, Jan \u2014 both archived).",
       "source": "listings"
     },
     {
@@ -45,16 +45,65 @@
       "priority": "Apartments.com",
       "text": "Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads.",
       "source": "listings"
+    },
+    {
+      "id": "act-4",
+      "icon": "\u26a0\ufe0f",
+      "priority": "UC Berkeley Housing, Rooms, Apts (47.7K)",
+      "text": "Last posted 04/06. WEEKLY AUDIT 04/13: 7 days old, due for weekly repost. No CL link (group bans external links).",
+      "source": "listings"
+    },
+    {
+      "id": "act-5",
+      "icon": "\u26a0\ufe0f",
+      "priority": "UC Berkeley Off-Campus (90.0K)",
+      "text": "Last posted 04/06. WEEKLY AUDIT 04/13: 7 days old, due for weekly repost.",
+      "source": "listings"
+    },
+    {
+      "id": "act-6",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Berkeley CA Rentals (6.6K)",
+      "text": "Last posted 04/06. Due for repost with CL link.",
+      "source": "listings"
+    },
+    {
+      "id": "act-7",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Berkeley & Bay Area (16.4K)",
+      "text": "Last posted 04/06. Due for repost with CL link.",
+      "source": "listings"
+    },
+    {
+      "id": "act-8",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Bay Area/SF Housing (81.4K)",
+      "text": "Last posted 04/06. Due for repost. No CL link.",
+      "source": "listings"
+    },
+    {
+      "id": "act-9",
+      "icon": "\u26a0\ufe0f",
+      "priority": "SF Bay Area Housing (220.0K)",
+      "text": "Last posted 04/06. Due for repost. No CL link.",
+      "source": "listings"
+    },
+    {
+      "id": "act-10",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Oakland Housing (35.5K)",
+      "text": "Last posted 04/06. Due for repost. No CL link.",
+      "source": "listings"
     }
   ],
   "listings": [
     {
       "id": "lst-1",
       "name": "Craigslist",
-      "detail": "Pre-existing \u00b7 Posted 03/14, RENEWED 04/07. **Expiration notice received 04/13 6:18 AM.** Mike: log into CL and repost/renew ASAP. Generated 2 prospects (Thomas, Jan \u2014 both now stale/archived).",
+      "detail": "Pre-existing \u00b7 Posted 03/14, RENEWED 04/07. Expiration notice 04/13. WEEKLY AUDIT 04/13: listing still visible (\"posted about a month ago\") but needs immediate repost. Mike: log into CL and repost ASAP. Generated 2 prospects (Thomas, Jan \u2014 both archived).",
       "status": "warn",
       "category": "platform",
-      "notes": "Posted 03/14, RENEWED 04/07. **Expiration notice received 04/13 6:18 AM.** Mike: log into CL and repost/renew ASAP. Generated 2 prospects (Thomas, Jan \u2014 both now stale/archived)."
+      "notes": "Posted 03/14, RENEWED 04/07. Expiration notice 04/13. WEEKLY AUDIT 04/13: listing still visible (\"posted about a month ago\") but needs immediate repost. Mike: log into CL and repost ASAP. Generated 2 prospects (Thomas, Jan \u2014 both archived)."
     },
     {
       "id": "lst-2",
@@ -67,10 +116,10 @@
     {
       "id": "lst-3",
       "name": "SpareRoom",
-      "detail": "04/01/2026 \u00b7 Ref #103057608. Logged in and active as of 04/12. Upgrade confirmed active until 05/07/2026. All 4 inbox threads replied 04/12.",
+      "detail": "04/01/2026 \u00b7 Ref #103057608. WEEKLY AUDIT 04/13: listing live, \"Upgraded\" badge active, Last Active: Just Now. 4 conversations (Julian 12msg, Kris 3, J T 3, Diego 3). 0 unreplied. Upgrade valid until ~05/07.",
       "status": "live",
       "category": "platform",
-      "notes": "Ref #103057608. Logged in and active as of 04/12. Upgrade confirmed active until 05/07/2026. All 4 inbox threads replied 04/12."
+      "notes": "Ref #103057608. WEEKLY AUDIT 04/13: listing live, \"Upgraded\" badge active, Last Active: Just Now. 4 conversations (Julian 12msg, Kris 3, J T 3, Diego 3). 0 unreplied. Upgrade valid until ~05/07."
     },
     {
       "id": "lst-4",
@@ -91,10 +140,10 @@
     {
       "id": "lst-6",
       "name": "Facebook Marketplace",
-      "detail": "Pre-existing \u00b7 Listed 12/31/2025, ~103 days old. **Facebook back online as of 04/12 evening sweep.** 611 clicks total. Renew available in 2 days. Active conversations: Christian (Sat), Prakhar (Fri), Morgan (Thu). Mike managing directly.",
+      "detail": "Pre-existing \u00b7 Listed 12/31/2025, ~104 days old. Re-authenticated 04/12. 661+ clicks total. WEEKLY AUDIT 04/13: renew available now or soon. Mike managing conversations directly.",
       "status": "live",
       "category": "platform",
-      "notes": "Listed 12/31/2025, ~103 days old. **Facebook back online as of 04/12 evening sweep.** 611 clicks total. Renew available in 2 days. Active conversations: Christian (Sat), Prakhar (Fri), Morgan (Thu). Mike managing directly."
+      "notes": "Listed 12/31/2025, ~104 days old. Re-authenticated 04/12. 661+ clicks total. WEEKLY AUDIT 04/13: renew available now or soon. Mike managing conversations directly."
     },
     {
       "id": "lst-16",
@@ -107,42 +156,42 @@
     {
       "id": "fbg-7",
       "name": "UC Berkeley Housing, Rooms, Apts (47.7K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. Admin approved immediately. No CL link (group bans external links).",
-      "status": "live",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. WEEKLY AUDIT 04/13: 7 days old, due for weekly repost. No CL link (group bans external links).",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit. Admin approved immediately. No CL link (group bans external links)."
+      "notes": "Last posted 04/06. WEEKLY AUDIT 04/13: 7 days old, due for weekly repost. No CL link (group bans external links)."
     },
     {
       "id": "fbg-8",
       "name": "UC Berkeley Off-Campus (90.0K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. Live immediately.",
-      "status": "live",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. WEEKLY AUDIT 04/13: 7 days old, due for weekly repost.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit. Live immediately."
+      "notes": "Last posted 04/06. WEEKLY AUDIT 04/13: 7 days old, due for weekly repost."
     },
     {
       "id": "fbg-9",
       "name": "Berkeley CA Rentals (6.6K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit with CL link.",
-      "status": "live",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. Due for repost with CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit with CL link."
+      "notes": "Last posted 04/06. Due for repost with CL link."
     },
     {
       "id": "fbg-10",
       "name": "Berkeley & Bay Area (16.4K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit with CL link.",
-      "status": "live",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. Due for repost with CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit with CL link."
+      "notes": "Last posted 04/06. Due for repost with CL link."
     },
     {
       "id": "fbg-11",
       "name": "Bay Area/SF Housing (81.4K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. No CL link (to avoid rejection).",
-      "status": "live",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. Due for repost. No CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit. No CL link (to avoid rejection)."
+      "notes": "Last posted 04/06. Due for repost. No CL link."
     },
     {
       "id": "fbg-12",
@@ -163,18 +212,18 @@
     {
       "id": "fbg-14",
       "name": "SF Bay Area Housing (220.0K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. No CL link. Previously pending/rejected since 03/28.",
-      "status": "live",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. Due for repost. No CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit. No CL link. Previously pending/rejected since 03/28."
+      "notes": "Last posted 04/06. Due for repost. No CL link."
     },
     {
       "id": "fbg-15",
       "name": "Oakland Housing (35.5K)",
-      "detail": "04/06/2026 \u00b7 Fresh post 04/06 weekly audit. No CL link. Post pending admin approval.",
-      "status": "pending",
+      "detail": "04/06/2026 \u00b7 Last posted 04/06. Due for repost. No CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "Fresh post 04/06 weekly audit. No CL link. Post pending admin approval."
+      "notes": "Last posted 04/06. Due for repost. No CL link."
     }
   ],
   "prospects": [
@@ -182,44 +231,54 @@
       "id": "prsp-1",
       "name": "Julian Flanagan",
       "source": "SpareRoom",
-      "status": "APPLICATION RECEIVED \u2705",
+      "status": "APPROVED \u2014 LEASE PENDING \u2705\ud83d\udd11",
       "date": "04/02/2026",
-      "notes": "Berkeley Biophysics PhD student, age 21. Spoke with Mike on phone 04/12. Zillow application invite sent 04/12, APPLICATION COMPLETED SAME DAY including credit and background check. Mike: REVIEW APPLICATION on Zillow Rental Manager. PRIORITY #1.",
+      "notes": "Berkeley Biophysics PhD student, age 21. Spoke with Mike on phone 04/12. Zillow application completed 04/12 (credit + background check). APPLICATION APPROVED. Draft lease email in Gmail (created 04/12 7:18 PM PT) \u2014 NOT YET SENT to julian.flanagan133@gmail.com. Term: Aug 1 2026\u2013Jul 31 2027, $1,650/mo, $1,650 deposit, $3,300 due at signing. Mike: SEND THE LEASE EMAIL from Gmail drafts. PRIORITY #1.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-2",
-      "name": "J T",
-      "source": "SpareRoom",
-      "status": "NEW \u2014 UNREPLIED \u26a0\ufe0f",
-      "date": "04/09/2026",
-      "notes": "UC Berkeley graduate student. Messaged 04/09: \"Hi Michael! I'm a graduate student at UC Berkeley. I saw your posting and...\" 3 days unreplied (missed during SpareRoom lockout). STRONG fit \u2014 Berkeley grad student. NEEDS IMMEDIATE RESPONSE.",
+      "name": "Niokhor Dione",
+      "source": "Zillow",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/12/2026",
+      "notes": "New Zillow lead. TOUR REQUESTED. Replied to on Zillow today (\"Hi Niokhor, thanks for your interest in 2322 Stu...\"). 0/2 screening match on Zillow. Awaiting response.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-3",
-      "name": "Diego Aranda",
+      "name": "J T",
       "source": "SpareRoom",
-      "status": "NEW \u2014 UNREPLIED \u26a0\ufe0f",
-      "date": "04/08/2026",
-      "notes": "Messaged 04/08: \"Hi Michael, I am Diego. Hope you are doing well! I was wondering if it could...\" 4 days unreplied (missed during SpareRoom lockout). NEEDS RESPONSE.",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/09/2026",
+      "notes": "UC Berkeley graduate student. Messaged 04/09. Was unreplied for 3 days during SpareRoom lockout. REPLIED 04/12 (SpareRoom \"Not Replied To\" = 0 as of evening sweep). STRONG fit \u2014 Berkeley grad student. Awaiting reply.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-4",
-      "name": "Kris",
+      "name": "Diego Aranda",
       "source": "SpareRoom",
-      "status": "NEW \u2014 UNREPLIED \u26a0\ufe0f",
-      "date": "04/11/2026",
-      "notes": "Messaged yesterday: \"Hi! My boyfriend and I are looking for a place! I am 20 and he is 18. We are...\" Couple (ages 20, 18). Need more info \u2014 may not fit single-room rental. NEEDS RESPONSE.",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/08/2026",
+      "notes": "Messaged 04/08. Was unreplied for 4 days during SpareRoom lockout. REPLIED 04/12 (SpareRoom \"Not Replied To\" = 0 as of evening sweep). Awaiting reply.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-5",
+      "name": "Kris",
+      "source": "SpareRoom",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/11/2026",
+      "notes": "Messaged 04/11. Couple (ages 20, 18). REPLIED 04/12 (SpareRoom \"Not Replied To\" = 0 as of evening sweep). May not fit single-room rental. Awaiting reply.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-6",
       "name": "Thomas Thuillier",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/12 \u274c",
@@ -229,17 +288,17 @@
       "active": true
     },
     {
-      "id": "prsp-6",
+      "id": "prsp-7",
       "name": "Jan Sch\u00fctte-Engel",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/13 \u274c",
       "date": "04/05/2026",
-      "notes": "Postdoc at UC Berkeley. REPLIED 04/08 11:16 PM via Yahoo Mail: clarified both upstairs rooms are the available ones (carpeted, vaulted, 400sqft each); downstairs hardwood is NOT available (Mike's personal space); two current tenants leaving in July, house freshly available Aug 1 with one other new tenant starting together; offered virtual tour. 5+ days no reply \u2014 archived 04/13 morning sweep per >5-day stale rule. Possible lost interest (wanted unfurnished hardwood). Phone: 217-904-8944. Strong fit if re-engages \u2014 Mike can nudge via direct text.",
+      "notes": "Postdoc at UC Berkeley. REPLIED 04/08 clarifying room details. 5+ days no reply \u2014 archived 04/13 morning sweep. Phone: 217-904-8944. Worth a direct text nudge if Mike wants to re-engage.",
       "actionNeeded": null,
       "active": true
     },
     {
-      "id": "prsp-7",
+      "id": "prsp-8",
       "name": "Julius",
       "source": "Facebook Groups",
       "status": "TOURED (UNVERIFIED) \ud83d\udd0d",
@@ -249,7 +308,7 @@
       "active": true
     },
     {
-      "id": "prsp-8",
+      "id": "prsp-9",
       "name": "Jack Boyd",
       "source": "Facebook/Craigslist post",
       "status": "TOUR SCHEDULING \u26a0\ufe0f",
@@ -335,8 +394,8 @@
     }
   ],
   "log": {
-    "date": "04/12/2026",
-    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
+    "date": "04/13/2026",
+    "title": "WEEKLY DEEP AUDIT (10:00 AM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",

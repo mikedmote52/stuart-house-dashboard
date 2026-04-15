@@ -632,6 +632,29 @@
       font-size: 12px;
     }
 
+    /* ── Stale Banner ── */
+    .stale-banner {
+      display: none;
+      padding: 10px 16px;
+      background: rgba(239, 68, 68, 0.1);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.25);
+      text-align: center;
+      font-size: 12px;
+      color: #ef4444;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+
+    .stale-banner.visible {
+      display: block;
+    }
+
+    .stale-banner .stale-age {
+      font-weight: 700;
+    }
+
     /* ── Utilities ── */
     .mb-8 { margin-bottom: 8px; }
 
@@ -659,6 +682,11 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Stale Data Banner -->
+  <div class="stale-banner" id="stale-banner">
+    Data is <span class="stale-age" id="stale-age"></span> old. Sweeps may not be running.
   </div>
 
   <!-- Room Chips -->
@@ -763,14 +791,52 @@
     function fetchAndRender() { fetchData().then(render); }
 
     function updateTimestamp() {
-      if (!state.fetchTime) return;
-      const mins = Math.floor((Date.now() - state.fetchTime) / 60000);
       const el = document.getElementById('update-time');
       const dot = document.getElementById('pulse-dot');
-      if (mins === 0) el.textContent = 'Just now';
-      else if (mins < 60) el.textContent = mins + 'm ago';
-      else el.textContent = Math.floor(mins / 60) + 'h ago';
-      dot.className = 'pulse-dot' + (mins > 120 ? ' error' : mins > 60 ? ' stale' : '');
+      const banner = document.getElementById('stale-banner');
+      const ageSpan = document.getElementById('stale-age');
+
+      // Use actual data timestamp, not browser fetch time
+      if (!state.data || !state.data.lastUpdated) {
+        if (!state.fetchTime) return;
+        el.textContent = 'No data';
+        dot.className = 'pulse-dot error';
+        return;
+      }
+
+      const dataTime = new Date(state.data.lastUpdated);
+      const mins = Math.floor((Date.now() - dataTime) / 60000);
+      const hours = Math.floor(mins / 60);
+      const days = Math.floor(hours / 24);
+
+      // Format the age string
+      let ageStr;
+      if (mins < 1) ageStr = 'Just now';
+      else if (mins < 60) ageStr = mins + 'm ago';
+      else if (hours < 24) ageStr = hours + 'h ' + (mins % 60) + 'm ago';
+      else ageStr = days + 'd ' + (hours % 24) + 'h ago';
+
+      el.textContent = ageStr;
+
+      // Color coding: green <1hr, orange 1-6hr, red >6hr
+      if (mins > 360) {
+        dot.className = 'pulse-dot error';
+      } else if (mins > 60) {
+        dot.className = 'pulse-dot stale';
+      } else {
+        dot.className = 'pulse-dot';
+      }
+
+      // Show stale banner when data is >6 hours old
+      if (mins > 360) {
+        let bannerAge;
+        if (days > 0) bannerAge = days + ' day' + (days > 1 ? 's' : '') + ', ' + (hours % 24) + 'h';
+        else bannerAge = hours + 'h ' + (mins % 60) + 'm';
+        ageSpan.textContent = bannerAge;
+        banner.classList.add('visible');
+      } else {
+        banner.classList.remove('visible');
+      }
     }
 
     function setupTabs() {
@@ -1063,8 +1129,53 @@
         return;
       }
 
-      container.innerHTML = '<div class="section-hdr">Automation Status</div><div class="sys-grid">' +
-        systems.map(s => `
+      // Calculate data age to dynamically show sync health
+      const dataTime = d.lastUpdated ? new Date(d.lastUpdated) : null;
+      const dataAgeMins = dataTime ? Math.floor((Date.now() - dataTime) / 60000) : 9999;
+
+      const enriched = systems.map(s => {
+        // Override Dashboard Sync status based on actual data freshness
+        if (s.name === 'Dashboard Sync') {
+          let syncStatus = 'live';
+          let syncDetail = s.detail;
+          if (dataAgeMins > 360) {
+            syncStatus = 'error';
+            const hrs = Math.floor(dataAgeMins / 60);
+            syncDetail = 'Last sync: ' + hrs + 'h ago';
+          } else if (dataAgeMins > 60) {
+            syncStatus = 'pending';
+            syncDetail = 'Last sync: ' + Math.floor(dataAgeMins / 60) + 'h ago';
+          } else {
+            syncDetail = 'Last sync: ' + dataAgeMins + 'm ago';
+          }
+          return { ...s, status: syncStatus, detail: syncDetail };
+        }
+        return s;
+      });
+
+      // Data freshness summary at top
+      let freshnessHtml = '';
+      if (dataTime) {
+        const hrs = Math.floor(dataAgeMins / 60);
+        const days = Math.floor(hrs / 24);
+        let ageLabel;
+        if (dataAgeMins < 60) ageLabel = dataAgeMins + ' minutes';
+        else if (hrs < 24) ageLabel = hrs + 'h ' + (dataAgeMins % 60) + 'm';
+        else ageLabel = days + 'd ' + (hrs % 24) + 'h';
+        const color = dataAgeMins > 360 ? '#ef4444' : dataAgeMins > 60 ? '#f97316' : '#22c55e';
+        freshnessHtml = `
+          <div style="padding:12px;background:#141414;border:1px solid #1e1e1e;border-radius:8px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-size:11px;font-weight:600;color:#888">Data Freshness</div>
+              <div style="font-size:13px;color:${color};font-weight:600;margin-top:2px">${ageLabel} old</div>
+            </div>
+            <div style="font-size:10px;color:#555">${dataTime.toLocaleString()}</div>
+          </div>
+        `;
+      }
+
+      container.innerHTML = '<div class="section-hdr">Automation Status</div>' + freshnessHtml + '<div class="sys-grid">' +
+        enriched.map(s => `
           <div class="sys-item">
             <div>
               <div class="sys-name">${s.name}</div>
