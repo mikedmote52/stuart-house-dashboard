@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T09:16:17.631118+00:00",
+  "lastUpdated": "2026-04-15T15:37:21.203718+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -319,11 +319,11 @@
     },
     {
       "id": "prsp-10",
-      "name": "Neel",
+      "name": "Neel Mokaria",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
       "date": "~04/13/2026",
-      "notes": "UMD student coming to SF for work June 1-Aug 15. Wants to share room with girlfriend. DISQUALIFIED: short-term (2.5 months vs 12-month lease), two occupants, wrong dates (not Aug 1). Needs polite decline response.",
+      "notes": "UMD student coming to SF for work June 1-Aug 15. Wants to share room with girlfriend. DISQUALIFIED: short-term (2.5 months vs 12-month lease), two occupants, wrong dates (not Aug 1). Polite decline sent 04/15 midday via FB Messenger. Neel replied 04/15 04:13 \"I worries thanks\" (acknowledging decline). Closed.",
       "actionNeeded": null,
       "active": true
     },
@@ -435,7 +435,7 @@
   ],
   "log": {
     "date": "04/15/2026",
-    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "title": "EVENING SWEEP (8:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
