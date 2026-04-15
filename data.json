@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T08:46:29.329891+00:00",
+  "lastUpdated": "2026-04-15T09:16:17.631118+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 4,
     "pending": 0,
-    "prospects": 9,
+    "prospects": 13,
     "actions": 10
   },
   "actions": [
@@ -301,14 +301,54 @@
       "id": "prsp-8",
       "name": "Julius",
       "source": "Facebook Groups",
-      "status": "TOURED (UNVERIFIED) \ud83d\udd0d",
+      "status": "RESCHEDULING \u2014 STALLING \ud83d\udd0d",
       "date": "04/06/2026",
-      "notes": "Berkeley PhD student. IN-PERSON TOUR was **Friday 04/10 ~11 AM** at Stuart House. iMessage still blocked \u2014 cannot verify tour outcome. Mike: did the tour happen? How did it go? STRONG fit \u2014 Berkeley PhD, Aug 1 move-in aligns.",
+      "notes": "Berkeley PhD student. Friday 04/10 tour CANCELLED \u2014 Mike's flight delayed. Mike texted rescheduling options (mornings before work, through Wed). Julius replied \"Ok, I have to see for tomorrow, will lyk\" then \"If not. I'm in town through weds. Avail in the mornings before work.\" No further messages since 04/10 (5 days). STRONG fit \u2014 needs nudge from Mike to reschedule.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-9",
+      "name": "Mohamed",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "~04/14/2026",
+      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response (1 day). Minimal info \u2014 needs screening if re-engages.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-10",
+      "name": "Neel",
+      "source": "Facebook Marketplace",
+      "status": "DECLINED \u274c",
+      "date": "~04/13/2026",
+      "notes": "UMD student coming to SF for work June 1-Aug 15. Wants to share room with girlfriend. DISQUALIFIED: short-term (2.5 months vs 12-month lease), two occupants, wrong dates (not Aug 1). Needs polite decline response.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-11",
+      "name": "Christian",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "~04/12/2026",
+      "notes": "Asked about availability, bathroom (shared), both rooms. Said \"I'm interested in its location.\" Mike gave cross streets (Telegraph & Stuart). No reply in 3 days. Joined Facebook 2026. Limited profile info.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-12",
+      "name": "Prakhar",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "~04/11/2026",
+      "notes": "Works near Union Square in SF, planning to commute via BART. Mike told him Ashby BART is down the street. Asked for address (Fri), Mike gave cross streets. \"Yes planning to commute.\" No screening info collected (profession, lease duration, move-in date). 4 days no reply after Mike's last message. Needs follow-up.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-13",
       "name": "Jack Boyd",
       "source": "Facebook/Craigslist post",
       "status": "STALE \u2014 ARCHIVED 04/15 \u274c",
@@ -342,7 +382,7 @@
         "time": "11:00 AM",
         "prospect": "Julius",
         "type": "In-person",
-        "outcome": "UNVERIFIED \u2014 iMessage blocked, cannot confirm if tour occurred. Mike: please update outcome."
+        "outcome": "CANCELLED \u2014 Mike's flight delayed. Rescheduling attempted via iMessage but stalled since 04/10. Julius available mornings before work, in town through Wed. Mike: nudge to reschedule."
       }
     ]
   },
