@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T20:00:00.000000+00:00",
+  "lastUpdated": "2026-04-15T19:31:22.963863+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -7,11 +7,8 @@
       {
         "name": "Room A (King)",
         "price": 1650,
-        "status": "occupied",
-        "availableDate": "2026-08-01",
-        "tenant": "Julian Flanagan",
-        "leaseStart": "2026-08-01",
-        "leaseEnd": "2027-07-31"
+        "status": "available",
+        "availableDate": "2026-08-01"
       },
       {
         "name": "Room B (Queen)",
@@ -24,15 +21,15 @@
   "stats": {
     "live": 4,
     "pending": 0,
-    "prospects": 10,
+    "prospects": 15,
     "actions": 10
   },
   "actions": [
     {
       "id": "act-1",
       "icon": "\ud83d\udcac",
-      "priority": "Julius — NUDGE NOW",
-      "text": "STRONG FIT. Berkeley PhD student. Tour cancelled 04/10 (Mike's flight delayed). Julius said 'in town through weds, avail mornings before work' then went silent. 5 days no contact. Text 510-859-5718 to reschedule. He may have found somewhere else if not contacted today.",
+      "priority": "Thomas Thuillier",
+      "text": "Reply with screening confirmation and tour scheduling. Thomas is an excellent prospect \u2014 LBL staff scientist = very stable income, quiet/respectful, seeking 1-year lease. Suggest Friday evening tour if Mike is back in Berkeley.",
       "source": "prospects"
     },
     {
@@ -46,15 +43,8 @@
       "id": "act-3",
       "icon": "\ud83d\udd34",
       "priority": "Apartments.com",
-      "text": "Site error on \"Add Property\" with room listings. 9 days unresolved. Try again — other platforms are producing leads but this is the #1 traffic site for rentals.",
+      "text": "Site error on \"Add Property\" with room listings. 9 days unresolved. Low priority \u2014 other platforms producing leads.",
       "source": "listings"
-    },
-    {
-      "id": "act-3b",
-      "icon": "\ud83d\udce7",
-      "priority": "berkeleystuarthouse@gmail.com — NOT CHECKED",
-      "text": "Gmail berkeleystuarthouse@gmail.com was NOT checked during today's sweeps (not logged in). Any CalRentals inquiries or other leads may be sitting unread there. Log in and check manually.",
-      "source": "system"
     },
     {
       "id": "act-4",
@@ -373,8 +363,8 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/10/2026",
-      "notes": "Facebook Marketplace inquiry. Mike replied \"Yes.\" (5 days ago). No further screening info collected. Needs follow-up to collect screening details (profession, move-in date, lease duration).",
-      "actionNeeded": "Collect screening info — profession, move-in date, lease term. 5 days since Mike's reply.",
+      "notes": "FB Marketplace inquiry. Mike replied \"Yes.\" 5 days ago. No screening info collected. Needs follow-up: profession, move-in date, lease term.",
+      "actionNeeded": null,
       "active": true
     },
     {
@@ -383,8 +373,8 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/09/2026",
-      "notes": "Facebook Marketplace inquiry. Mike replied \"Yes, are you interested?\" (6 days ago). No response. Going stale — may need to archive soon if no reply.",
-      "actionNeeded": "6 days no reply after Mike's message. Consider archiving by 04/17 if no response.",
+      "notes": "FB Marketplace inquiry. Mike replied \"Yes, are you interested?\" 6 days ago. No response. Archive by 04/17 if no reply.",
+      "actionNeeded": null,
       "active": true
     }
   ],
@@ -461,16 +451,6 @@
       "name": "Dashboard Sync",
       "detail": "Auto-deploy to GitHub Pages",
       "status": "pending"
-    },
-    {
-      "name": "morning_text.py (launchd)",
-      "detail": "PERMISSION ERROR — launchd python3 can't open script: Operation not permitted. Needs Full Disk Access granted to python3 in System Settings > Privacy & Security.",
-      "status": "error"
-    },
-    {
-      "name": "berkeleystuarthouse@gmail.com",
-      "detail": "NOT checked during sweeps — not logged in. Manual check needed.",
-      "status": "warn"
     }
   ],
   "log": {
