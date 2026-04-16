@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T15:31:08.584010+00:00",
+  "lastUpdated": "2026-04-16T19:31:11.112554+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 4,
     "pending": 0,
-    "prospects": 21,
+    "prospects": 22,
     "actions": 10
   },
   "actions": [
@@ -391,9 +391,9 @@
       "id": "prsp-17",
       "name": "Liam",
       "source": "Facebook Marketplace",
-      "status": "MIKE REPLIED DIRECTLY \ud83d\udce8",
+      "status": "TOUR TODAY \u2014 RUNNING LATE \ud83d\udd52",
       "date": "04/15/2026",
-      "notes": "NEW 04/15 ~22:13. Liam: EMT at King American Ambulance, cyclist/reader/writer. Moving with 5-year-old Australian Shepherd \"Kota\" (well-behaved). Phone: 951-213-1749. Mike replied personally with rapport-building msg (\"I used to be EMT/ER tech, now PA at Highland 10 yrs\"). Liam: \"That's perfect.\" \ud83d\udea8 SCREENING FLAG: PET (dog) \u2014 confirm pet policy before advancing. Currently ball in our court \u2014 Mike may want to continue thread directly given personal connection.",
+      "notes": "NEW 04/15 ~22:13. Liam: EMT at King American Ambulance, cyclist/reader/writer. Moving with 5-year-old Australian Shepherd \"Kota\" (well-behaved). Phone: 951-213-1749. Mike built personal rapport (EMT\u2192PA), Liam confirmed Thursday 04/16 tour at noon (Mike landing 11:30 AM, meet at 12:00). **04/16 12:06 PT**: Liam: \"Hi there, getting a little tied up in the city. Won['t] be able to meet for a couple hours.\" \u2014 tour delayed by ~2 hrs. Mike needs to re-plan. Pet policy still unresolved.",
       "actionNeeded": null,
       "active": true
     },
@@ -434,6 +434,16 @@
       "status": "INVITED TO APPLY \ud83d\udce8",
       "date": "04/15/2026",
       "notes": "New Zillow lead. 2/2 screening match. Monthly income $8,333, credit 720-799, no cats/dogs (has \"Other\" pet), 1 occupant, 1 bedroom, parking needed, 12-month lease desired. \u26a0\ufe0f Ideal move-in 06/01/2026 (doesn't match Aug 1). Application invite sent 04/15 12:41pm. Name hidden on Zillow. Needs follow-up message clarifying Aug 1 lease start.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-22",
+      "name": "Kevin",
+      "source": "Facebook Marketplace",
+      "status": "DECLINED \u274c",
+      "date": "04/16/2026",
+      "notes": "NEW 04/16 11:46 AM PT. Tech worker relocating to Bay Area, hybrid schedule, active lifestyle, clean/respectful. Wants move-in May 11\u201315. DISQUALIFIED: May timing doesn't match Aug 1 lease start. Polite decline sent 04/16 12:09 PT via FB Messenger (offered re-engagement if Aug 1 works). Closed.",
       "actionNeeded": null,
       "active": true
     }
@@ -515,7 +525,7 @@
   ],
   "log": {
     "date": "04/16/2026",
-    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
