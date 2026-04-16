@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T19:31:22.963863+00:00",
+  "lastUpdated": "2026-04-16T05:55:30.981518+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 4,
     "pending": 0,
-    "prospects": 15,
+    "prospects": 18,
     "actions": 10
   },
   "actions": [
@@ -301,9 +301,9 @@
       "id": "prsp-8",
       "name": "Julius",
       "source": "Facebook Groups",
-      "status": "RESCHEDULING \u2014 STALLING \ud83d\udd0d",
+      "status": "RESPONDED \ud83d\udce8",
       "date": "04/06/2026",
-      "notes": "Berkeley PhD student. Friday 04/10 tour CANCELLED \u2014 Mike's flight delayed. Mike texted rescheduling options (mornings before work, through Wed). Julius replied \"Ok, I have to see for tomorrow, will lyk\" then \"If not. I'm in town through weds. Avail in the mornings before work.\" No further messages since 04/10 (5 days). STRONG fit \u2014 needs nudge from Mike to reschedule.",
+      "notes": "Berkeley PhD student. Friday 04/10 tour CANCELLED \u2014 Mike's flight delayed. Nudge sent 04/15 11:01 AM PT (\"Hey Julius! Just checking in\u2014still interested in seeing the room?\"). Julius replied 11:17 AM: \"I'm looking for a room with private bathroom. I don't remember if that's the case for Stuart House.\" Replied 11:25 AM: \"Oh gotcha. no it\u2019s shared.\" Awaiting Julius's response \u2014 shared bathroom may be a dealbreaker.",
       "actionNeeded": null,
       "active": true
     },
@@ -313,7 +313,7 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/14/2026",
-      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response (1 day). Minimal info \u2014 needs screening if re-engages.",
+      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response (2 days). Minimal info \u2014 needs screening if re-engages.",
       "actionNeeded": null,
       "active": true
     },
@@ -323,7 +323,7 @@
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
       "date": "~04/13/2026",
-      "notes": "UMD student coming to SF for work June 1-Aug 15. Wants to share room with girlfriend. DISQUALIFIED: short-term (2.5 months vs 12-month lease), two occupants, wrong dates (not Aug 1). Polite decline sent 04/15 midday via FB Messenger. Neel replied 04/15 04:13 \"I worries thanks\" (acknowledging decline). Closed.",
+      "notes": "UMD student coming to SF for work June 1-Aug 15. Wants to share room with girlfriend. DISQUALIFIED: short-term (2.5 months vs 12-month lease), two occupants, wrong dates (not Aug 1). Polite decline sent 04/15. Neel replied 04/15 04:13 \"I worries thanks\" (acknowledging decline). Closed.",
       "actionNeeded": null,
       "active": true
     },
@@ -363,17 +363,47 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/10/2026",
-      "notes": "FB Marketplace inquiry. Mike replied \"Yes.\" 5 days ago. No screening info collected. Needs follow-up: profession, move-in date, lease term.",
+      "notes": "FB Marketplace inquiry. Mike replied \"Yes.\" 6 days ago. No screening info collected. Approaching stale \u2014 archive by 04/17 if no reply.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-15",
-      "name": "Kristine",
+      "name": "Kristine (Kristin)",
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/09/2026",
-      "notes": "FB Marketplace inquiry. Mike replied \"Yes, are you interested?\" 6 days ago. No response. Archive by 04/17 if no reply.",
+      "notes": "FB Marketplace inquiry. Mike replied \"Yes, are you interested?\" 7 days ago. No response. \"You can now rate each other\" auto-msg visible \u2014 likely dead. Archive candidate.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-16",
+      "name": "Yonathan Arteaga",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/15/2026",
+      "notes": "NEW. Asked \"Hello, is this still available?\" Replied 04/15 midday with lease terms ($1,650/mo, 12-month lease Aug 1), screening questions (work/school, move-in date), tour offer. Awaiting reply.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-17",
+      "name": "\u6e58\u5b9c",
+      "source": "Facebook Marketplace",
+      "status": "DECLINED \u274c",
+      "date": "04/15/2026",
+      "notes": "Previous response sent with tour offer. Replied \"Sorry I'm looking to start in mid June.\" DISQUALIFIED: June start doesn't match Aug 1 lease. Polite decline sent 04/15 midday.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-18",
+      "name": "Morgan",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "~04/10/2026",
+      "notes": "Asked \"when is the move in date and what are the other roommates like\" (Thu). Mike replied briefly \"August 1 move in. Will be new tenants.\" 5 days no reply. Follow-up sent 04/15 midday with full details + screening questions. Awaiting reply.",
       "actionNeeded": null,
       "active": true
     }
