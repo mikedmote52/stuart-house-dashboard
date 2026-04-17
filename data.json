@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T01:31:15.277390+00:00",
+  "lastUpdated": "2026-04-17T15:30:55.692138+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 4,
     "pending": 0,
-    "prospects": 22,
+    "prospects": 24,
     "actions": 10
   },
   "actions": [
@@ -231,24 +231,44 @@
       "id": "prsp-1",
       "name": "Julian Flanagan",
       "source": "SpareRoom",
-      "status": "LEASE SIGNED \u2705\ud83d\udd11",
+      "status": "LEASE SIGNED \u2705\ud83d\udd11\ud83d\udcb0",
       "date": "04/02/2026",
-      "notes": "Berkeley Biophysics PhD student, age 21. Zillow application approved 04/12. Lease signed. Term: Aug 1 2026\u2013Jul 31 2027, $1,650/mo, $1,650 deposit. Room A (King) filled.",
+      "notes": "Berkeley Biophysics PhD student, age 21. Zillow application approved 04/12. Lease signed. Term: Aug 1 2026\u2013Jul 31 2027, $1,650/mo, $1,650 deposit. Room A (King) filled. **04/17: Venmo payment received \u2014 $3,300 (1st month + deposit). Fully committed.**",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-2",
-      "name": "Niokhor Dione",
-      "source": "Zillow",
-      "status": "RESPONDED \ud83d\udce8",
-      "date": "04/12/2026",
-      "notes": "New Zillow lead. TOUR REQUESTED. Replied to on Zillow today (\"Hi Niokhor, thanks for your interest in 2322 Stu...\"). 0/2 screening match on Zillow. Awaiting response.",
+      "name": "Jacquy",
+      "source": "Facebook Marketplace",
+      "status": "NEW \ud83c\udd95",
+      "date": "04/17/2026",
+      "notes": "Messaged 07:25 AM today. \"Jacquy is waiting for your response.\" Message content unknown \u2014 needs response.",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-3",
+      "name": "Taranjot",
+      "source": "Facebook Marketplace",
+      "status": "NEW \ud83c\udd95",
+      "date": "04/17/2026",
+      "notes": "Messaged 07:06 AM today. \"Taranjot is waiting for your response.\" Message content unknown \u2014 needs response.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-4",
+      "name": "Niokhor Dione",
+      "source": "Zillow",
+      "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
+      "date": "04/12/2026",
+      "notes": "New Zillow lead. Replied 04/12. 5+ days no response. Archived 04/17 morning sweep.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-5",
       "name": "J T",
       "source": "SpareRoom",
       "status": "RESPONDED \ud83d\udce8",
@@ -258,7 +278,7 @@
       "active": true
     },
     {
-      "id": "prsp-4",
+      "id": "prsp-6",
       "name": "Diego Aranda",
       "source": "SpareRoom",
       "status": "RESPONDED \ud83d\udce8",
@@ -268,7 +288,7 @@
       "active": true
     },
     {
-      "id": "prsp-5",
+      "id": "prsp-7",
       "name": "Kris",
       "source": "SpareRoom",
       "status": "RESPONDED \ud83d\udce8",
@@ -278,7 +298,7 @@
       "active": true
     },
     {
-      "id": "prsp-6",
+      "id": "prsp-8",
       "name": "Thomas Thuillier",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/12 \u274c",
@@ -288,7 +308,7 @@
       "active": true
     },
     {
-      "id": "prsp-7",
+      "id": "prsp-9",
       "name": "Jan Sch\u00fctte-Engel",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/13 \u274c",
@@ -298,17 +318,17 @@
       "active": true
     },
     {
-      "id": "prsp-8",
+      "id": "prsp-10",
       "name": "Julius",
       "source": "Facebook Groups",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
       "date": "04/06/2026",
-      "notes": "Berkeley PhD student. Friday 04/10 tour CANCELLED \u2014 Mike's flight delayed. Nudge sent 04/15 11:01 AM PT (\"Hey Julius! Just checking in\u2014still interested in seeing the room?\"). Julius replied 11:17 AM: \"I'm looking for a room with private bathroom. I don't remember if that's the case for Stuart House.\" Replied 11:25 AM: \"Oh gotcha. no it\u2019s shared.\" Awaiting Julius's response \u2014 shared bathroom may be a dealbreaker.",
+      "notes": "Berkeley PhD student. Shared bathroom dealbreaker \u2014 replied 04/15 that bathroom is shared, Julius went silent (2+ days). Archived 04/17 morning sweep. Phone: 510-859-5718.",
       "actionNeeded": null,
       "active": true
     },
     {
-      "id": "prsp-9",
+      "id": "prsp-11",
       "name": "Mohamed",
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
@@ -318,7 +338,7 @@
       "active": true
     },
     {
-      "id": "prsp-10",
+      "id": "prsp-12",
       "name": "Neel Mokaria",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -328,27 +348,27 @@
       "active": true
     },
     {
-      "id": "prsp-11",
+      "id": "prsp-13",
       "name": "Christian",
       "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
       "date": "~04/12/2026",
-      "notes": "Asked about availability, bathroom (shared), both rooms. Said \"I'm interested in its location.\" Mike gave cross streets (Telegraph & Stuart). No reply in 3 days. Joined Facebook 2026. Limited profile info.",
+      "notes": "Mike gave cross streets 04/12. 5+ days no reply. Archived 04/17 morning sweep.",
       "actionNeeded": null,
       "active": true
     },
     {
-      "id": "prsp-12",
+      "id": "prsp-14",
       "name": "Prakhar",
       "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
       "date": "~04/11/2026",
-      "notes": "Works near Union Square in SF, planning to commute via BART. Mike told him Ashby BART is down the street. Asked for address (Fri), Mike gave cross streets. \"Yes planning to commute.\" No screening info collected (profession, lease duration, move-in date). 4 days no reply after Mike's last message. Needs follow-up.",
+      "notes": "Mike told him Ashby BART is down the street (Fri 04/11). 6 days no reply. Archived 04/17 morning sweep.",
       "actionNeeded": null,
       "active": true
     },
     {
-      "id": "prsp-13",
+      "id": "prsp-15",
       "name": "Jack Boyd",
       "source": "Facebook/Craigslist post",
       "status": "STALE \u2014 ARCHIVED 04/15 \u274c",
@@ -358,7 +378,7 @@
       "active": true
     },
     {
-      "id": "prsp-14",
+      "id": "prsp-16",
       "name": "Jolly",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/16 \u274c",
@@ -368,7 +388,7 @@
       "active": true
     },
     {
-      "id": "prsp-15",
+      "id": "prsp-17",
       "name": "Kristine (Kristin)",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/16 \u274c",
@@ -378,7 +398,7 @@
       "active": true
     },
     {
-      "id": "prsp-16",
+      "id": "prsp-18",
       "name": "Yonathan Arteaga",
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
@@ -388,17 +408,17 @@
       "active": true
     },
     {
-      "id": "prsp-17",
+      "id": "prsp-19",
       "name": "Liam",
       "source": "Facebook Marketplace",
-      "status": "TOUR TODAY \u2014 RUNNING LATE \ud83d\udd52",
+      "status": "TOUR RESCHEDULING \ud83d\udcc5",
       "date": "04/15/2026",
-      "notes": "NEW 04/15 ~22:13. Liam: EMT at King American Ambulance, cyclist/reader/writer. Moving with 5-year-old Australian Shepherd \"Kota\" (well-behaved). Phone: 951-213-1749. Mike built personal rapport (EMT\u2192PA), Liam confirmed Thursday 04/16 tour at noon (Mike landing 11:30 AM, meet at 12:00). **04/16 12:06 PT**: Liam: \"Hi there, getting a little tied up in the city. Won['t] be able to meet for a couple hours.\" \u2014 tour delayed by ~2 hrs. Mike needs to re-plan. Pet policy still unresolved.",
+      "notes": "EMT at King American Ambulance, cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up in city. **04/16 (Thu)**: Liam replied \"Oh I see. No worries. I can swing coming around next week.\" \u2014 still interested, proposing next week. Best options: Mon 04/20 or Tue 04/21 afternoon (Airbnb guest checks out 1pm Tue). Pet policy still needs Mike's decision.",
       "actionNeeded": null,
       "active": true
     },
     {
-      "id": "prsp-18",
+      "id": "prsp-20",
       "name": "\u6e58\u5b9c",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -408,7 +428,7 @@
       "active": true
     },
     {
-      "id": "prsp-19",
+      "id": "prsp-21",
       "name": "Morgan",
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
@@ -418,7 +438,7 @@
       "active": true
     },
     {
-      "id": "prsp-20",
+      "id": "prsp-22",
       "name": "Martin Kim",
       "source": "SpareRoom",
       "status": "RESPONDED \ud83d\udce8",
@@ -428,7 +448,7 @@
       "active": true
     },
     {
-      "id": "prsp-21",
+      "id": "prsp-23",
       "name": "Unknown (Zillow)",
       "source": "Zillow",
       "status": "INVITED TO APPLY \ud83d\udce8",
@@ -438,7 +458,7 @@
       "active": true
     },
     {
-      "id": "prsp-22",
+      "id": "prsp-24",
       "name": "Kevin",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
