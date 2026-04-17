@@ -360,7 +360,7 @@ function renderOverview(d) {
   }
 
   // Remaining actions as compact cards (skip first if it became hero and no Julian)
-  const julian = actions.length > 0 && (actions[0].priority || '').toLowerCase().includes('julian'); const startIdx = julian ? 0 : 1;
+  const startIdx = julian ? 0 : 1;
   const remaining = actions.slice(startIdx);
 
   // Group FB groups that all need reposting
