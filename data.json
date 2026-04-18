@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T01:30:51.267481+00:00",
+  "lastUpdated": "2026-04-18T15:31:07.775555+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -271,9 +271,9 @@
       "id": "prsp-5",
       "name": "J T",
       "source": "SpareRoom",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/18 \u274c",
       "date": "04/09/2026",
-      "notes": "UC Berkeley graduate student. Messaged 04/09. Was unreplied for 3 days during SpareRoom lockout. REPLIED 04/12 (SpareRoom \"Not Replied To\" = 0 as of evening sweep). STRONG fit \u2014 Berkeley grad student. Awaiting reply.",
+      "notes": "UC Berkeley graduate student. Replied 04/12. 6 days no response. Archived 04/18 morning sweep. STRONG fit \u2014 worth re-engaging via SpareRoom if Mike logs in.",
       "actionNeeded": null,
       "active": true
     },
@@ -281,9 +281,9 @@
       "id": "prsp-6",
       "name": "Diego Aranda",
       "source": "SpareRoom",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/18 \u274c",
       "date": "04/08/2026",
-      "notes": "Messaged 04/08. Was unreplied for 4 days during SpareRoom lockout. REPLIED 04/12 (SpareRoom \"Not Replied To\" = 0 as of evening sweep). Awaiting reply.",
+      "notes": "Replied 04/12. 6 days no response. Archived 04/18 morning sweep.",
       "actionNeeded": null,
       "active": true
     },
@@ -291,9 +291,9 @@
       "id": "prsp-7",
       "name": "Kris",
       "source": "SpareRoom",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/18 \u274c",
       "date": "04/11/2026",
-      "notes": "Messaged 04/11. Couple (ages 20, 18). REPLIED 04/12 (SpareRoom \"Not Replied To\" = 0 as of evening sweep). May not fit single-room rental. Awaiting reply.",
+      "notes": "Couple (ages 20, 18). Replied 04/12. 6 days no response. Archived 04/18 morning sweep. Couple may not fit single-room format regardless.",
       "actionNeeded": null,
       "active": true
     },
@@ -333,7 +333,7 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/14/2026",
-      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response (2 days). Minimal info \u2014 needs screening if re-engages.",
+      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response 4 days. \u26a0\ufe0f APPROACHING STALE \u2014 archive tomorrow 04/19 if no reply.",
       "actionNeeded": null,
       "active": true
     },
