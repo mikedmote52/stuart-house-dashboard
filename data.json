@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-17T19:30:51.441452+00:00",
+  "lastUpdated": "2026-04-18T01:30:51.267481+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -251,9 +251,9 @@
       "id": "prsp-3",
       "name": "Taranjot",
       "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "DECLINED \u274c",
       "date": "04/17/2026",
-      "notes": "Messaged 07:06 AM. Morning sweep replied 08:17 with room details + tour offer. Taranjot replied 08:19 \"Hey yes! Can we schedule a tour.\" **04/17 midday:** Responded with screening questions (work/school, move-in date, 12-month lease Aug 1 confirmation) + offered in-person tour Mon 04/20 afternoon or Wed 04/22. Awaiting reply.",
+      "notes": "Messaged 07:06 AM. Morning sweep replied 08:17. Taranjot replied \"Hey yes! Can we schedule a tour.\" Midday: sent screening questions + tour offer. **04/17 evening (12:50 PM):** Taranjot replied \"Oh dang I'm trying to move in a week or two \ud83d\ude1f\" \u2014 DISQUALIFIED: immediate move-in vs. Aug 1 lease. Evening sweep sent polite decline. Closed.",
       "actionNeeded": null,
       "active": true
     },
@@ -441,9 +441,9 @@
       "id": "prsp-22",
       "name": "Martin Kim",
       "source": "SpareRoom",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "DECLINED \u274c",
       "date": "04/16/2026",
-      "notes": "NEW 04/16. 21yo medical assistant working full-time 8-5 in Walnut Creek/Vallejo. Quiet, looking for a place to sleep. REPLIED 04/16 morning sweep with utility details, lease terms, BART commute info. **04/16 (11:33 PM EDT):** Martin replied \"Ideally I'd like to move in earlier, and yes, I am thinking of a long-term lease (1+years)\" then \"Is moving in earlier in mid-May possible?\" **04/17 midday:** Responded clearly \u2014 Aug 1 is fixed, can't accommodate May. Explained current tenants' leases run through July. Asked if Aug 1 still works; offered tour if so. Awaiting his decision. \u26a0\ufe0f Move-in timing is borderline \u2014 could re-qualify if he accepts Aug 1.",
+      "notes": "NEW 04/16. 21yo medical assistant working full-time 8-5 in Walnut Creek/Vallejo. Quiet, looking for a place to sleep. Replied 04/16\u201317 with details. Asked about May move-in. **04/17 midday:** Told Aug 1 is fixed. **04/17 evening (3:25 PM EDT):** Martin replied \"I see, it probably isn't a good fit for me. Thank you nonetheless and I wish you the best of luck with your search. \u2014Martin\" \u2014 Self-declined. Evening sweep sent gracious close. Closed.",
       "actionNeeded": null,
       "active": true
     },
@@ -453,7 +453,7 @@
       "source": "Zillow",
       "status": "INVITED TO APPLY \ud83d\udce8",
       "date": "04/15/2026",
-      "notes": "New Zillow lead. 2/2 screening match. Monthly income $8,333, credit 720-799, no cats/dogs (has \"Other\" pet), 1 occupant, 1 bedroom, parking needed, 12-month lease desired. \u26a0\ufe0f Ideal move-in 06/01/2026 (doesn't match Aug 1). Application invite sent 04/15 12:41pm. Name hidden on Zillow. Needs follow-up message clarifying Aug 1 lease start.",
+      "notes": "New Zillow lead. 2/2 screening match. Monthly income $8,333, credit 720-799, no cats/dogs (has \"Other\" pet), 1 occupant, 1 bedroom, parking needed, 12-month lease desired. \u26a0\ufe0f Ideal move-in 06/01/2026 (doesn't match Aug 1). Application invite sent 04/15. **04/17 evening sweep (6:07 PM):** Sent clarification \u2014 Aug 1 is fixed, can't accommodate June 1, offered to move forward if Aug 1 works. Awaiting response.",
       "actionNeeded": null,
       "active": true
     },
@@ -545,7 +545,7 @@
   ],
   "log": {
     "date": "04/17/2026",
-    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
+    "title": "EVENING SWEEP (6:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
