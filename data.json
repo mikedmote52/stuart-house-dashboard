@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T15:31:10.082780+00:00",
+  "lastUpdated": "2026-04-19T19:31:10.489218+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 4,
     "pending": 0,
-    "prospects": 24,
+    "prospects": 26,
     "actions": 10
   },
   "actions": [
@@ -411,9 +411,9 @@
       "id": "prsp-19",
       "name": "Liam",
       "source": "Facebook Marketplace",
-      "status": "\u26a0\ufe0f MOVE-IN MISMATCH \u2014 NEEDS MIKE'S CALL",
+      "status": "TOUR SCHEDULED \ud83d\udcc5 Thu 4/23",
       "date": "04/15/2026",
-      "notes": "EMT at King American Ambulance, cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18 (today):** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" Liam said he'll text Wed to confirm tour. **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" \u26a0\ufe0f DISQUALIFIER: May 15 move-in does not match Aug 1 lease start. Mike needs to decide: (a) tell Liam Aug 1 is firm and close, or (b) explore if \"flexible\" means he could wait until Aug 1. Needs Mike's reply.",
+      "notes": "EMT at King American Ambulance, cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18:** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" Mike clarified: soonest current tenant moves out is beginning of July. **04/19 (early AM):** Liam replied \"Ok I might be able to make that work.\" Mike Liked it. Thread is warm. \ud83d\udc3e Note: has Australian Shepherd \u2014 pet deposit confirmed $250. Tour Thursday 4/23, Liam will text Wed 4/22 to confirm time. Move-in timeline: targeting July (not Aug 1 per lease, Mike may need to decide if July start is acceptable vs. Aug 1 strict).",
       "actionNeeded": null,
       "active": true
     },
@@ -459,6 +459,26 @@
     },
     {
       "id": "prsp-24",
+      "name": "Krishna",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/19/2026",
+      "notes": "Added by morning sweep 04/19. Said she'd wait until Sunday (Mike back in town). Morning sweep sent follow-up 08:20 AM: \"Hi Krishna! Just wanted to follow up \u2014 I'm back in town now. Would you still like to come see the room? Happy to set up a time this week. Feel free to text me at (714) 612-0723 for faster coordination!\" Awaiting reply.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-25",
+      "name": "Yashitha",
+      "source": "Unknown",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/18/2026",
+      "notes": "Mentioned in morning sweep iMessage digest 04/19. Asked about May 1 move-in on 04/18. Told Aug 1 is the earliest (current tenant through July). No reply ~24h as of midday 04/19. \u26a0\ufe0f Platform unknown \u2014 workspace wasn't mounted when discovered, not added to data.json. If no reply by 9 AM Mon 04/21, send soft nudge. Archive if timing mismatch confirmed.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-26",
       "name": "Kevin",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -545,7 +565,7 @@
   ],
   "log": {
     "date": "04/19/2026",
-    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
