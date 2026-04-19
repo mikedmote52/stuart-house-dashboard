@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T01:32:40.438347+00:00",
+  "lastUpdated": "2026-04-19T15:31:10.082780+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -331,9 +331,9 @@
       "id": "prsp-11",
       "name": "Mohamed",
       "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/19 \u274c",
       "date": "~04/14/2026",
-      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response 4 days. \u26a0\ufe0f APPROACHING STALE \u2014 archive tomorrow 04/19 if no reply.",
+      "notes": "Asked \"Hi, is this available?\" Mike replied \"Yes, are you interested?\" (Mon 14:41). No response 5 days. Archived 04/19 morning sweep per 5-day stale rule.",
       "actionNeeded": null,
       "active": true
     },
@@ -403,7 +403,7 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "04/15/2026",
-      "notes": "NEW. Asked \"Hello, is this still available?\" Replied 04/15 midday with lease terms ($1,650/mo, 12-month lease Aug 1), screening questions (work/school, move-in date), tour offer. Awaiting reply.",
+      "notes": "Asked \"Hello, is this still available?\" Replied 04/15 midday with lease terms ($1,650/mo, 12-month lease Aug 1), screening questions, tour offer. \u26a0\ufe0f 4 days no reply as of 04/19 \u2014 archive 04/20 if no response.",
       "actionNeeded": null,
       "active": true
     },
@@ -433,7 +433,7 @@
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
       "date": "~04/10/2026",
-      "notes": "Asked \"when is the move in date and what are the other roommates like\" (Thu). Mike replied briefly \"August 1 move in. Will be new tenants.\" 5 days no reply. Follow-up sent 04/15 midday with full details + screening questions. Awaiting reply.",
+      "notes": "Asked \"when is the move in date and what are the other roommates like.\" Follow-up sent 04/15 with full details + screening questions. \u26a0\ufe0f 4 days no reply as of 04/19 \u2014 archive 04/20 if no response.",
       "actionNeeded": null,
       "active": true
     },
@@ -544,8 +544,8 @@
     }
   ],
   "log": {
-    "date": "04/18/2026",
-    "title": "EVENING SWEEP (6:00 PM PT, Scheduled Task)",
+    "date": "04/19/2026",
+    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
