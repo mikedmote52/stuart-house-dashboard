@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T19:31:07.564222+00:00",
+  "lastUpdated": "2026-04-19T01:32:40.438347+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -261,9 +261,9 @@
       "id": "prsp-4",
       "name": "Niokhor Dione",
       "source": "Zillow",
-      "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
+      "status": "DECLINED \u274c",
       "date": "04/12/2026",
-      "notes": "New Zillow lead. Replied 04/12. 5+ days no response. Archived 04/17 morning sweep.",
+      "notes": "New Zillow lead. Replied 04/12, then 5 days silence. Archived 04/17. **04/18 evening:** Niokhor replied via Zillow: \"Hi Mike, unfortunately I'm looking for something immediately and would not be able to commit for a year.\" \u2014 SELF-DISQUALIFIED: immediate move-in + no year commitment. Evening sweep sent gracious close. Closed.",
       "actionNeeded": null,
       "active": true
     },
@@ -411,9 +411,9 @@
       "id": "prsp-19",
       "name": "Liam",
       "source": "Facebook Marketplace",
-      "status": "TOUR RESCHEDULING \ud83d\udcc5",
+      "status": "\u26a0\ufe0f MOVE-IN MISMATCH \u2014 NEEDS MIKE'S CALL",
       "date": "04/15/2026",
-      "notes": "EMT at King American Ambulance, cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up in city. **04/16 (Thu)**: Liam replied \"Oh I see. No worries. I can swing coming around next week.\" \u2014 still interested, proposing next week. Best options: Mon 04/20 or Tue 04/21 afternoon (Airbnb guest checks out 1pm Tue). Pet policy still needs Mike's decision.",
+      "notes": "EMT at King American Ambulance, cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18 (today):** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" Liam said he'll text Wed to confirm tour. **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" \u26a0\ufe0f DISQUALIFIER: May 15 move-in does not match Aug 1 lease start. Mike needs to decide: (a) tell Liam Aug 1 is firm and close, or (b) explore if \"flexible\" means he could wait until Aug 1. Needs Mike's reply.",
       "actionNeeded": null,
       "active": true
     },
@@ -545,7 +545,7 @@
   ],
   "log": {
     "date": "04/18/2026",
-    "title": "MIDDAY CHECK (12:00 PM PT, Scheduled Task)",
+    "title": "EVENING SWEEP (6:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
