@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T15:31:17.501215+00:00",
+  "lastUpdated": "2026-04-21T19:31:16.459420+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -21,7 +21,7 @@
   "stats": {
     "live": 6,
     "pending": 4,
-    "prospects": 27,
+    "prospects": 28,
     "actions": 4
   },
   "actions": [
@@ -197,16 +197,26 @@
     },
     {
       "id": "prsp-2",
-      "name": "Jacquy",
-      "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
-      "date": "04/17/2026",
-      "notes": "Messaged 07:25 AM. Morning sweep replied 08:17 with room details ($1,650/mo, 400sqft, Aug 1, Ashby BART, tour offer + Mike's number). Awaiting reply.",
+      "name": "Eliza",
+      "source": "Facebook Post",
+      "status": "TOUR SCHEDULED \ud83d\udcc5 Wed 4/22 4:30 PM",
+      "date": "04/21/2026",
+      "notes": "23yo, UNC Chapel Hill grad, works downtown Oakland. Has a car \u2014 parking and safe neighborhood important. Messaged 7:22 AM PT. Morning sweep replied with room details. **04/21 midday (11:40 AM PT):** Eliza replied \"Yes please, that all sounds amazing! Can move schedule around afternoons/evenings after 4.\" Midday sweep scheduled tour: **Wed 4/22 at 4:30 PM, 2322 Stuart St, in-person.** Strong fit \u2014 professional, local, Aug 1 timeline TBD (need to confirm at tour).",
       "actionNeeded": null,
       "active": true
     },
     {
       "id": "prsp-3",
+      "name": "Jacquy",
+      "source": "Facebook Marketplace",
+      "status": "RESPONDED \ud83d\udce8",
+      "date": "04/17/2026",
+      "notes": "Messaged 07:25 AM. Morning sweep replied 08:17 with room details ($1,650/mo, 400sqft, Aug 1, Ashby BART, tour offer + Mike's number). Awaiting reply. \u26a0\ufe0f STALE THRESHOLD TOMORROW 04/22 \u2014 if no reply by morning sweep, archive.",
+      "actionNeeded": null,
+      "active": true
+    },
+    {
+      "id": "prsp-4",
       "name": "Taranjot",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -216,7 +226,7 @@
       "active": true
     },
     {
-      "id": "prsp-4",
+      "id": "prsp-5",
       "name": "Niokhor Dione",
       "source": "Zillow",
       "status": "DECLINED \u274c",
@@ -226,7 +236,7 @@
       "active": true
     },
     {
-      "id": "prsp-5",
+      "id": "prsp-6",
       "name": "J T",
       "source": "SpareRoom",
       "status": "STALE \u2014 ARCHIVED 04/18 \u274c",
@@ -236,7 +246,7 @@
       "active": true
     },
     {
-      "id": "prsp-6",
+      "id": "prsp-7",
       "name": "Diego Aranda",
       "source": "SpareRoom",
       "status": "STALE \u2014 ARCHIVED 04/18 \u274c",
@@ -246,7 +256,7 @@
       "active": true
     },
     {
-      "id": "prsp-7",
+      "id": "prsp-8",
       "name": "Kris",
       "source": "SpareRoom",
       "status": "STALE \u2014 ARCHIVED 04/18 \u274c",
@@ -256,7 +266,7 @@
       "active": true
     },
     {
-      "id": "prsp-8",
+      "id": "prsp-9",
       "name": "Thomas Thuillier",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/12 \u274c",
@@ -266,7 +276,7 @@
       "active": true
     },
     {
-      "id": "prsp-9",
+      "id": "prsp-10",
       "name": "Jan Sch\u00fctte-Engel",
       "source": "Craigslist",
       "status": "STALE \u2014 ARCHIVED 04/13 \u274c",
@@ -276,7 +286,7 @@
       "active": true
     },
     {
-      "id": "prsp-10",
+      "id": "prsp-11",
       "name": "Julius",
       "source": "Facebook Groups",
       "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
@@ -286,7 +296,7 @@
       "active": true
     },
     {
-      "id": "prsp-11",
+      "id": "prsp-12",
       "name": "Mohamed",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/19 \u274c",
@@ -296,7 +306,7 @@
       "active": true
     },
     {
-      "id": "prsp-12",
+      "id": "prsp-13",
       "name": "Neel Mokaria",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -306,7 +316,7 @@
       "active": true
     },
     {
-      "id": "prsp-13",
+      "id": "prsp-14",
       "name": "Christian",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
@@ -316,7 +326,7 @@
       "active": true
     },
     {
-      "id": "prsp-14",
+      "id": "prsp-15",
       "name": "Prakhar",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/17 \u274c",
@@ -326,7 +336,7 @@
       "active": true
     },
     {
-      "id": "prsp-15",
+      "id": "prsp-16",
       "name": "Jack Boyd",
       "source": "Facebook/Craigslist post",
       "status": "STALE \u2014 ARCHIVED 04/15 \u274c",
@@ -336,7 +346,7 @@
       "active": true
     },
     {
-      "id": "prsp-16",
+      "id": "prsp-17",
       "name": "Jolly",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/16 \u274c",
@@ -346,7 +356,7 @@
       "active": true
     },
     {
-      "id": "prsp-17",
+      "id": "prsp-18",
       "name": "Kristine (Kristin)",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/16 \u274c",
@@ -356,7 +366,7 @@
       "active": true
     },
     {
-      "id": "prsp-18",
+      "id": "prsp-19",
       "name": "Yonathan Arteaga",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/20 \u274c",
@@ -366,7 +376,7 @@
       "active": true
     },
     {
-      "id": "prsp-19",
+      "id": "prsp-20",
       "name": "Liam",
       "source": "Facebook Marketplace",
       "status": "TOUR SCHEDULED \ud83d\udcc5 Thu 4/23 \ud83d\udea8 CONFIRMED CONFLICT",
@@ -376,7 +386,7 @@
       "active": true
     },
     {
-      "id": "prsp-20",
+      "id": "prsp-21",
       "name": "\u6e58\u5b9c",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -386,7 +396,7 @@
       "active": true
     },
     {
-      "id": "prsp-21",
+      "id": "prsp-22",
       "name": "Morgan",
       "source": "Facebook Marketplace",
       "status": "STALE \u2014 ARCHIVED 04/20 \u274c",
@@ -396,7 +406,7 @@
       "active": true
     },
     {
-      "id": "prsp-22",
+      "id": "prsp-23",
       "name": "Martin Kim",
       "source": "SpareRoom",
       "status": "DECLINED \u274c",
@@ -406,7 +416,7 @@
       "active": true
     },
     {
-      "id": "prsp-23",
+      "id": "prsp-24",
       "name": "Unknown (Zillow)",
       "source": "Zillow",
       "status": "INVITED TO APPLY \ud83d\udce8",
@@ -416,7 +426,7 @@
       "active": true
     },
     {
-      "id": "prsp-24",
+      "id": "prsp-25",
       "name": "Krishna",
       "source": "Facebook Marketplace",
       "status": "RESPONDED \ud83d\udce8",
@@ -426,7 +436,7 @@
       "active": true
     },
     {
-      "id": "prsp-25",
+      "id": "prsp-26",
       "name": "Arman John",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -436,7 +446,7 @@
       "active": true
     },
     {
-      "id": "prsp-26",
+      "id": "prsp-27",
       "name": "Yashitha",
       "source": "Unknown",
       "status": "DECLINED \u274c",
@@ -446,7 +456,7 @@
       "active": true
     },
     {
-      "id": "prsp-27",
+      "id": "prsp-28",
       "name": "Kevin",
       "source": "Facebook Marketplace",
       "status": "DECLINED \u274c",
@@ -533,7 +543,7 @@
   ],
   "log": {
     "date": "04/21/2026",
-    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "title": "MIDDAY SWEEP (12:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
