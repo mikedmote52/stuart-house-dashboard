@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T19:31:13.423551+00:00",
+  "lastUpdated": "2026-04-21T01:31:13.242703+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -429,9 +429,9 @@
       "id": "prsp-25",
       "name": "Yashitha",
       "source": "Unknown",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "DECLINED \u274c",
       "date": "04/18/2026",
-      "notes": "Mentioned in morning sweep iMessage digest 04/19. Asked about May 1 move-in on 04/18. Told Aug 1 is the earliest (current tenant through July). No reply ~24h as of midday 04/19. \u26a0\ufe0f Platform unknown \u2014 workspace wasn't mounted when discovered, not added to data.json. If no reply by 9 AM Mon 04/21, send soft nudge. Archive if timing mismatch confirmed.",
+      "notes": "Asked about May 1 move-in. Told Aug 1 is earliest. **04/20 (6:29 PM):** Replied \"Sure thanks but my move in is may. So this won't work but thanks for checking in.\" Self-disqualified: May move-in vs. Aug 1 lease. Closing reply sent; she liked it 7:18 PM. Thread fully resolved.",
       "actionNeeded": null,
       "active": true
     },
@@ -523,7 +523,7 @@
   ],
   "log": {
     "date": "04/20/2026",
-    "title": "WEEKLY DEEP AUDIT (10:00 AM PT, Scheduled Task)",
+    "title": "EVENING SWEEP (6:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
