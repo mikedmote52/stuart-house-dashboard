@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21T19:31:16.459420+00:00",
+  "lastUpdated": "2026-04-22T01:31:18.263164+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -199,9 +199,9 @@
       "id": "prsp-2",
       "name": "Eliza",
       "source": "Facebook Post",
-      "status": "TOUR SCHEDULED \ud83d\udcc5 Wed 4/22 4:30 PM",
+      "status": "TOUR CONFIRMED \u2705\ud83d\udcc5 Wed 4/22 4:30 PM",
       "date": "04/21/2026",
-      "notes": "23yo, UNC Chapel Hill grad, works downtown Oakland. Has a car \u2014 parking and safe neighborhood important. Messaged 7:22 AM PT. Morning sweep replied with room details. **04/21 midday (11:40 AM PT):** Eliza replied \"Yes please, that all sounds amazing! Can move schedule around afternoons/evenings after 4.\" Midday sweep scheduled tour: **Wed 4/22 at 4:30 PM, 2322 Stuart St, in-person.** Strong fit \u2014 professional, local, Aug 1 timeline TBD (need to confirm at tour).",
+      "notes": "23yo, UNC Chapel Hill grad, works downtown Oakland. Has a car \u2014 parking and safe neighborhood important. Messaged 7:22 AM PT. Morning sweep replied with room details. **04/21 midday:** Eliza replied \"Yes please, that all sounds amazing!\" Midday sweep scheduled tour Wed 4/22 4:30 PM. **04/21 afternoon (12:55 PM PT):** Eliza confirmed \"That will be perfect, I'll be there then.\" Mike clarified he won't be there but contractor will show her around; she can text Mike with questions. Eliza replied \"Oh ok I see! Sounds good.\" Tour fully confirmed. Strong fit \u2014 professional, local, Aug 1 timeline TBD (confirm at tour).",
       "actionNeeded": null,
       "active": true
     },
@@ -543,7 +543,7 @@
   ],
   "log": {
     "date": "04/21/2026",
-    "title": "MIDDAY SWEEP (12:00 PM PT, Scheduled Task)",
+    "title": "EVENING SWEEP (6:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
