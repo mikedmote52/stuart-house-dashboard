@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T01:31:18.263164+00:00",
+  "lastUpdated": "2026-04-22T15:31:20.438004+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -209,9 +209,9 @@
       "id": "prsp-3",
       "name": "Jacquy",
       "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/22 \u274c",
       "date": "04/17/2026",
-      "notes": "Messaged 07:25 AM. Morning sweep replied 08:17 with room details ($1,650/mo, 400sqft, Aug 1, Ashby BART, tour offer + Mike's number). Awaiting reply. \u26a0\ufe0f STALE THRESHOLD TOMORROW 04/22 \u2014 if no reply by morning sweep, archive.",
+      "notes": "Messaged 07:25 AM. Morning sweep replied 08:17 with room details. 5 days no reply. Archived 04/22 morning sweep per 5-day stale rule.",
       "actionNeeded": null,
       "active": true
     },
