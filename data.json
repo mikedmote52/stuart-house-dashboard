@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-24T01:31:28.296574+00:00",
+  "lastUpdated": "2026-04-24T15:31:31.234524+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -429,9 +429,9 @@
       "id": "prsp-25",
       "name": "Krishna",
       "source": "Facebook Marketplace",
-      "status": "RESPONDED \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/24 \u274c",
       "date": "04/19/2026",
-      "notes": "Added by morning sweep 04/19. Said she'd wait until Sunday (Mike back in town). Morning sweep sent follow-up 08:20 AM: \"Hi Krishna! Just wanted to follow up \u2014 I'm back in town now. Would you still like to come see the room? Happy to set up a time this week. Feel free to text me at (714) 612-0723 for faster coordination!\" Awaiting reply. **04/21: Still no reply (2 days). Stale threshold 04/24.**",
+      "notes": "Added by morning sweep 04/19. Said she'd wait until Sunday (Mike back in town). Morning sweep sent follow-up 08:20 AM: \"Hi Krishna! Just wanted to follow up \u2014 I'm back in town now. Would you still like to come see the room? Happy to set up a time this week. Feel free to text me at (714) 612-0723 for faster coordination!\" No reply after 5 days \u2014 archived 04/24 morning sweep per 5-day stale rule.",
       "actionNeeded": null,
       "active": true
     },
