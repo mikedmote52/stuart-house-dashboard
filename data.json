@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-25T15:31:38.683426+00:00",
+  "lastUpdated": "2026-04-25T19:31:33.615605+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -419,9 +419,9 @@
       "id": "prsp-24",
       "name": "Unknown (Zillow)",
       "source": "Zillow",
-      "status": "INVITED TO APPLY \ud83d\udce8",
+      "status": "STALE \u2014 ARCHIVED 04/25 \u274c",
       "date": "04/15/2026",
-      "notes": "New Zillow lead. 2/2 screening match. Monthly income $8,333, credit 720-799, no cats/dogs (has \"Other\" pet), 1 occupant, 1 bedroom, parking needed, 12-month lease desired. \u26a0\ufe0f Ideal move-in 06/01/2026 (doesn't match Aug 1). Application invite sent 04/15. **04/17 evening sweep (6:07 PM):** Sent clarification \u2014 Aug 1 is fixed, can't accommodate June 1, offered to move forward if Aug 1 works. Awaiting response.",
+      "notes": "New Zillow lead. 2/2 screening match. Monthly income $8,333, credit 720-799, no cats/dogs (has \"Other\" pet), 1 occupant, 1 bedroom, parking needed, 12-month lease desired. \u26a0\ufe0f Ideal move-in 06/01/2026 (doesn't match Aug 1). Application invite sent 04/15. **04/17 evening sweep (6:07 PM):** Sent clarification \u2014 Aug 1 is fixed, can't accommodate June 1, offered to move forward if Aug 1 works. **04/25 midday sweep:** 8 days no response. Archived per 5-day stale rule.",
       "actionNeeded": null,
       "active": true
     },
@@ -543,7 +543,7 @@
   ],
   "log": {
     "date": "04/25/2026",
-    "title": "MORNING SWEEP (8:00 AM PT, Scheduled Task)",
+    "title": "MIDDAY SWEEP (12:00 PM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
