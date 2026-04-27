@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T18:21:54.717338+00:00",
+  "lastUpdated": "2026-04-27T19:31:23.101225+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -414,9 +414,9 @@
       "id": "prsp-20",
       "name": "Liam",
       "source": "Facebook Marketplace",
-      "status": "RESCHEDULE PENDING \u2014 awaiting Liam's reply \ud83d\udcc5",
+      "status": "WARM \u2014 awaiting Liam's follow-up \ud83d\udd04",
       "date": "04/15/2026",
-      "notes": "PA at Highland Hospital Oakland (10 yrs), cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18:** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" Mike clarified: soonest current tenant moves out is beginning of July. **04/19:** Liam \"Ok I might be able to make that work.\" Thread warm. \ud83d\udc3e Pet: Australian Shepherd \u2014 $250 deposit confirmed. **04/22:** Thu 4/23 Fast Track Swing conflict. Morning sweep drafted reschedule. Liam confirmed can't make Thu, Mike asked about 4/23 but Liam said \"won't be in city until the evening.\" Mike offered contractor/handyman to show him the place instead: \"I can connect you with the handy man too. He can show you. Just let me know what day and times.\" **04/23 morning sweep:** No reply from Liam yet. Thread warm \u2014 awaiting Liam's preferred day/time for contractor showing. Move-in target: July (Mike to decide if July OK vs. Aug 1 strict).",
+      "notes": "PA at Highland Hospital Oakland (10 yrs), cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18:** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" Mike clarified: soonest current tenant moves out is beginning of July. **04/19:** Liam \"Ok I might be able to make that work.\" Thread warm. \ud83d\udc3e Pet: Australian Shepherd \u2014 $250 deposit confirmed. **04/22:** Thu 4/23 Fast Track Swing conflict. Morning sweep drafted reschedule. Liam confirmed can't make Thu, Mike asked about 4/23 but Liam said \"won't be in city until the evening.\" Mike offered contractor/handyman to show him the place instead. **04/27 morning sweep (11:35 AM PT):** Sent warm close: \"Hey Liam totally understand things have been hectic. The room's still here if the timing ever lines up for you. Feel free to reach back out anytime.\" **04/27 (11:49 AM PT):** Liam replied \u2014 \"Hey Mike, apologies for not getting back to you sooner. A few things fell through with a job I was hoping to get so I'm currently delayed in my plans. I'll get back to you soon. LK\" \u2014 Still interested, job situation caused delay. No action needed \u2014 thread is warm, Liam is self-pacing. Move-in target: July (Mike to decide if July OK vs. Aug 1 strict).",
       "actionNeeded": null,
       "active": true
     },
@@ -576,12 +576,5 @@
       "status": "pending"
     }
   ],
-  "log": {
-    "date": "04/27/2026",
-    "title": "WEEKLY DEEP AUDIT (10:00 AM PT, Scheduled Task)",
-    "worked": [],
-    "failed": [],
-    "improvement": "",
-    "metrics": {}
-  }
+  "log": null
 }
