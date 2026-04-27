@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-26T19:30:43.002428+00:00",
+  "lastUpdated": "2026-04-27T18:21:54.717338+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -19,10 +19,10 @@
     ]
   },
   "stats": {
-    "live": 6,
-    "pending": 4,
+    "live": 3,
+    "pending": 2,
     "prospects": 28,
-    "actions": 4
+    "actions": 9
   },
   "actions": [
     {
@@ -36,21 +36,56 @@
       "id": "act-2",
       "icon": "\u26a0\ufe0f",
       "priority": "Zillow",
-      "text": "Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access 04/15\u201304/20 (6 consecutive days). Mike must verify manually.",
+      "text": "Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access (6+ consecutive days). Mike must verify manually at zillow.com/rental-manager.",
       "source": "listings"
     },
     {
       "id": "act-3",
-      "icon": "\ud83d\udd34",
-      "priority": "Apartments.com",
-      "text": "Site error on \"Add Property\" with room listings. Low priority \u2014 other platforms producing leads.",
+      "icon": "\u26a0\ufe0f",
+      "priority": "UC Berkeley Housing, Rooms, Apts (48.1K)",
+      "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. No CL link (group bans external links).",
       "source": "listings"
     },
     {
       "id": "act-4",
       "icon": "\u26a0\ufe0f",
-      "priority": "Facebook Marketplace",
-      "text": "1,005 clicks as of 04/20. \"Renew (3 days)\" button visible \u2014 renewal available ~04/23. Mike can renew from selling page.",
+      "priority": "UC Berkeley Off-Campus (90.6K)",
+      "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link (7927938356).",
+      "source": "listings"
+    },
+    {
+      "id": "act-5",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Berkeley CA Rentals (6.8K)",
+      "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link.",
+      "source": "listings"
+    },
+    {
+      "id": "act-6",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Berkeley & Bay Area (16.4K)",
+      "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link.",
+      "source": "listings"
+    },
+    {
+      "id": "act-7",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Bay Area/SF Housing (82.8K)",
+      "text": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check if approved and repost.",
+      "source": "listings"
+    },
+    {
+      "id": "act-8",
+      "icon": "\u26a0\ufe0f",
+      "priority": "SF Bay Area Housing (223.2K)",
+      "text": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check and repost if approved.",
+      "source": "listings"
+    },
+    {
+      "id": "act-9",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Oakland Housing (35.6K)",
+      "text": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified.",
       "source": "listings"
     }
   ],
@@ -58,98 +93,98 @@
     {
       "id": "lst-1",
       "name": "Craigslist",
-      "detail": "04/15/2026 \u00b7 Reposted 04/15 11:04 AM. Verified ACTIVE 04/20. Expires ~05/10 (25 days remaining).",
+      "detail": "04/15/2026 \u00b7 **WEEKLY AUDIT 04/27:** Old URL (7921147509) is 404-dead. NEW active URL: 7927938356. Listing IS appearing in search results ($1,650, 12 days old as of 04/27). Getting buried \u2014 needs repost to restore top-of-feed visibility. Mike must log in and repost today.",
       "status": "live",
       "category": "platform",
-      "notes": "Reposted 04/15 11:04 AM. Verified ACTIVE 04/20. Expires ~05/10 (25 days remaining)."
+      "notes": "**WEEKLY AUDIT 04/27:** Old URL (7921147509) is 404-dead. NEW active URL: 7927938356. Listing IS appearing in search results ($1,650, 12 days old as of 04/27). Getting buried \u2014 needs repost to restore top-of-feed visibility. Mike must log in and repost today."
     },
     {
       "id": "lst-2",
       "name": "Zillow",
-      "detail": "03/28/2026 \u00b7 Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access 04/15\u201304/20 (6 consecutive days). Mike must verify manually.",
+      "detail": "03/28/2026 \u00b7 Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access (6+ consecutive days). Mike must verify manually at zillow.com/rental-manager.",
       "status": "warn",
       "category": "platform",
-      "notes": "Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access 04/15\u201304/20 (6 consecutive days). Mike must verify manually."
+      "notes": "Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access (6+ consecutive days). Mike must verify manually at zillow.com/rental-manager."
     },
     {
       "id": "lst-3",
       "name": "SpareRoom",
-      "detail": "04/01/2026 \u00b7 Ref #103057608. Upgrade valid until ~05/07. Session expired for 6+ consecutive days as of 04/20. Mike must log in manually to restore monitoring.",
+      "detail": "04/01/2026 \u00b7 Ref #103057608. Session expired 14+ days as of 04/27. Was top-tier lead source (Julian, J T, Diego). Mike must log in manually at spareroom.com. URGENT.",
       "status": "pending",
       "category": "platform",
-      "notes": "Ref #103057608. Upgrade valid until ~05/07. Session expired for 6+ consecutive days as of 04/20. Mike must log in manually to restore monitoring."
+      "notes": "Ref #103057608. Session expired 14+ days as of 04/27. Was top-tier lead source (Julian, J T, Diego). Mike must log in manually at spareroom.com. URGENT."
     },
     {
       "id": "lst-4",
       "name": "CalRentals (och.berkeley.edu)",
-      "detail": "03/30/2026 \u00b7 $30/mo paid. No inquiries to date.",
+      "detail": "03/30/2026 \u00b7 $30/mo paid. 0 inquiries lifetime. Consider canceling if Craigslist/SpareRoom produce adequate leads.",
       "status": "live",
       "category": "platform",
-      "notes": "$30/mo paid. No inquiries to date."
+      "notes": "$30/mo paid. 0 inquiries lifetime. Consider canceling if Craigslist/SpareRoom produce adequate leads."
     },
     {
       "id": "lst-5",
       "name": "Apartments.com",
-      "detail": "03/28/2026 \u00b7 Site error on \"Add Property\" with room listings. Low priority \u2014 other platforms producing leads.",
-      "status": "error",
+      "detail": "03/28/2026 \u00b7 Persistent site error on \"Add Property.\" Low priority \u2014 other platforms producing leads. Abandon unless Mike wants to retry manually.",
+      "status": "pending",
       "category": "platform",
-      "notes": "Site error on \"Add Property\" with room listings. Low priority \u2014 other platforms producing leads."
+      "notes": "Persistent site error on \"Add Property.\" Low priority \u2014 other platforms producing leads. Abandon unless Mike wants to retry manually."
     },
     {
       "id": "lst-6",
       "name": "Facebook Marketplace",
-      "detail": "Pre-existing \u00b7 1,005 clicks as of 04/20. \"Renew (3 days)\" button visible \u2014 renewal available ~04/23. Mike can renew from selling page.",
-      "status": "warn",
+      "detail": "Pre-existing \u00b7 **WEEKLY AUDIT 04/27:** Listing LIVE \u2014 501 clicks, \"Renew (6 days)\" shown (recently renewed). Next renewal available ~05/03. No action needed this week.",
+      "status": "live",
       "category": "platform",
-      "notes": "1,005 clicks as of 04/20. \"Renew (3 days)\" button visible \u2014 renewal available ~04/23. Mike can renew from selling page."
+      "notes": "**WEEKLY AUDIT 04/27:** Listing LIVE \u2014 501 clicks, \"Renew (6 days)\" shown (recently renewed). Next renewal available ~05/03. No action needed this week."
     },
     {
       "id": "lst-16",
       "name": "Furnished Finder",
-      "detail": "$200 cost, decide later. Luisa Prieto from FF sent follow-up email 04/04 (sales outreach).",
+      "detail": "$200 cost. Defer unless Room B still vacant by May 15.",
       "status": "inactive",
       "category": "platform",
-      "notes": "$200 cost, decide later. Luisa Prieto from FF sent follow-up email 04/04 (sales outreach)."
+      "notes": "$200 cost. Defer unless Room B still vacant by May 15."
     },
     {
       "id": "fbg-7",
       "name": "UC Berkeley Housing, Rooms, Apts (48.1K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: posted, approved by admin immediately. No CL link (group bans external links).",
-      "status": "live",
+      "detail": "04/20/2026 \u00b7 Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. No CL link (group bans external links).",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: posted, approved by admin immediately. No CL link (group bans external links)."
+      "notes": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. No CL link (group bans external links)."
     },
     {
       "id": "fbg-8",
       "name": "UC Berkeley Off-Campus (90.6K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: posted with CL link, appeared in feed immediately.",
-      "status": "live",
+      "detail": "04/20/2026 \u00b7 Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link (7927938356).",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: posted with CL link, appeared in feed immediately."
+      "notes": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link (7927938356)."
     },
     {
       "id": "fbg-9",
       "name": "Berkeley CA Rentals (6.8K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: posted with CL link, appeared in feed immediately.",
-      "status": "live",
+      "detail": "04/20/2026 \u00b7 Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: posted with CL link, appeared in feed immediately."
+      "notes": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link."
     },
     {
       "id": "fbg-10",
       "name": "Berkeley & Bay Area (16.4K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: posted with CL link, appeared in feed immediately.",
-      "status": "live",
+      "detail": "04/20/2026 \u00b7 Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: posted with CL link, appeared in feed immediately."
+      "notes": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link."
     },
     {
       "id": "fbg-11",
       "name": "Bay Area/SF Housing (82.8K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: submitted, awaiting admin approval. No CL link.",
-      "status": "pending",
+      "detail": "04/20/2026 \u00b7 Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check if approved and repost.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: submitted, awaiting admin approval. No CL link."
+      "notes": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check if approved and repost."
     },
     {
       "id": "fbg-12",
@@ -170,18 +205,18 @@
     {
       "id": "fbg-14",
       "name": "SF Bay Area Housing (223.2K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: submitted, likely pending admin review. No CL link.",
-      "status": "pending",
+      "detail": "04/20/2026 \u00b7 Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check and repost if approved.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: submitted, likely pending admin review. No CL link."
+      "notes": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check and repost if approved."
     },
     {
       "id": "fbg-15",
       "name": "Oakland Housing (35.6K)",
-      "detail": "04/20/2026 \u00b7 WEEKLY AUDIT 04/20: NEWLY ACCESSIBLE \u2014 previous sweeps incorrectly flagged as non-member. Submitted, awaiting admin approval. No CL link.",
-      "status": "pending",
+      "detail": "04/20/2026 \u00b7 Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified.",
+      "status": "warn",
       "category": "facebook_group",
-      "notes": "WEEKLY AUDIT 04/20: NEWLY ACCESSIBLE \u2014 previous sweeps incorrectly flagged as non-member. Submitted, awaiting admin approval. No CL link."
+      "notes": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified."
     }
   ],
   "prospects": [
@@ -542,8 +577,8 @@
     }
   ],
   "log": {
-    "date": "04/25/2026",
-    "title": "EVENING SWEEP (6:00 PM PT, Scheduled Task)",
+    "date": "04/27/2026",
+    "title": "WEEKLY DEEP AUDIT (10:00 AM PT, Scheduled Task)",
     "worked": [],
     "failed": [],
     "improvement": "",
