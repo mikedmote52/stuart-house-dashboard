@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-28T08:19:56.752241+00:00",
+  "lastUpdated": "2026-04-28T15:31:28.537745+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -424,9 +424,9 @@
       "id": "prsp-21",
       "name": "Liam",
       "source": "Facebook Marketplace",
-      "status": "WARM \u2014 awaiting Liam's follow-up \ud83d\udd04",
+      "status": "WARM \u2014 self-pacing, job situation \ud83d\udd04",
       "date": "04/15/2026",
-      "notes": "PA at Highland Hospital Oakland (10 yrs), cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18:** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" Mike clarified: soonest current tenant moves out is beginning of July. **04/19:** Liam \"Ok I might be able to make that work.\" Thread warm. \ud83d\udc3e Pet: Australian Shepherd \u2014 $250 deposit confirmed. **04/22:** Thu 4/23 Fast Track Swing conflict. Morning sweep drafted reschedule. Liam confirmed can't make Thu, Mike asked about 4/23 but Liam said \"won't be in city until the evening.\" Mike offered contractor/handyman to show him the place instead. **04/27 morning sweep (11:35 AM PT):** Sent warm close: \"Hey Liam totally understand things have been hectic. The room's still here if the timing ever lines up for you. Feel free to reach back out anytime.\" **04/27 (11:49 AM PT):** Liam replied \u2014 \"Hey Mike, apologies for not getting back to you sooner. A few things fell through with a job I was hoping to get so I'm currently delayed in my plans. I'll get back to you soon. LK\" \u2014 Still interested, job situation caused delay. No action needed \u2014 thread is warm, Liam is self-pacing. Move-in target: July (Mike to decide if July OK vs. Aug 1 strict).",
+      "notes": "PA at Highland Hospital Oakland (10 yrs), cyclist/reader/writer. Has 5yo Australian Shepherd \"Kota.\" Phone: 951-213-1749. Tour attempted 04/16 noon but Liam was tied up. **04/16:** Liam \"will swing by next week.\" **04/18:** Active iMessage convo with Mike. Mike confirmed pet policy: allowed if house-trained + well-behaved, $250 deposit for deep clean. Liam confirmed \"That's perfect thanks.\" **04/18 (2:21 PM PT):** Mike asked move-in date. Liam replied \"May 15ish, flexible.\" Mike clarified: soonest current tenant moves out is beginning of July. **04/19:** Liam \"Ok I might be able to make that work.\" Thread warm. \ud83d\udc3e Pet: Australian Shepherd \u2014 $250 deposit confirmed. **04/22:** Thu 4/23 Fast Track Swing conflict. Morning sweep drafted reschedule. Liam confirmed can't make Thu, Mike asked about 4/23 but Liam said \"won't be in city until the evening.\" Mike offered contractor/handyman to show him the place instead. **04/27 ~11:35 AM PT:** Sent warm close: \"Hey Liam totally understand things have been hectic. The room's still here if the timing ever lines up for you. Feel free to reach back out anytime.\" **04/27 ~11:49 AM PT:** Liam replied \u2014 \"Hey Mike, apologies for not getting back to you sooner. A few things fell through with a job I was hoping to get so I'm currently delayed in my plans. I'll get back to you soon. LK\" **04/27 ~12:12 PM PT:** Mike replied warmly \u2014 \"No worries at all, Liam sorry to hear about the job situation. The room's available August 1 so there's still time on your side. Whenever your plans firm back up, just reach out and we'll get you in to see it. Hope things look up soon!\" **04/27 ~12:45 PM PT:** Liam replied \"Thanks for the heads up.\" \u2014 Thread fully resolved for now. Self-pacing, will reach back out when ready. No action needed. Move-in target: July/Aug 1 (Mike to decide if July OK).",
       "actionNeeded": null,
       "active": true
     },
@@ -514,12 +514,12 @@
   "tours": {
     "scheduled": [
       {
-        "date": "TBD",
-        "time": "TBD",
-        "prospect": "Jack Boyd",
-        "type": "Virtual (FaceTime)",
-        "confirmed": "Pending (7 days)",
-        "notes": "Incoming Berkeley grad student, back east. Mike proposed Sunday 04/12 on 04/06 \u2014 7 days no confirmed reply visible (iMessage blocked). Likely stale \u2014 needs nudge or archive soon."
+        "date": "05/02/2026 (Sat)",
+        "time": "After 1 PM",
+        "prospect": "Isabella (#37)",
+        "type": "In-person",
+        "confirmed": "\u2705 CONFIRMED",
+        "notes": "UC Berkeley CEE Masters student, Aug move-in. Tour with Fabio (handyman). Confirmed 04/28 AM via iMessage. Isabella said \"Ok! That will still work for me.\" Mike sent Fabio's contact/photo."
       }
     ],
     "completed": [
