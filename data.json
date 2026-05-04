@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-01T19:58:14.674699+00:00",
+  "lastUpdated": "2026-05-04T09:20:28.951617+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -234,9 +234,9 @@
       "id": "prsp-2",
       "name": "Isabella",
       "source": "iMessage/direct",
-      "status": "TOUR SCHEDULED \ud83d\udcc5 \u2014 Sat 5/2 after 1 PM (Fabio)",
+      "status": "TOURED 05/02 \u2014 awaiting decision \ud83d\udd04",
       "date": "04/27/2026",
-      "notes": "Incoming UC Berkeley Civil & Environmental Engineering masters student, Aug move-in, lives ~1hr from Berkeley. Very friendly, polite, clean, responsible. Willing to meet housemates. **04/27 8:19 PM:** Isabella messaged intro. **04/27 ~9:53 PM:** Mike replied with room details ($1,650/mo, Aug 1, 400sqft, introduced Julian as housemate), offered Wed 4/29 PM or Sat 5/2 PM tour. **04/27 ~9:55 PM:** Isabella replied \u2014 interested in photos + tour, already visiting another property Sat but available after 1 PM. **04/27 ~9:56 PM:** Mike replied he'd be out of town but Fabio (handyman) can show her around. **04/28 ~3:34 AM:** Mike sent Fabio's photo + \"He's my handy man.\" **04/28 ~3:23 AM:** Isabella replied \"Ok! That will still work for me\" \u2014 **TOUR CONFIRMED: Sat 5/2 after 1 PM with Fabio.** Strong fit \u2014 grad student, Aug 1, collaborative housemate. **04/28 2:36 PM PT:** Isabella messaged \"Thank you! I will add his contact information\" (re: Fabio's photo) \u2014 Tour logistics **FULLY SET** \u2705",
+      "notes": "Incoming UC Berkeley Civil & Environmental Engineering masters student, Aug move-in, lives ~1hr from Berkeley. Very friendly, polite, clean, responsible. Willing to meet housemates. Tour with Fabio: Sat 5/2 after 1 PM \u2014 COMPLETED. **05/01 (eve):** Reminder sent \u2014 \"Just a quick reminder that your tour at 2322 Stuart St is tomorrow (Saturday, May 2) after 1 PM with Fabio.\" **05/04 (morning):** Post-tour check-in sent \u2014 \"Hi Isabella! Hope you had a great visit on Saturday just checking in to see how you felt about the place. Would love to hear your thoughts, and happy to answer any questions you have.\" No reply yet as of 05/04 evening. Thread warm \u2014 await decision.",
       "actionNeeded": null,
       "active": true
     },
@@ -244,9 +244,9 @@
       "id": "prsp-3",
       "name": "Om",
       "source": "Facebook Marketplace",
-      "status": "NEW \u2014 awaiting response",
+      "status": "STALE \u2014 5 days no reply \u26a0\ufe0f",
       "date": "04/29/2026",
-      "notes": "Messaged \"Hi, is this available?\" Wed 04/29 via FB Marketplace. Prior sweep replied \"Yes, are you interested?\" No response yet (16h). Screening questions pending.",
+      "notes": "Messaged \"Hi, is this available?\" Wed 04/29 via FB Marketplace. Replied \"Yes, are you interested?\" No response after 5 days (as of 05/04). At stale threshold. FB Messenger blocked from automated access \u2014 Mike should check manually and consider archiving or nudging.",
       "actionNeeded": null,
       "active": true
     },
@@ -524,15 +524,22 @@
   "tours": {
     "scheduled": [
       {
-        "date": "05/02/2026 (Sat)",
-        "time": "After 1 PM",
-        "prospect": "Isabella (#37)",
-        "type": "In-person",
-        "confirmed": "\u2705 CONFIRMED",
-        "notes": "UC Berkeley CEE Masters student, Aug move-in. Tour with Fabio (handyman). Confirmed 04/28 AM via iMessage. Isabella said \"Ok! That will still work for me.\" Mike sent Fabio's contact/photo."
+        "date": "(none scheduled)",
+        "time": "\u2014",
+        "prospect": "\u2014",
+        "type": "\u2014",
+        "confirmed": "\u2014",
+        "notes": "\u2014"
       }
     ],
     "completed": [
+      {
+        "date": "05/02/2026",
+        "time": "After 1 PM",
+        "prospect": "Isabella (#37)",
+        "type": "In-person (Fabio)",
+        "outcome": "COMPLETED \u2014 awaiting decision"
+      },
       {
         "date": "04/12/2026",
         "time": "11:00 AM PST",
