@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-04T15:30:59.681067+00:00",
+  "lastUpdated": "2026-05-04T19:32:28.341619+00:00",
   "property": {
     "address": "2322 Stuart St",
     "subtitle": "Berkeley Rental Manager",
@@ -19,10 +19,10 @@
     ]
   },
   "stats": {
-    "live": 3,
+    "live": 2,
     "pending": 2,
     "prospects": 30,
-    "actions": 9
+    "actions": 10
   },
   "actions": [
     {
@@ -35,54 +35,61 @@
     {
       "id": "act-2",
       "icon": "\u26a0\ufe0f",
-      "priority": "Zillow",
-      "text": "Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access (6+ consecutive days). Mike must verify manually at zillow.com/rental-manager.",
+      "priority": "SpareRoom",
+      "text": "**WEEKLY AUDIT 05/04:** Domain blocked via Chrome. Upgrade expires 05/07 (3 days). Mike must log in at spareroom.com to check inbox and renew/extend upgrade before it lapses.",
       "source": "listings"
     },
     {
       "id": "act-3",
+      "icon": "\u26a0\ufe0f",
+      "priority": "Facebook Marketplace",
+      "text": "**WEEKLY AUDIT 05/04:** Domain blocked by Chrome extension \u2014 cannot confirm status. Renewal was due ~05/03 (per 04/27 audit). Mike should log in to FB Marketplace and renew if prompted.",
+      "source": "listings"
+    },
+    {
+      "id": "act-4",
       "icon": "\u26a0\ufe0f",
       "priority": "UC Berkeley Housing, Rooms, Apts (48.1K)",
       "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. No CL link (group bans external links).",
       "source": "listings"
     },
     {
-      "id": "act-4",
+      "id": "act-5",
       "icon": "\u26a0\ufe0f",
       "priority": "UC Berkeley Off-Campus (90.6K)",
       "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link (7927938356).",
       "source": "listings"
     },
     {
-      "id": "act-5",
+      "id": "act-6",
       "icon": "\u26a0\ufe0f",
       "priority": "Berkeley CA Rentals (6.8K)",
       "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link.",
       "source": "listings"
     },
     {
-      "id": "act-6",
+      "id": "act-7",
       "icon": "\u26a0\ufe0f",
       "priority": "Berkeley & Bay Area (16.4K)",
       "text": "Last posted 04/20. Chrome extension blocked 04/27 \u2014 Mike must repost manually. Use updated CL link.",
       "source": "listings"
     },
     {
-      "id": "act-7",
+      "id": "act-8",
       "icon": "\u26a0\ufe0f",
       "priority": "Bay Area/SF Housing (82.8K)",
       "text": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check if approved and repost.",
       "source": "listings"
     },
     {
-      "id": "act-8",
+      "id": "act-9",
       "icon": "\u26a0\ufe0f",
       "priority": "SF Bay Area Housing (223.2K)",
       "text": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified. Mike should check and repost if approved.",
       "source": "listings"
     },
     {
-      "id": "act-9",
+      "id": "act-10",
       "icon": "\u26a0\ufe0f",
       "priority": "Oakland Housing (35.6K)",
       "text": "Submitted 04/20 pending approval. Chrome extension blocked 04/27 \u2014 status unverified.",
@@ -93,26 +100,26 @@
     {
       "id": "lst-1",
       "name": "Craigslist",
-      "detail": "04/15/2026 \u00b7 **WEEKLY AUDIT 04/27:** Old URL (7921147509) is 404-dead. NEW active URL: 7927938356. Listing IS appearing in search results ($1,650, 12 days old as of 04/27). Getting buried \u2014 needs repost to restore top-of-feed visibility. Mike must log in and repost today.",
+      "detail": "05/04/2026 \u00b7 **WEEKLY AUDIT 05/04:** Active URL 7930534695, posted 04/27, expires ~05/24. CONFIRMED appearing in CL search results (186 total East Bay room listings). 7 days old \u2014 still reasonably fresh. No repost needed yet (~05/17 ideal repost window).",
       "status": "live",
       "category": "platform",
-      "notes": "**WEEKLY AUDIT 04/27:** Old URL (7921147509) is 404-dead. NEW active URL: 7927938356. Listing IS appearing in search results ($1,650, 12 days old as of 04/27). Getting buried \u2014 needs repost to restore top-of-feed visibility. Mike must log in and repost today."
+      "notes": "**WEEKLY AUDIT 05/04:** Active URL 7930534695, posted 04/27, expires ~05/24. CONFIRMED appearing in CL search results (186 total East Bay room listings). 7 days old \u2014 still reasonably fresh. No repost needed yet (~05/17 ideal repost window)."
     },
     {
       "id": "lst-2",
       "name": "Zillow",
-      "detail": "03/28/2026 \u00b7 Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access (6+ consecutive days). Mike must verify manually at zillow.com/rental-manager.",
-      "status": "warn",
+      "detail": "05/04/2026 \u00b7 **WEEKLY AUDIT 05/04:** PerimeterX CAPTCHA blocking all automated access. Listing EXPIRES TOMORROW (05/05). Mike MUST log in to zillow.com/rental-manager TODAY to renew.",
+      "status": "pending",
       "category": "platform",
-      "notes": "Last confirmed live 04/19 evening. PerimeterX CAPTCHA blocking automated access (6+ consecutive days). Mike must verify manually at zillow.com/rental-manager."
+      "notes": "**WEEKLY AUDIT 05/04:** PerimeterX CAPTCHA blocking all automated access. Listing EXPIRES TOMORROW (05/05). Mike MUST log in to zillow.com/rental-manager TODAY to renew."
     },
     {
       "id": "lst-3",
       "name": "SpareRoom",
-      "detail": "04/01/2026 \u00b7 Ref #103057608. Session expired 14+ days as of 04/27. Was top-tier lead source (Julian, J T, Diego). Mike must log in manually at spareroom.com. URGENT.",
-      "status": "pending",
+      "detail": "05/04/2026 \u00b7 **WEEKLY AUDIT 05/04:** Domain blocked via Chrome. Upgrade expires 05/07 (3 days). Mike must log in at spareroom.com to check inbox and renew/extend upgrade before it lapses.",
+      "status": "warn",
       "category": "platform",
-      "notes": "Ref #103057608. Session expired 14+ days as of 04/27. Was top-tier lead source (Julian, J T, Diego). Mike must log in manually at spareroom.com. URGENT."
+      "notes": "**WEEKLY AUDIT 05/04:** Domain blocked via Chrome. Upgrade expires 05/07 (3 days). Mike must log in at spareroom.com to check inbox and renew/extend upgrade before it lapses."
     },
     {
       "id": "lst-4",
@@ -133,10 +140,10 @@
     {
       "id": "lst-6",
       "name": "Facebook Marketplace",
-      "detail": "Pre-existing \u00b7 **WEEKLY AUDIT 04/27:** Listing LIVE \u2014 501 clicks, \"Renew (6 days)\" shown (recently renewed). Next renewal available ~05/03. No action needed this week.",
-      "status": "live",
+      "detail": "05/04/2026 \u00b7 **WEEKLY AUDIT 05/04:** Domain blocked by Chrome extension \u2014 cannot confirm status. Renewal was due ~05/03 (per 04/27 audit). Mike should log in to FB Marketplace and renew if prompted.",
+      "status": "warn",
       "category": "platform",
-      "notes": "**WEEKLY AUDIT 04/27:** Listing LIVE \u2014 501 clicks, \"Renew (6 days)\" shown (recently renewed). Next renewal available ~05/03. No action needed this week."
+      "notes": "**WEEKLY AUDIT 05/04:** Domain blocked by Chrome extension \u2014 cannot confirm status. Renewal was due ~05/03 (per 04/27 audit). Mike should log in to FB Marketplace and renew if prompted."
     },
     {
       "id": "lst-16",
@@ -244,9 +251,9 @@
       "id": "prsp-3",
       "name": "Om",
       "source": "Facebook Marketplace",
-      "status": "STALE \u2014 5 days no reply \u26a0\ufe0f",
+      "status": "STALE \u2014 ARCHIVED 05/04 \u274c",
       "date": "04/29/2026",
-      "notes": "Messaged \"Hi, is this available?\" Wed 04/29 via FB Marketplace. Replied \"Yes, are you interested?\" No response after 5 days (as of 05/04). At stale threshold. FB Messenger blocked from automated access \u2014 Mike should check manually and consider archiving or nudging.",
+      "notes": "Messaged \"Hi, is this available?\" Wed 04/29 via FB Marketplace. Replied \"Yes, are you interested?\" No response after 6 days (as of 05/04 weekly audit). Archived per 5-day stale rule. FB Messenger blocked from automated access.",
       "actionNeeded": null,
       "active": true
     },
